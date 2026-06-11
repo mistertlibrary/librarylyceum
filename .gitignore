@@ -1,0 +1,6 @@
+# OS and tooling artifacts
+.cache/
+.wget-hsts
+node_modules/
+.DS_Store
+Thumbs.db
