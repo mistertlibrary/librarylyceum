@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found &mdash; WEHS Library Lyceum</title>
+  <meta name="robots" content="noindex">
+
+  <!-- 404.html is served for ANY unmatched path, including deep ones such as
+       /librarylyceum/guides/2026/annotation. Relative paths would resolve
+       against that phantom directory and break. Every path in this file is
+       therefore root-absolute and hard-coded to the repository name. If the
+       repository is renamed, or the site moves to a custom domain, update
+       the paths in this file only. Every other page stays relative. -->
+
+  <link rel="icon" type="image/svg+xml" href="/librarylyceum/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/librarylyceum/favicon.png">
+  <link rel="apple-touch-icon" href="/librarylyceum/favicon.png">
+
+  <script>
+    /* Reader preferences, applied before first paint. Keep inline, in the head. */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem("lyceum-theme");
+        var s = localStorage.getItem("lyceum-size");
+        var f = localStorage.getItem("lyceum-font");
+        if (t === "dark") d.dataset.theme = "dark";
+        if (s && s !== "default") d.dataset.size = s;
+        if (f && f !== "serif") d.dataset.font = f;
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/librarylyceum/lyceum-fonts.css">
+  <link rel="stylesheet" href="/librarylyceum/lyceum.css">
+
+  <style>
+    /* ── 404 PAGE ONLY ── */
+
+    .shelf-ornament { margin: 0 auto 2rem; display: block; }
+
+    .notfound-header h1 { font-size: clamp(1.7rem, 4vw, 2.9rem); }
+
+    .interview {
+      background-color: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 2.2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.9rem;
+      transition: background-color 0.3s;
+    }
+
+    .interview-label {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red-ink);
+      text-align: center;
+    }
+
+    .interview-form {
+      display: flex;
+      gap: 0.6rem;
+      width: 100%;
+      max-width: 580px;
+      align-items: stretch;
+    }
+
+    .interview-form .search-wrap { flex: 1; }
+
+    .interview-submit {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--on-red);
+      background-color: var(--red);
+      border: 1px solid var(--red);
+      padding: 0 1.6rem;
+      cursor: pointer;
+      transition: background-color 0.22s, color 0.22s;
+    }
+
+    .interview-submit:hover { background-color: transparent; color: var(--red-ink); }
+
+    /* ── DESTINATIONS ── */
+    .destinations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      background-color: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .destination-card {
+      border-right: 1px solid var(--border);
+      padding: 2.6rem 2.6rem 2.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      transition: background-color 0.2s;
+    }
+
+    .destination-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0; left: 2.6rem; right: 2.6rem;
+      height: 3px;
+      background-color: var(--red);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: center;
+    }
+
+    .destination-card:hover { background-color: var(--surface); }
+    .destination-card:hover::after { transform: scaleX(1); }
+    .destination-card:hover .card-arrow { opacity: 1; transform: translate(3px,-3px); }
+
+    .destination-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+
+    .destination-title {
+      font-family: var(--display);
+      font-size: calc(var(--base-size) * 1.35);
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.02em;
+      line-height: 1.25;
+      transition: color 0.2s;
+    }
+
+    .destination-card:hover .destination-title { color: var(--red-ink); }
+
+    .destination-desc {
+      font-family: var(--body-font);
+      font-size: calc(var(--base-size) * 0.88);
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ── REQUESTED PATH ── */
+    .requested-path {
+      text-align: center;
+      padding: 1.6rem 2.5rem 2.4rem;
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      word-break: break-all;
+    }
+
+    @media (max-width: 820px) {
+      .interview { padding: 1.8rem 1.25rem; }
+      .interview-form { flex-direction: column; }
+      .interview-submit { padding: 0.75rem 1.6rem; }
+      .destination-card { padding: 2rem 1.5rem; }
+      .destination-card::after { left: 1.5rem; right: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#search-input">Skip to main content</a>
+
+  <!-- ACCESSIBILITY PANEL -->
+  <button id="a11y-trigger" class="a11y-trigger" type="button"
+          aria-expanded="false" aria-controls="a11y-panel"
+          aria-label="Display and accessibility settings">
+    <span class="a11y-trigger-glyph" aria-hidden="true">Aa</span>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-panel-title" hidden>
+    <p class="a11y-panel-title" id="a11y-panel-title">Display Settings</p>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-size-label">Text size</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-size-label">
+        <button class="a11y-btn active" type="button" data-size="default" aria-pressed="true">A</button>
+        <button class="a11y-btn" type="button" data-size="large"  aria-pressed="false">A+</button>
+        <button class="a11y-btn" type="button" data-size="larger" aria-pressed="false">A++</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-font-label">Typeface</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-font-label">
+        <button class="a11y-btn active" type="button" data-font="serif" aria-pressed="true">Serif</button>
+        <button class="a11y-btn" type="button" data-font="sans" aria-pressed="false">Sans</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-theme-label">Theme</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-theme-label">
+        <button class="a11y-btn active" type="button" data-theme-choice="light" aria-pressed="true">Light</button>
+        <button class="a11y-btn" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <a href="/librarylyceum/index.html" class="header-brand" aria-label="WEHS Library Lyceum home">
+      <div class="header-wordmark">
+        <span class="wordmark-school">West Essex High School</span>
+        <span class="wordmark-name">Library Lyceum</span>
+      </div>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="/librarylyceum/index.html">Home</a>
+      <a href="/librarylyceum/databases.html">Find a Database</a>
+      <a href="/librarylyceum/guides.html">Research Guides</a>
+      <a href="/librarylyceum/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- THE EMPTY SHELF -->
+    <div class="page-header notfound-header">
+
+      <svg class="shelf-ornament" width="190" height="114" viewBox="0 0 120 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="4"     y1="62" x2="116"   y2="62" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="square"/>
+        <line x1="4.75"  y1="62" x2="4.75"  y2="45" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="square"/>
+        <line x1="115.25" y1="62" x2="115.25" y2="45" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="square"/>
+
+        <rect x="9"    y="22" width="9"  height="40" stroke="#C9A84C" stroke-width="1.5" fill="#C9A84C" fill-opacity="0.25"/>
+        <rect x="19.5" y="16" width="7"  height="46" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+        <rect x="27.5" y="26" width="10" height="36" stroke="#C9A84C" stroke-width="1.5" fill="#C9A84C" fill-opacity="0.35"/>
+        <rect x="38.5" y="19" width="8"  height="43" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+        <rect x="47.5" y="24" width="9"  height="38" stroke="#C9A84C" stroke-width="1.5" fill="#C9A84C" fill-opacity="0.25"/>
+
+        <rect x="76" y="20" width="8" height="42" stroke="#C9A84C" stroke-width="1.5" fill="#C9A84C" fill-opacity="0.25" transform="rotate(-22 76 62)"/>
+
+        <rect x="87"   y="25" width="10" height="37" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+        <rect x="98.5" y="18" width="8"  height="44" stroke="#C9A84C" stroke-width="1.5" fill="#C9A84C" fill-opacity="0.35"/>
+        <rect x="108"  y="23" width="6"  height="39" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+      </svg>
+
+      <h1>Uh oh! That&rsquo;s not on the shelf!</h1>
+      <div class="page-rule" aria-hidden="true"></div>
+      <p>Not to worry! We&rsquo;ll find what you&rsquo;re after.</p>
+    </div>
+
+    <!-- THE REFERENCE INTERVIEW -->
+    <div class="interview">
+      <label class="interview-label" for="search-input">What are you looking for?</label>
+      <form class="interview-form" action="/librarylyceum/databases.html" method="get" role="search">
+        <div class="search-wrap">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="11.5" y1="11.5" x2="16" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <input type="search" id="search-input" name="q" autocomplete="off">
+        </div>
+        <button class="interview-submit" type="submit">Search</button>
+      </form>
+    </div>
+
+    <!-- DESTINATIONS -->
+    <div class="destinations">
+      <a class="destination-card" href="/librarylyceum/databases.html">
+        <div class="destination-header">
+          <span class="destination-title">Find a Database</span>
+          <svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <p class="destination-desc">Our complete database collection, organized by subject and searchable by keyword. From peer-reviewed journals to primary source archives, you'll find the right resource for any research question.</p>
+      </a>
+
+      <a class="destination-card" href="/librarylyceum/guides.html">
+        <div class="destination-header">
+          <span class="destination-title">Research Guides</span>
+          <svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <p class="destination-desc">Bespoke instructional resources built for specific courses, assignments, and questions. Each serves as a guide through unfamiliar territory, helping you ask better questions as you explore.</p>
+      </a>
+    </div>
+
+    <p class="requested-path" id="requested-path" hidden>
+      <span class="visually-hidden">Requested address: </span><span id="requested-path-value"></span>
+    </p>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <span class="footer-name">West Essex High School Library Lyceum</span>
+    </div>
+    <div class="footer-right">
+      Questions? Reach out to <a href="mailto:sthompson@westex.org">Mr. Thompson</a>.<br>
+      &copy; <span id="yr">2026</span> West Essex High School
+    </div>
+  </footer>
+
+  <script src="/librarylyceum/lyceum.js" defer></script>
+  <script>
+    (function () {
+      var wrap = document.getElementById("requested-path");
+      var value = document.getElementById("requested-path-value");
+      var path = window.location.pathname + window.location.search;
+      if (!path || path === "/") return;
+      value.textContent = path;
+      wrap.hidden = false;
+    })();
+  </script>
+</body>
+</html>
