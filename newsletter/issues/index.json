@@ -1,0 +1,22 @@
+{
+  "issues": [
+    {
+      "number": 1,
+      "slug": "sample-students",
+      "date": "2026-09-08",
+      "title": "Sample issue for students",
+      "dek": "Placeholder text only. Delete this issue before you publish; it exists to show the layout.",
+      "audience": "students",
+      "tags": ["sample", "placeholder"]
+    },
+    {
+      "number": 2,
+      "slug": "sample-faculty",
+      "date": "2026-09-22",
+      "title": "Sample issue for faculty",
+      "dek": "Placeholder text only. Delete this issue before you publish; it exists to show the audience badge and filter.",
+      "audience": "faculty",
+      "tags": ["sample", "placeholder"]
+    }
+  ]
+}

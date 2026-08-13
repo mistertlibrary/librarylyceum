@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── EDIT THESE SIX LINES PER ISSUE. Nothing else in this file changes. ── -->
+  <title>Sample issue for faculty &mdash; WEHS Library Lyceum</title>
+  <meta name="description" content="Placeholder text only. Delete this issue before you publish; it exists to show the audience badge and filter.">
+  <meta property="og:title" content="Sample issue for faculty &mdash; WEHS Library Lyceum">
+  <meta property="og:description" content="Placeholder text only. Delete this issue before you publish; it exists to show the audience badge and filter.">
+  <meta property="og:url" content="https://mistertlibrary.github.io/librarylyceum/newsletter/issues/sample-faculty/">
+  <meta name="twitter:title" content="Sample issue for faculty &mdash; WEHS Library Lyceum">
+  <meta name="twitter:description" content="Placeholder text only. Delete this issue before you publish; it exists to show the audience badge and filter.">
+  <!-- ── END PER-ISSUE EDITS ── -->
+
+  <link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon.png">
+  <link rel="apple-touch-icon" href="../../../favicon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WEHS Library Lyceum">
+  <meta property="og:image" content="https://mistertlibrary.github.io/librarylyceum/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mistertlibrary.github.io/librarylyceum/og-image.png">
+
+  <script>
+    /* Reader preferences, applied before first paint. Keep inline, in the head. */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem("lyceum-theme");
+        var s = localStorage.getItem("lyceum-size");
+        var f = localStorage.getItem("lyceum-font");
+        if (t === "dark") d.dataset.theme = "dark";
+        if (s && s !== "default") d.dataset.size = s;
+        if (f && f !== "serif") d.dataset.font = f;
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../../../lyceum-fonts.css">
+  <link rel="stylesheet" href="../../../lyceum.css">
+  <link rel="stylesheet" href="../../../newsletter.css">
+
+  <script src="../../../vendor-marked.js" defer></script>
+  <script src="../../../lyceum.js" defer></script>
+  <script src="../../../newsletter-issue.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ACCESSIBILITY PANEL -->
+  <button id="a11y-trigger" class="a11y-trigger" type="button"
+          aria-expanded="false" aria-controls="a11y-panel"
+          aria-label="Display and accessibility settings">
+    <span class="a11y-trigger-glyph" aria-hidden="true">Aa</span>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-panel-title" hidden>
+    <p class="a11y-panel-title" id="a11y-panel-title">Display Settings</p>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-size-label">Text size</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-size-label">
+        <button class="a11y-btn active" type="button" data-size="default" aria-pressed="true">A</button>
+        <button class="a11y-btn" type="button" data-size="large"  aria-pressed="false">A+</button>
+        <button class="a11y-btn" type="button" data-size="larger" aria-pressed="false">A++</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-font-label">Typeface</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-font-label">
+        <button class="a11y-btn active" type="button" data-font="serif" aria-pressed="true">Serif</button>
+        <button class="a11y-btn" type="button" data-font="sans" aria-pressed="false">Sans</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-theme-label">Theme</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-theme-label">
+        <button class="a11y-btn active" type="button" data-theme-choice="light" aria-pressed="true">Light</button>
+        <button class="a11y-btn" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <a href="../../../index.html" class="header-brand" aria-label="WEHS Library Lyceum home">
+      <div class="header-wordmark">
+        <span class="wordmark-school">West Essex High School</span>
+        <span class="wordmark-name">Library Lyceum</span>
+      </div>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../databases.html">Find a Database</a>
+      <a href="../../../guides.html">Research Guides</a>
+      <a href="../../" class="active" aria-current="page">Newsletter</a>
+      <a href="../../../about.html">About</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div id="issue-root">
+      <div class="results-meta">Loading this issue&hellip;</div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <span class="footer-name">West Essex High School Library Lyceum</span>
+    </div>
+    <div class="footer-right">
+      Questions? Reach out to <a href="mailto:sthompson@westex.org">Mr. Thompson</a>.<br>
+      &copy; <span id="yr">2026</span> West Essex High School
+    </div>
+  </footer>
+
+</body>
+</html>
