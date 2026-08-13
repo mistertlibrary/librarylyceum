@@ -1,16 +1,3 @@
-/* ============================================================
-   LIBRARY LYCEUM: NEWSLETTER
-   West Essex High School Library Media Center
-
-   Load order: lyceum-fonts.css, lyceum.css, newsletter.css
-
-   1. Issue masthead        5. Footnotes
-   2. Contents              6. Colophon and issue nav
-   3. Issue body            7. Archive
-   4. Body elements         8. Print and responsive
-   ============================================================ */
-
-
 /* ── 1. ISSUE MASTHEAD ──────────────────────────────────── */
 
 .issue-masthead {

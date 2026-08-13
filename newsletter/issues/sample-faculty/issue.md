@@ -11,7 +11,7 @@ Placeholder opening paragraph for the faculty-facing sample.
 
 ## Databases and access {placeholder gloss}
 
-Placeholder body text.
+Consider this a test of the system.
 
 ## Collaboration {second placeholder gloss}
 
