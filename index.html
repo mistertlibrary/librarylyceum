@@ -84,6 +84,48 @@
 
     .invocation p:last-child { margin-bottom: 0; }
 
+    /* ── INVOCATION DISCLOSURE ── */
+    .invocation-more { margin-top: 1.4rem; }
+
+    .invocation-more > summary {
+      list-style: none;
+      display: inline-block;
+      cursor: pointer;
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: transparent;
+      border: 2px solid var(--red);
+      padding: 0.75rem 2rem;
+      transition: background-color 0.22s, color 0.22s;
+    }
+
+    .invocation-more > summary::-webkit-details-marker { display: none; }
+    .invocation-more > summary::marker { content: ""; }
+
+    .invocation-more > summary:hover { background-color: var(--red); color: var(--on-red); }
+
+    .invocation-more > summary:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .invocation-more .summary-open { display: none; }
+    .invocation-more[open] .summary-open { display: inline; }
+    .invocation-more[open] .summary-closed { display: none; }
+
+    .invocation-body {
+      margin-top: 2.2rem;
+      animation: fadeUp 0.5s cubic-bezier(0.22,1,0.36,1) both;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .invocation-body { animation: none; }
+    }
+
     /* ── GATEWAYS ── */
     .gateways {
       display: grid;
@@ -349,20 +391,30 @@
 
       <div class="invocation">
         <p>Information, like love, seems at once immensely powerful and functionally infinite. Information, like love's objects, does not always reciprocate our affections.</p>
-        <p>Love is neither obligatory nor passive. Information is neither knowledge nor wisdom.</p>
-        <p>Love and information, to borrow from Adrienne Rich, depend on our exertion. We must refine the delicate and terrifying truths we can tell each other, trying though it may be.</p>
-        <p>Information, like love, demands a committment to constructing and reconstructing the very reality we share.</p>
-        <p>How romantic! Surely some framework will ease our burden...</p>
-        <p>Data, unlike people, are not created equal. Knowledge is fabric; information mere filament. The more we learn, the less we know—until we twist two tangles into a tapestry.</p>
-        <p>Love and information, taut in the loom: how shall we transit the depths between warp and weft?</p>
-        <p>We find a pattern. We weave (a thread at a time, cumulative, cautious, gaining confidence as we proceed), unweave (to right wrongs, remedy errors, stave off finality), weave again, transforming coarse fibers into a considered raiment that evinces our understanding.</p>
-        <p>How tedious! Perhaps there's a shortcut...</p>
-        <p>At our own peril, as all knowledge is tentative. Revision proves essential as our understanding matures. Take heart: nothing's more comfortable than a well-worn, lovingly mended garment.</p>
-        <p>Love and information, taut in the loom: why can't we automate for efficiency?</p>
-        <p>We can, but only if you're willing to accept what's handed you. If so, first promise you won't complain about the compromises you've made (shoddy craftsmanship, shredded trust, myriad consequences social, cultural, environmental, economic, and psychological), acknowledge the product was only ever meant for show (not use, especially not your use), and concede you were never actually interested in the process (loving, learning, living!).</p>
-        <p>How absurd! But it's surprising what people are willing to relinquish...</p>
-        <p>Love and information, taut in the loom. Understanding dwells between truth and fiction, yes and no, zero and one. When we enter our library, we step into this very gap.</p>
-        <p>How will <i>you</i> fill it?</p>
+
+        <details class="invocation-more">
+          <summary>
+            <span class="summary-closed">Continue reading</span>
+            <span class="summary-open">Collapse</span>
+          </summary>
+
+          <div class="invocation-body">
+            <p>Love is neither obligatory nor passive. Information is neither knowledge nor wisdom.</p>
+            <p>Love and information, to borrow from Adrienne Rich, depend on our exertion. We must refine the delicate and terrifying truths we can tell each other, trying though it may be.</p>
+            <p>Information, like love, demands a commitment to constructing and reconstructing the very reality we share.</p>
+            <p>How romantic! Surely some framework will ease our burden...</p>
+            <p>Data, unlike people, are not created equal. Knowledge is fabric; information mere filament. The more we learn, the less we know—until we twist two tangles into a tapestry.</p>
+            <p>Love and information, taut in the loom: how shall we transit the depths between warp and weft?</p>
+            <p>We find a pattern. We weave (a thread at a time, cumulative, cautious, gaining confidence as we proceed), unweave (to right wrongs, remedy errors, stave off finality), weave again, transforming coarse fibers into a considered raiment that evinces our understanding.</p>
+            <p>How tedious! Perhaps there's a shortcut...</p>
+            <p>At our own peril, as all knowledge is tentative. Revision proves essential as our understanding matures. Take heart: nothing's more comfortable than a well-worn, lovingly mended garment.</p>
+            <p>Love and information, taut in the loom: why can't we automate for efficiency?</p>
+            <p>We can, but only if you're willing to accept what's handed you. If so, first promise you won't complain about the compromises you've made (shoddy craftsmanship, shredded trust, myriad consequences social, cultural, environmental, economic, and psychological), acknowledge the product was only ever meant for show (not use, especially not your use), and concede you were never actually interested in the process (loving, learning, living!).</p>
+            <p>How absurd! But it's surprising what people are willing to relinquish...</p>
+            <p>Love and information, taut in the loom. Understanding dwells between truth and fiction, yes and no, zero and one. When we enter our library, we step into this very gap.</p>
+            <p>How will <i>you</i> fill it?</p>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -430,14 +482,6 @@
             <span class="start-link-title">Research Guides</span>
             <span class="start-link-desc">When your teacher assigns a project, there's a chance I've already built a guide to accompany it. Check the gallery before you search anywhere else.</span>
           </a>
-
-          <!-- THIRD SLOT, READY WHEN YOU ARE.
-               The grid is auto-fit, so uncommenting this makes a clean
-               row of three at desktop width and stacks on mobile. The
-               copy below is deliberately left blank rather than drafted
-               for you. A guide on turning an assignment prompt into
-               search terms, or on choosing between a database and the
-               open web, is the natural fit here.
 
           <a href="guides.html?q=REPLACE" class="start-link">
             <span class="start-link-title">REPLACE</span>
