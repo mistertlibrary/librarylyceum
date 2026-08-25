@@ -1,0 +1,41 @@
+/* Library Lyceum: OpenDyslexic, loaded on demand.
+   Kept out of lyceum-fonts.css so it is fetched only by readers who choose this
+   typeface. lyceum.js injects this stylesheet when the preference is selected,
+   and the pre-paint snippet in the head injects it when the preference is
+   already stored, so the face is in place before first paint.
+
+   OpenDyslexic was created by Abbie Gonzalez and is released under the SIL Open
+   Font License 1.1 — see OPENDYSLEXIC-LICENSE.txt. The faces here were taken
+   from the copies already self-hosted in the WEHS guide network. */
+
+@font-face {
+  font-family: "OpenDyslexic";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/opendyslexic-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/opendyslexic-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/opendyslexic-400-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/opendyslexic-700-italic.woff") format("woff");
+}

@@ -6,7 +6,7 @@
   "use strict";
 
   var STORE = { size: "lyceum-size", font: "lyceum-font", theme: "lyceum-theme" };
-  var DEFAULTS = { size: "default", font: "serif", theme: "light" };
+  var DEFAULTS = { size: "small", font: "serif", theme: "light" };
 
   function read(key, fallback) {
     try { return localStorage.getItem(key) || fallback; }
@@ -24,12 +24,43 @@
   var root = document.documentElement;
 
   function applySize(val) {
-    if (val === "default") delete root.dataset.size;
+    if (val === "small") delete root.dataset.size;
     else root.dataset.size = val;
   }
 
-  function applyFont(val)  { root.dataset.font = val; }
-  function applyTheme(val) { root.dataset.theme = val; }
+  /* OpenDyslexic lives in its own stylesheet so that its ~130KB is fetched only
+     by readers who choose it, rather than by everyone on every page. The URL is
+     derived from the canonical fonts link rather than hard-coded, so this keeps
+     working at any directory depth and in any repository that vendors the
+     chrome. The pre-paint snippet in the head injects the same link when the
+     stored preference is already "dyslexic", so a reader who needs the face
+     does not get a flash of the fallback first. */
+  function ensureDyslexicCss() {
+    if (document.getElementById("lyceum-dyslexic")) return;
+    var base = document.querySelector('link[href*="lyceum-fonts.css"]');
+    var href = base
+      ? base.getAttribute("href").replace("lyceum-fonts.css", "lyceum-dyslexic.css")
+      : "lyceum-dyslexic.css";
+    var link = document.createElement("link");
+    link.id = "lyceum-dyslexic";
+    link.rel = "stylesheet";
+    link.href = href;
+    document.head.appendChild(link);
+  }
+
+  function applyFont(val) {
+    if (val === "dyslexic") ensureDyslexicCss();
+    root.dataset.font = val;
+  }
+
+  /* A reader may arrive holding a theme this stylesheet cannot render — a value
+     from a future palette, or a corrupted entry. Rather than discard the choice,
+     which would silently reset it for every guide that CAN honour it, the stored
+     value is left alone and only the rendering falls back. */
+  var THEMES = ["light", "dark", "contrast"];
+  function renderable(val) { return THEMES.indexOf(val) === -1 ? "light" : val; }
+
+  function applyTheme(val) { root.dataset.theme = renderable(val); }
 
   function markActive(type, val) {
     var buttons = document.querySelectorAll(".a11y-btn[data-" + type + "]");
@@ -41,9 +72,10 @@
   }
 
   function updateThemeButtons(val) {
+    var shown = renderable(val);
     var buttons = document.querySelectorAll(".a11y-btn[data-theme-choice]");
     Array.prototype.forEach.call(buttons, function (b) {
-      var match = b.dataset.themeChoice === val;
+      var match = b.dataset.themeChoice === shown;
       b.classList.toggle("active", match);
       b.setAttribute("aria-pressed", String(match));
     });
@@ -121,7 +153,17 @@
       });
     }
 
-    var size  = read(STORE.size,  DEFAULTS.size);
+    /* The size scale was renamed to match the vocabulary every guide already
+       used, so one choice now carries across the whole network. Anyone holding a
+       value from the old scale is migrated rather than silently reset. */
+    var LEGACY_SIZE = { "default": "small", "large": "medium", "larger": "large" };
+    var stored = read(STORE.size, DEFAULTS.size);
+    if (LEGACY_SIZE.hasOwnProperty(stored) && ["small","medium","large"].indexOf(stored) === -1) {
+      stored = LEGACY_SIZE[stored];
+      write(STORE.size, stored);
+    }
+
+    var size  = stored;
     var font  = read(STORE.font,  DEFAULTS.font);
     var theme = read(STORE.theme, DEFAULTS.theme);
 

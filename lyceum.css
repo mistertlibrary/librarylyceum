@@ -28,6 +28,15 @@
   --near-black: #0F0F0F;
   --gold: #C9A84C;
   --gold-light: #D4B86A;
+
+  /* Gold for text on LIGHT backgrounds. --gold measures 2.13:1 on parchment and
+     1.84:1 on the toolbar, against the 4.5:1 WCAG AA asks of text this size, so
+     it is unreadable for low-vision readers wherever it sits on the page rather
+     than on the near-black chrome. --gold-ink keeps the hue at 44 degrees and
+     clears 5.1:1 on every light surface. Same relationship as --red / --red-ink.
+     Use --gold for rules, borders, ornament, and any text on the dark header,
+     footer, or settings panel, where it already clears 7:1. */
+  --gold-ink: #7A5A08;
   --rule-color: #D4C5A9;
   --white: #FFFFFF;
 
@@ -55,6 +64,9 @@
 /* ── 2. DARK MODE ───────────────────────────────────────── */
 
 [data-theme="dark"] {
+  /* On the dark palette --gold clears 7.29:1 and needs no darkening. */
+  --gold-ink: var(--gold);
+
   --bg: #141414;
   --surface: #1E1E1E;
   --border: #3A3A3A;
@@ -66,12 +78,116 @@
 }
 
 
+/* ── 2b. HIGH CONTRAST ──────────────────────────────────── */
+
+/* Eight of the nine guides already offered a high-contrast theme; the hub was
+   the only member of its own network without one. Four of those guides — both
+   Citation Stations and both Research Basics guides — use black ground, white
+   text, and a saturated yellow accent, which is also the Windows high-contrast
+   convention and lets the Lyceum keep its gold. This follows them.
+
+   Every pair below was measured: the lowest ratio anywhere in this palette is
+   14.67:1, against the 7:1 WCAG AAA asks of body text. Gold, red, and the ink
+   variants all collapse to one yellow, because at this contrast level hue is
+   decoration and legibility is the whole point.
+
+   The raw named colours are overridden as well as the semantic ones. A handful
+   of rules reach past --bg and --text to --parchment, --charcoal, and
+   --near-black directly; leaving those alone would have left the skip link and
+   the header carrying the light palette into a black page. */
+
+[data-theme="contrast"] {
+  --parchment:  #000000;
+  --cream:      #000000;
+  --charcoal:   #FFFFFF;
+  --near-black: #000000;
+  --white:      #FFFFFF;
+
+  --bg:          #000000;
+  --surface:     #000000;
+  --border:      #FFFFFF;
+  --text:        #FFFFFF;
+  --text-muted:  #FFFFFF;
+  --rule-color:  #FFFFFF;
+
+  --gold:       #FFD400;
+  --gold-ink:   #FFD400;
+  --gold-light: #FFD400;
+
+  --red:      #FFD400;
+  --red-ink:  #FFD400;
+  --dark-red: #FFD400;
+  --on-red:   #000000;
+
+  --panel-bg:     #000000;
+  --panel-border: #FFFFFF;
+  --panel-label:  #FFFFFF;
+  --panel-btn:    #FFFFFF;
+}
+
+/* Cards signal hover by changing to --surface, which is the same black as the
+   page here. Colour alone was never the right affordance; in this theme it is
+   no affordance at all, so hover draws a real edge instead. */
+[data-theme="contrast"] .db-card:hover,
+[data-theme="contrast"] .guide-card:hover,
+[data-theme="contrast"] .result:hover,
+[data-theme="contrast"] .destination-card:hover,
+[data-theme="contrast"] .contact-item:hover {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+
+/* Dimmed placeholders and faded ornament defeat the purpose of the theme. */
+[data-theme="contrast"] .search-wrap input::placeholder { opacity: 1; }
+[data-theme="contrast"] .card-arrow { opacity: 1; }
+[data-theme="contrast"] .subject-index { box-shadow: none; }
+
+/* The 44px graticule behind the hero and page headers is the sort of low-
+   contrast patterning that makes text harder to resolve for exactly the readers
+   who choose this theme. It goes; the ground stays flat black. */
+[data-theme="contrast"] .hero,
+[data-theme="contrast"] .page-header { background-image: none; }
+
+
+/* ── 2c. ORNAMENT COLOUR ────────────────────────────────── */
+
+/* The inline SVG ornaments on the home page and the 404 carry their colours as
+   presentation attributes, so they never saw the --red-ink decision and have
+   been rendering crimson on every ground. On the dark palette that is 2.78:1,
+   the same figure that prompted --red-ink for text in the first place. These
+   are aria-hidden decoration, so no success criterion is violated, but leaving
+   them behind makes the ornament the one thing on the page that ignores the
+   reader's theme.
+
+   Routing the literal values through the tokens fixes that without editing a
+   single path: CSS outranks presentation attributes, so the artwork is
+   untouched and only its colour follows the theme. In light mode the tokens
+   resolve to these exact hexes, so nothing changes there at all. */
+
+[stroke="#B22234"] { stroke: var(--red-ink); }
+[fill="#B22234"]   { fill:   var(--red-ink); }
+[stroke="#C9A84C"] { stroke: var(--gold); }
+[fill="#C9A84C"]   { fill:   var(--gold); }
+
+
 /* ── 3. SIZE AND TYPEFACE ───────────────────────────────── */
 
-[data-size="large"]  { --base-size: 21px; }
-[data-size="larger"] { --base-size: 24px; }
+/* small is the default and needs no rule. The network shares this vocabulary:
+   every guide uses small/medium/large, so one choice holds across all of them. */
+[data-size="medium"] { --base-size: 21px; }
+[data-size="large"]  { --base-size: 24px; }
 
 [data-font="sans"] { --body-font: var(--sans); }
+
+/* OpenDyslexic applies to headings and labels as well as body text: a reader
+   who needs it needs it everywhere, not only in paragraphs. The face itself is
+   in lyceum-dyslexic.css, fetched on demand — see lyceum.js. */
+[data-font="dyslexic"] {
+  --body-font: "OpenDyslexic", Georgia, serif;
+  --display:   "OpenDyslexic", Georgia, serif;
+  --sans:      "OpenDyslexic", system-ui, sans-serif;
+  line-height: 1.9;
+}
 
 [data-font="sans"] .invocation p,
 [data-font="sans"] .gateway p,
@@ -81,6 +197,15 @@
 [data-font="sans"] .section-body p,
 [data-font="sans"] .mission-text,
 [data-font="sans"] .empty-state p { font-style: normal; }
+
+[data-font="dyslexic"] .invocation p,
+[data-font="dyslexic"] .gateway p,
+[data-font="dyslexic"] .footer-name,
+[data-font="dyslexic"] .page-header p,
+[data-font="dyslexic"] .start-here-body,
+[data-font="dyslexic"] .section-body p,
+[data-font="dyslexic"] .mission-text,
+[data-font="dyslexic"] .empty-state p { font-style: normal; }
 
 
 /* ── 4. BASE AND RESET ──────────────────────────────────── */
@@ -180,7 +305,9 @@ body {
   right: 1.5rem;
   bottom: 5.5rem;
   z-index: 200;
-  width: 262px;
+  /* Wide enough for three theme buttons. "Contrast" is the longest label in the
+     panel and the widest row sets the width for all of them. */
+  width: 290px;
   background-color: var(--panel-bg);
   border: 1px solid var(--panel-border);
   border-top: 2px solid var(--gold);
@@ -219,7 +346,10 @@ body {
   margin-bottom: 0.45rem;
 }
 
-.a11y-row { display: flex; gap: 0.4rem; }
+/* wrap + min-width:0 so a long label reflows instead of pushing out of the
+   panel. Flex items default to min-width:auto and will not shrink below their
+   content, which OpenDyslexic's wide glyphs otherwise trigger. */
+.a11y-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
 .a11y-btn {
   flex: 1;
@@ -231,11 +361,20 @@ body {
   color: var(--panel-btn);
   background: transparent;
   border: 1px solid #333;
-  padding: 0.4rem 0.5rem;
+  padding: 0.4rem 0.35rem;
   cursor: pointer;
   line-height: 1.4;
+  min-width: 0;
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
+
+/* The panel's own labels tighten in this mode so the controls keep fitting.
+   OpenDyslexic is wide enough that "Dyslexic" still clips on a third of the
+   row, so in this mode that one control takes a row of its own. */
+[data-font="dyslexic"] .a11y-btn { letter-spacing: 0.02em; font-size: 0.55rem; }
+[data-font="dyslexic"] .a11y-btn[data-font="dyslexic"] { flex-basis: 100%; }
+[data-font="dyslexic"] .a11y-label,
+[data-font="dyslexic"] .a11y-panel-title { letter-spacing: 0.08em; }
 
 .a11y-btn:hover,
 .a11y-btn.active {
@@ -474,7 +613,7 @@ nav a:hover, nav a.active { color: var(--gold); border-bottom-color: var(--gold)
 }
 
 .toolbar-btn:hover,
-.toolbar-btn.active { color: var(--gold); border-color: var(--gold); background: rgba(201,168,76,0.08); }
+.toolbar-btn.active { color: var(--gold-ink); border-color: var(--gold-ink); background: rgba(122,90,8,0.08); }
 
 .toolbar-btn.copied { color: #5A9E6F; border-color: #5A9E6F; }
 
@@ -548,8 +687,8 @@ nav a:hover, nav a.active { color: var(--gold); border-bottom-color: var(--gold)
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--gold);
-  border: 1px solid rgba(201,168,76,0.35);
+  color: var(--gold-ink);
+  border: 1px solid rgba(122,90,8,0.35);
   padding: 0.15rem 0.5rem;
 }
 
@@ -643,7 +782,8 @@ nav a:hover, nav a.active { color: var(--gold); border-bottom-color: var(--gold)
 
 .empty-state p + p { margin-top: 1rem; }
 
-.empty-state a { color: var(--red-ink); }
+/* Underlined: colour alone is not a distinguisher for a link inside a sentence. */
+.empty-state a { color: var(--red-ink); text-decoration: underline; text-underline-offset: 0.18em; }
 
 
 /* ── 14. FOOTER ─────────────────────────────────────────── */
@@ -681,8 +821,10 @@ footer {
   line-height: 1.9;
 }
 
-.footer-right a { color: var(--gold-light); text-decoration: none; }
-.footer-right a:hover { text-decoration: underline; }
+/* Underlined, not colour-only: these sit inside a sentence, where WCAG 1.4.1
+   requires a non-colour distinguisher. */
+.footer-right a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 0.18em; }
+.footer-right a:hover { color: var(--white); }
 
 
 /* ── 15. FOCUS, MOTION, PRINT ───────────────────────────── */

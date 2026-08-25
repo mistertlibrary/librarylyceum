@@ -4,6 +4,11 @@
 // Note: run from the school network as well, since EBSCO profile
 // links may resolve differently on and off campus.
 const fs = require("fs");
+const path = require("path");
+
+/* Resolved against this file, not the working directory, so the checker gives
+   the same answer however it is invoked. */
+const DATA = path.join(__dirname, "..", "data");
 
 function parseCsv(text) {
   const rows = [];
@@ -40,7 +45,9 @@ async function check(url) {
 }
 
 (async () => {
-  for (const file of ["databases.csv", "guides.csv"]) {
+  let totalBad = 0;
+  for (const name of ["databases.csv", "guides.csv"]) {
+    const file = path.join(DATA, name);
     const text = fs.readFileSync(file, "utf8").replace(/^\uFEFF/, "");
     const rows = parseCsv(text);
     const header = rows[0].map(s => s.trim());
@@ -55,5 +62,9 @@ async function check(url) {
       if (!r.ok) { console.log(`FAIL [${r.status}]  ${name}  ${url}`); bad++; }
     }
     console.log(bad === 0 ? "All links OK." : `${bad} problem link(s).`);
+    totalBad += bad;
   }
+  // Exit non-zero so this can gate a scheduled job. Previously it always
+  // reported success regardless of what it found.
+  if (totalBad > 0) process.exit(1);
 })();

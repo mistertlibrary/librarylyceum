@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search &mdash; WEHS Library Lyceum</title>
+
+  <meta name="description" content="Search the Library Lyceum: databases, research guides, and newsletter issues in one place.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WEHS Library Lyceum">
+  <meta property="og:title" content="Search &mdash; WEHS Library Lyceum">
+  <meta property="og:description" content="Search the Library Lyceum: databases, research guides, and newsletter issues in one place.">
+  <meta property="og:url" content="https://mistertlibrary.github.io/librarylyceum/search.html">
+  <meta property="og:image" content="https://mistertlibrary.github.io/librarylyceum/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Search &mdash; WEHS Library Lyceum">
+  <meta name="twitter:description" content="Search the Library Lyceum: databases, research guides, and newsletter issues in one place.">
+  <meta name="twitter:image" content="https://mistertlibrary.github.io/librarylyceum/og-image.png">
+
+  <!-- lyceum:head -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <script>
+    /* Reader preferences, applied before first paint. Keep inline, in the head. */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem("lyceum-theme");
+        var s = localStorage.getItem("lyceum-size");
+        var f = localStorage.getItem("lyceum-font");
+        if (t === "dark" || t === "contrast") d.dataset.theme = t;
+        if (s && s !== "small") d.dataset.size = s;
+        if (f && f !== "serif") d.dataset.font = f;
+        if (f === "dyslexic") {
+          var L = document.createElement("link");
+          L.id = "lyceum-dyslexic"; L.rel = "stylesheet"; L.href = "/librarylyceum/lyceum-dyslexic.css";
+          document.head.appendChild(L);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/librarylyceum/lyceum-fonts.css">
+  <link rel="stylesheet" href="lyceum.css">
+  <!-- /lyceum:head -->
+
+  <script src="vendor/vendor-fuse.js" defer></script>
+  <script src="lyceum.js" defer></script>
+  <script src="search.js" defer></script>
+
+  <style>
+    /* ── SEARCH PAGE ONLY ── */
+
+    .search-page-input {
+      font-size: calc(var(--base-size) * 1.05);
+    }
+
+    .result-group { animation: fadeUp 0.5s cubic-bezier(0.22,1,0.36,1) both; }
+
+    .result-group-heading {
+      font-family: var(--display);
+      font-size: calc(var(--base-size) * 1.25);
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.04em;
+      padding: 1.6rem 2.5rem 0.9rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+      border-bottom: 1px solid var(--border);
+      margin: 0;
+    }
+
+    .result-group-count {
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+    }
+
+    .result-list { list-style: none; margin: 0; padding: 0; }
+
+    .result {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2.5rem;
+      display: block;
+      text-decoration: none;
+      position: relative;
+      transition: background-color 0.2s;
+    }
+
+    .result::after {
+      content: "";
+      position: absolute;
+      bottom: 0; left: 2.5rem; right: 2.5rem;
+      height: 3px;
+      background-color: var(--red);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: center;
+    }
+
+    .result:hover { background-color: var(--surface); }
+    .result:hover::after { transform: scaleX(1); }
+    .result:hover .card-arrow { opacity: 1; transform: translate(3px,-3px); }
+
+    .result:focus-visible { outline: 2px solid var(--gold); outline-offset: -4px; }
+
+    .result-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .result-title {
+      font-family: var(--display);
+      font-size: calc(var(--base-size) * 1.12);
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+      transition: color 0.2s;
+    }
+
+    .result:hover .result-title { color: var(--red-ink); }
+
+    .result-desc {
+      font-family: var(--body-font);
+      font-size: calc(var(--base-size) * 0.88);
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 68ch;
+    }
+
+    .result-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.7rem;
+    }
+
+    /* --gold-ink, not --gold: gold on parchment measures 2.13:1, well below the
+       4.5:1 WCAG AA needs for text this size. */
+    .result-context {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-ink);
+      margin-bottom: 0.3rem;
+    }
+
+    /* Matched sections, offered beneath the guide that contains them. The card
+       above is itself a link, so these sit outside it in the same list item —
+       an anchor nested in an anchor is invalid markup. */
+    .result-item { list-style: none; }
+
+    .result-has-sections { border-bottom: 0; padding-bottom: 0.9rem; }
+
+    .result-sections {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      padding: 0 2.5rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .result-section {
+      font-family: var(--sans);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red-ink);
+      text-decoration: none;
+      border: 1px solid var(--red-ink);
+      padding: 0.24rem 0.62rem;
+      transition: background-color 0.18s, color 0.18s;
+    }
+
+    .result-section:hover,
+    .result-section:focus-visible {
+      background-color: var(--red);
+      color: var(--on-red);
+    }
+
+    .result-section:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    .search-prompt {
+      text-align: center;
+      padding: 4.5rem 2rem 5rem;
+      background-color: var(--bg);
+    }
+
+    .search-prompt p {
+      font-family: var(--body-font);
+      font-size: calc(var(--base-size) * 1.02);
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.85;
+      max-width: 560px;
+      margin: 0 auto 2.2rem;
+    }
+
+    .search-prompt-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+
+    .search-prompt-link {
+      font-family: var(--sans);
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--red-ink);
+      text-decoration: none;
+      border: 2px solid var(--red-ink);
+      padding: 0.7rem 1.6rem;
+      transition: background-color 0.22s, color 0.22s;
+    }
+
+    .search-prompt-link:hover { background-color: var(--red); color: var(--on-red); }
+
+    @media (max-width: 640px) {
+      .result, .result-group-heading { padding-left: 1.25rem; padding-right: 1.25rem; }
+      .result::after { left: 1.25rem; right: 1.25rem; }
+      .result-sections { padding-left: 1.25rem; padding-right: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- lyceum:skiplink target="#main-content" search="#search-input" -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#search-input">Skip to search</a>
+  <!-- /lyceum:skiplink -->
+
+  <!-- lyceum:a11y -->
+  <button id="a11y-trigger" class="a11y-trigger" type="button"
+          aria-expanded="false" aria-controls="a11y-panel"
+          aria-label="Display and accessibility settings">
+    <span class="a11y-trigger-glyph" aria-hidden="true">Aa</span>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-panel-title" hidden>
+    <p class="a11y-panel-title" id="a11y-panel-title">Display Settings</p>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-size-label">Text size</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-size-label">
+        <button class="a11y-btn active" type="button" data-size="small" aria-pressed="true">A</button>
+        <button class="a11y-btn" type="button" data-size="medium" aria-pressed="false">A+</button>
+        <button class="a11y-btn" type="button" data-size="large"  aria-pressed="false">A++</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-font-label">Typeface</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-font-label">
+        <button class="a11y-btn active" type="button" data-font="serif" aria-pressed="true">Serif</button>
+        <button class="a11y-btn" type="button" data-font="sans" aria-pressed="false">Sans</button>
+        <button class="a11y-btn" type="button" data-font="dyslexic" aria-pressed="false" aria-label="OpenDyslexic">Dyslexic</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-theme-label">Theme</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-theme-label">
+        <button class="a11y-btn active" type="button" data-theme-choice="light" aria-pressed="true">Light</button>
+        <button class="a11y-btn" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        <button class="a11y-btn" type="button" data-theme-choice="contrast" aria-pressed="false">Contrast</button>
+      </div>
+    </div>
+  </div>
+  <!-- /lyceum:a11y -->
+
+  <!-- lyceum:header page="search" -->
+  <header>
+    <a href="index.html" class="header-brand" aria-label="WEHS Library Lyceum home">
+      <div class="header-wordmark">
+        <span class="wordmark-school">West Essex High School</span>
+        <span class="wordmark-name">Library Lyceum</span>
+      </div>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="databases.html">Find a Database</a>
+      <a href="guides.html">Research Guides</a>
+      <a href="search.html" class="active" aria-current="page">Search</a>
+      <a href="newsletter/">Newsletter</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <!-- /lyceum:header -->
+
+  <main id="main-content">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <h1>Search</h1>
+      <div class="page-rule" aria-hidden="true"></div>
+      <p>Universal search! Find databases, research guides, and more.</p>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="controls" role="search">
+      <div class="search-wrap">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="11.5" y1="11.5" x2="16" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input type="search" id="search-input" class="search-page-input"
+               placeholder="Search the Lyceum&hellip;" aria-label="Search the Lyceum" autocomplete="off" autofocus>
+      </div>
+
+      <div class="filter-bar" id="type-bar" role="group" aria-label="Filter by kind of resource"></div>
+
+      <div class="toolbar-row">
+        <div class="toolbar-group" id="state-wrap" style="display:none;">
+          <button class="toolbar-btn clear-btn" type="button" id="clear-btn">Clear search</button>
+          <button class="toolbar-btn" type="button" id="copy-btn">Copy link to this search</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS META -->
+    <div class="results-meta" id="results-meta" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- RESULTS -->
+    <div id="results"></div>
+
+  </main>
+
+  <!-- lyceum:footer -->
+  <footer>
+    <div class="footer-left">
+      <span class="footer-name">West Essex High School Library Lyceum</span>
+    </div>
+    <div class="footer-right">
+      Questions? Reach out to <a href="mailto:sthompson@westex.org">Mr. Thompson</a>.<br>
+      &copy; <span id="yr">2026</span> West Essex High School
+    </div>
+  </footer>
+  <!-- /lyceum:footer -->
+</body>
+</html>

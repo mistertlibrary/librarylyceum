@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WEHS Library Lyceum</title>
 
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-
   <meta name="description" content="The West Essex High School Library's digital home: curated databases, bespoke research guides, and the tools to ask better questions.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WEHS Library Lyceum">
@@ -21,6 +17,11 @@
   <meta name="twitter:description" content="The West Essex High School Library's digital home: curated databases, bespoke research guides, and the tools to ask better questions.">
   <meta name="twitter:image" content="https://mistertlibrary.github.io/librarylyceum/og-image.png">
 
+  <!-- lyceum:head -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
   <script>
     /* Reader preferences, applied before first paint. Keep inline, in the head. */
     (function () {
@@ -29,15 +30,21 @@
         var t = localStorage.getItem("lyceum-theme");
         var s = localStorage.getItem("lyceum-size");
         var f = localStorage.getItem("lyceum-font");
-        if (t === "dark") d.dataset.theme = "dark";
-        if (s && s !== "default") d.dataset.size = s;
+        if (t === "dark" || t === "contrast") d.dataset.theme = t;
+        if (s && s !== "small") d.dataset.size = s;
         if (f && f !== "serif") d.dataset.font = f;
+        if (f === "dyslexic") {
+          var L = document.createElement("link");
+          L.id = "lyceum-dyslexic"; L.rel = "stylesheet"; L.href = "/librarylyceum/lyceum-dyslexic.css";
+          document.head.appendChild(L);
+        }
       } catch (e) {}
     })();
   </script>
 
-  <link rel="stylesheet" href="lyceum-fonts.css">
+  <link rel="stylesheet" href="/librarylyceum/lyceum-fonts.css">
   <link rel="stylesheet" href="lyceum.css">
+  <!-- /lyceum:head -->
 
   <style>
     /* ── HOMEPAGE ONLY ── */
@@ -96,9 +103,9 @@
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--red-ink);
       background: transparent;
-      border: 2px solid var(--red);
+      border: 2px solid var(--red-ink);
       padding: 0.75rem 2rem;
       transition: background-color 0.22s, color 0.22s;
     }
@@ -196,11 +203,11 @@
       text-decoration: none;
       padding: 0.9rem 2.4rem;
       display: inline-block;
-      border: 2px solid var(--red);
+      border: 2px solid var(--red-ink);
       transition: background-color 0.22s, color 0.22s;
     }
 
-    .gateway-link:hover { background-color: transparent; color: var(--red); }
+    .gateway-link:hover { background-color: transparent; color: var(--red-ink); }
 
     /* ── START HERE ── */
     .start-here {
@@ -314,9 +321,11 @@
   </style>
 </head>
 <body>
+  <!-- lyceum:skiplink target="#main-content" -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  <!-- /lyceum:skiplink -->
 
-  <!-- ACCESSIBILITY PANEL -->
+  <!-- lyceum:a11y -->
   <button id="a11y-trigger" class="a11y-trigger" type="button"
           aria-expanded="false" aria-controls="a11y-panel"
           aria-label="Display and accessibility settings">
@@ -329,9 +338,9 @@
     <div class="a11y-group">
       <span class="a11y-label" id="a11y-size-label">Text size</span>
       <div class="a11y-row" role="group" aria-labelledby="a11y-size-label">
-        <button class="a11y-btn active" type="button" data-size="default" aria-pressed="true">A</button>
-        <button class="a11y-btn" type="button" data-size="large"  aria-pressed="false">A+</button>
-        <button class="a11y-btn" type="button" data-size="larger" aria-pressed="false">A++</button>
+        <button class="a11y-btn active" type="button" data-size="small" aria-pressed="true">A</button>
+        <button class="a11y-btn" type="button" data-size="medium" aria-pressed="false">A+</button>
+        <button class="a11y-btn" type="button" data-size="large"  aria-pressed="false">A++</button>
       </div>
     </div>
 
@@ -340,6 +349,7 @@
       <div class="a11y-row" role="group" aria-labelledby="a11y-font-label">
         <button class="a11y-btn active" type="button" data-font="serif" aria-pressed="true">Serif</button>
         <button class="a11y-btn" type="button" data-font="sans" aria-pressed="false">Sans</button>
+        <button class="a11y-btn" type="button" data-font="dyslexic" aria-pressed="false" aria-label="OpenDyslexic">Dyslexic</button>
       </div>
     </div>
 
@@ -348,11 +358,12 @@
       <div class="a11y-row" role="group" aria-labelledby="a11y-theme-label">
         <button class="a11y-btn active" type="button" data-theme-choice="light" aria-pressed="true">Light</button>
         <button class="a11y-btn" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        <button class="a11y-btn" type="button" data-theme-choice="contrast" aria-pressed="false">Contrast</button>
       </div>
     </div>
   </div>
-
-  <!-- HEADER -->
+  <!-- /lyceum:a11y -->
+  <!-- lyceum:header page="home" -->
   <header>
     <a href="index.html" class="header-brand" aria-label="WEHS Library Lyceum home">
       <div class="header-wordmark">
@@ -364,10 +375,12 @@
       <a href="index.html" class="active" aria-current="page">Home</a>
       <a href="databases.html">Find a Database</a>
       <a href="guides.html">Research Guides</a>
+      <a href="search.html">Search</a>
       <a href="newsletter/">Newsletter</a>
       <a href="about.html">About</a>
     </nav>
   </header>
+  <!-- /lyceum:header -->
 
   <main id="main-content">
 
@@ -488,7 +501,7 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- lyceum:footer -->
   <footer>
     <div class="footer-left">
       <span class="footer-name">West Essex High School Library Lyceum</span>
@@ -498,6 +511,7 @@
       &copy; <span id="yr">2026</span> West Essex High School
     </div>
   </footer>
+  <!-- /lyceum:footer -->
 
   <script src="lyceum.js" defer></script>
 </body>

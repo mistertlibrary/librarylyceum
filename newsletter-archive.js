@@ -28,6 +28,13 @@
     return hay.indexOf(state.q) > -1;
   }
 
+  /* ── COPY ──
+     Both lines are Mr. Thompson's to replace. NOT_YET is what a visitor sees
+     before the first issue exists, which is the state the archive is in today. */
+
+  var NOT_YET  = 'The first issue is still being written.';
+  var NO_MATCH = 'No issues match that search.';
+
   function render() {
     var list = document.getElementById('archive-list');
     var status = document.getElementById('archive-status');
@@ -35,7 +42,10 @@
 
     if (!visible.length) {
       list.innerHTML = '';
-      status.textContent = 'No issues match that search.';
+      /* Two different silences. Nothing published yet is not the same as a
+         search that found nothing, and saying the second when the first is true
+         tells a first visitor their search broke. */
+      status.textContent = issues.length ? NO_MATCH : NOT_YET;
       return;
     }
 

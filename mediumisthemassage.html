@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compose &mdash; Knightly Muse</title>
+
+  <meta name="description" content="Drafting desk for Knightly Muse, the West Essex High School Library newsletter.">
+  <meta name="robots" content="noindex">
+
+  <!-- lyceum:head -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <script>
+    /* Reader preferences, applied before first paint. Keep inline, in the head. */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem("lyceum-theme");
+        var s = localStorage.getItem("lyceum-size");
+        var f = localStorage.getItem("lyceum-font");
+        if (t === "dark" || t === "contrast") d.dataset.theme = t;
+        if (s && s !== "small") d.dataset.size = s;
+        if (f && f !== "serif") d.dataset.font = f;
+        if (f === "dyslexic") {
+          var L = document.createElement("link");
+          L.id = "lyceum-dyslexic"; L.rel = "stylesheet"; L.href = "/librarylyceum/lyceum-dyslexic.css";
+          document.head.appendChild(L);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/librarylyceum/lyceum-fonts.css">
+  <link rel="stylesheet" href="lyceum.css">
+  <!-- /lyceum:head -->
+
+  <link rel="stylesheet" href="newsletter.css">
+
+  <style>
+    /* ── COMPOSER ──
+       A drafting desk, not a published page: it deliberately runs wider than
+       the newsletter measure so the preview can sit beside the writing. */
+
+    .compose-head {
+      padding: 2rem 2.5rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .compose-head h1 {
+      font-family: var(--display);
+      font-size: calc(var(--base-size) * 1.5);
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    .compose-head p {
+      font-family: var(--sans);
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      max-width: 46ch;
+      line-height: 1.6;
+    }
+
+    .compose-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 0;
+      align-items: start;
+    }
+
+    .compose-pane { min-width: 0; }
+    .compose-pane + .compose-pane { border-left: 1px solid var(--border); }
+
+    .pane-label {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-ink);
+      padding: 1.1rem 2rem 0.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .pane-label .count {
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: none;
+      color: var(--text-muted);
+    }
+
+    /* ── the form ── */
+
+    .compose-fields {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem 1rem;
+      padding: 0 2rem 1.2rem;
+    }
+
+    .field { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+    .field.wide { grid-column: 1 / -1; }
+
+    .field label {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .field .hint {
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      font-family: var(--body-font);
+      font-size: calc(var(--base-size) * 0.82);
+      color: var(--text);
+      background-color: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.5rem 0.7rem;
+      width: 100%;
+    }
+
+    .field select { font-family: var(--sans); font-size: 0.74rem; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); }
+
+    /* ── the toolbar ── */
+
+    .compose-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      padding: 0.7rem 2rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background-color: var(--surface);
+      position: sticky;
+      top: var(--header-height);
+      z-index: 40;
+    }
+
+    .compose-toolbar button {
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--text);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.34rem 0.62rem;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .compose-toolbar button:hover,
+    .compose-toolbar button:focus-visible { border-color: var(--gold); color: var(--gold-ink); }
+
+    .compose-toolbar .sep {
+      width: 1px;
+      background: var(--border);
+      margin: 0.1rem 0.35rem;
+      align-self: stretch;
+    }
+
+    /* The writing surface is two layers. A <pre> underneath carries the same
+       text with its structural marks dimmed; a transparent <textarea> on top
+       carries the caret, the selection, and the spellchecker. Every property
+       that affects where a glyph lands is declared once, for both, so the
+       layers cannot drift apart. Colour is the only thing that differs —
+       weight or size would change the metrics and break the alignment. */
+
+    .editor-wrap { position: relative; }
+
+    .editor-mirror,
+    .editor-wrap #f-body {
+      font-family: var(--body-font);
+      font-size: calc(var(--base-size) * 0.92);
+      line-height: 1.75;
+      letter-spacing: normal;
+      tab-size: 4;
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      word-break: normal;
+      padding: 1.6rem 2rem 3rem;
+      border: 0;
+      margin: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .editor-mirror {
+      position: absolute;
+      inset: 0;
+      color: var(--text);
+      background-color: var(--bg);
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    /* The marks. Present enough to show structure, quiet enough to read past. */
+    .editor-mirror .mk { color: var(--text-muted); opacity: 0.45; }
+    .editor-mirror .gloss-mk { color: var(--gold-ink); opacity: 0.75; }
+    .editor-mirror .note-mk { color: var(--red-ink); opacity: 0.65; }
+    .editor-mirror .url-mk { color: var(--text-muted); opacity: 0.6; }
+
+    .editor-wrap #f-body {
+      position: relative;
+      min-height: 60vh;
+      background: transparent;
+      color: transparent;
+      caret-color: var(--red-ink);
+      resize: vertical;
+      outline: none;
+      display: block;
+    }
+
+    .editor-wrap #f-body::placeholder { color: var(--text-muted); }
+    .editor-wrap #f-body::selection { background: rgba(201,168,76,0.35); }
+
+    [data-theme="contrast"] .editor-mirror .mk,
+    [data-theme="contrast"] .editor-mirror .url-mk { opacity: 0.85; }
+
+    /* ── the preview ── */
+
+    .compose-preview {
+      padding: 0 2rem 3rem;
+      /* The published issue centres itself; here it fills the pane. */
+    }
+
+    .compose-preview .issue-masthead,
+    .compose-preview .issue-body,
+    .compose-preview .issue-contents,
+    .compose-preview .footnotes { max-width: none; margin-left: 0; margin-right: 0; }
+
+    .compose-preview h1 { font-size: calc(var(--base-size) * 1.7); }
+
+    /* ── checks and actions ── */
+
+    .compose-checks {
+      margin: 0 2rem 1.2rem;
+      border-left: 2px solid var(--red-ink);
+      padding: 0.8rem 1rem;
+      background-color: var(--surface);
+    }
+
+    .compose-checks .checks-title {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--red-ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .compose-checks ul { margin: 0; padding-left: 1.1rem; }
+
+    .compose-checks li {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      line-height: 1.6;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+
+    .compose-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 1.4rem 2.5rem 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn-primary, .btn-quiet {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.7rem 1.4rem;
+      cursor: pointer;
+      border: 1px solid var(--red);
+    }
+
+    .btn-primary { color: var(--on-red); background-color: var(--red); }
+    .btn-primary:hover, .btn-primary:focus-visible { background-color: var(--dark-red); border-color: var(--dark-red); }
+
+    .btn-quiet { color: var(--text-muted); background: transparent; border-color: var(--border); }
+    .btn-quiet:hover, .btn-quiet:focus-visible { color: var(--red-ink); border-color: var(--red-ink); }
+
+    .compose-status {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1 1 22ch;
+    }
+
+    .compose-status.is-bad { color: var(--red-ink); }
+
+    #save-note, #f-folder {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+
+    #f-folder { color: var(--gold-ink); font-weight: 600; }
+
+    [data-theme="contrast"] .btn-primary:hover,
+    [data-theme="contrast"] .btn-primary:focus-visible { background-color: var(--bg); color: var(--gold); }
+
+    /* ── the lock ──
+       A cupboard door, not a vault door. See the note in compose.js. */
+
+    body.is-locked { overflow: hidden; }
+    body.is-locked > main,
+    body.is-locked > header,
+    body.is-locked > footer,
+    body.is-locked > .a11y-trigger,
+    body.is-locked > .a11y-panel { display: none; }
+
+    .gate {
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-color: var(--bg);
+    }
+
+    .gate-card {
+      width: 100%;
+      max-width: 34rem;
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--gold);
+      background-color: var(--surface);
+      padding: 2.4rem 2.4rem 2rem;
+    }
+
+    .gate-card h2 {
+      font-family: var(--display);
+      font-size: calc(var(--base-size) * 1.5);
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.7rem;
+      text-align: center;
+    }
+
+    .gate-card > p {
+      font-family: var(--sans);
+      font-size: 0.76rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 1.4rem;
+      text-align: center;
+    }
+
+    .gate-card input[type="password"] {
+      font-family: var(--body-font);
+      font-size: calc(var(--base-size) * 0.9);
+      color: var(--text);
+      background-color: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.7rem 0.9rem;
+      width: 100%;
+    }
+
+    .gate-card input[type="password"]:focus { border-color: var(--gold); outline: none; }
+
+    .gate-note {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      color: var(--red-ink);
+      margin-top: 0.6rem;
+      text-align: center;
+    }
+
+    .gate-actions {
+      display: flex;
+      gap: 0.6rem;
+      justify-content: center;
+      margin-top: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .gate-output {
+      margin-top: 1.6rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem;
+    }
+
+    .gate-output p {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .gate-output pre {
+      background-color: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.7rem 0.9rem;
+      overflow-x: auto;
+    }
+
+    .gate-output code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.72rem;
+      color: var(--text);
+      white-space: pre;
+    }
+
+    @media (max-width: 980px) {
+      .compose-grid { grid-template-columns: 1fr; }
+      .compose-pane + .compose-pane { border-left: 0; border-top: 1px solid var(--border); }
+      .compose-toolbar { position: static; }
+      .compose-fields { grid-template-columns: 1fr; }
+      #f-body { min-height: 40vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- lyceum:skiplink target="#f-title" -->
+  <a class="skip-link" href="#f-title">Skip to main content</a>
+  <!-- /lyceum:skiplink -->
+
+  <!-- lyceum:a11y -->
+  <button id="a11y-trigger" class="a11y-trigger" type="button"
+          aria-expanded="false" aria-controls="a11y-panel"
+          aria-label="Display and accessibility settings">
+    <span class="a11y-trigger-glyph" aria-hidden="true">Aa</span>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-panel-title" hidden>
+    <p class="a11y-panel-title" id="a11y-panel-title">Display Settings</p>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-size-label">Text size</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-size-label">
+        <button class="a11y-btn active" type="button" data-size="small" aria-pressed="true">A</button>
+        <button class="a11y-btn" type="button" data-size="medium" aria-pressed="false">A+</button>
+        <button class="a11y-btn" type="button" data-size="large"  aria-pressed="false">A++</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-font-label">Typeface</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-font-label">
+        <button class="a11y-btn active" type="button" data-font="serif" aria-pressed="true">Serif</button>
+        <button class="a11y-btn" type="button" data-font="sans" aria-pressed="false">Sans</button>
+        <button class="a11y-btn" type="button" data-font="dyslexic" aria-pressed="false" aria-label="OpenDyslexic">Dyslexic</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-theme-label">Theme</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-theme-label">
+        <button class="a11y-btn active" type="button" data-theme-choice="light" aria-pressed="true">Light</button>
+        <button class="a11y-btn" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        <button class="a11y-btn" type="button" data-theme-choice="contrast" aria-pressed="false">Contrast</button>
+      </div>
+    </div>
+  </div>
+  <!-- /lyceum:a11y -->
+
+  <!-- lyceum:header page="newsletter" -->
+  <header>
+    <a href="index.html" class="header-brand" aria-label="WEHS Library Lyceum home">
+      <div class="header-wordmark">
+        <span class="wordmark-school">West Essex High School</span>
+        <span class="wordmark-name">Library Lyceum</span>
+      </div>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="databases.html">Find a Database</a>
+      <a href="guides.html">Research Guides</a>
+      <a href="search.html">Search</a>
+      <a href="newsletter/" class="active" aria-current="page">Newsletter</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <!-- /lyceum:header -->
+
+  <div class="gate" id="gate" hidden>
+    <form class="gate-card" id="gate-form">
+      <h2 id="gate-title">Knightly Muse</h2>
+      <p id="gate-blurb">The drafting desk. Not a page for readers.</p>
+      <label class="visually-hidden" for="gate-input">Passphrase</label>
+      <input id="gate-input" type="password" autocomplete="current-password" spellcheck="false">
+      <p class="gate-note" id="gate-note" hidden></p>
+      <div class="gate-actions">
+        <button type="submit" class="btn-primary" id="gate-submit">Open</button>
+        <button type="button" class="btn-quiet" id="gate-skip" hidden>Leave it unlocked</button>
+      </div>
+      <div class="gate-output" id="gate-output" hidden>
+        <p>Paste this line near the top of <code>mediumisthemassage.js</code>, replacing the empty one:</p>
+        <pre><code></code></pre>
+      </div>
+    </form>
+  </div>
+
+  <main id="main-content">
+
+    <div class="compose-head">
+      <h1>Compose an issue</h1>
+      <p>The preview runs the same code the published page runs, over the same
+         stylesheet. What you see here is what a reader gets. Nothing leaves this
+         browser until you save.</p>
+    </div>
+
+    <div class="compose-grid">
+
+      <!-- ── WRITING ── -->
+      <section class="compose-pane" aria-label="Draft">
+        <div class="pane-label">
+          <span>The issue</span>
+          <span class="count" id="f-count">0 words</span>
+        </div>
+
+        <div class="compose-fields">
+          <div class="field wide">
+            <label for="f-title">Title</label>
+            <input id="f-title" type="text" autocomplete="off" spellcheck="true">
+          </div>
+
+          <div class="field wide">
+            <label for="f-dek">Dek <span class="hint">— one or two lines. Also the archive card and the link preview.</span></label>
+            <textarea id="f-dek" rows="2" spellcheck="true"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="f-number">Issue number</label>
+            <input id="f-number" type="number" min="1" step="1" inputmode="numeric">
+          </div>
+
+          <div class="field">
+            <label for="f-date">Date</label>
+            <input id="f-date" type="date">
+          </div>
+
+          <div class="field">
+            <label for="f-audience">Audience</label>
+            <select id="f-audience">
+              <option value="both">For everyone</option>
+              <option value="students">For students</option>
+              <option value="faculty">For faculty</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-tags">Tags <span class="hint">— comma separated</span></label>
+            <input id="f-tags" type="text" autocomplete="off">
+          </div>
+
+          <div class="field wide">
+            <label for="f-slug">Folder name <span class="hint">— this becomes the issue's web address</span></label>
+            <input id="f-slug" type="text" autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+
+        <div class="compose-toolbar" role="toolbar" aria-label="Formatting">
+          <button type="button" data-tool="section" title="Start a section">Section</button>
+          <button type="button" data-tool="gloss" title="Add a contents-list note to this section">Gloss</button>
+          <span class="sep" aria-hidden="true"></span>
+          <button type="button" data-tool="bold" title="Bold (Ctrl+B)">Bold</button>
+          <button type="button" data-tool="italic" title="Italic (Ctrl+I)">Italic</button>
+          <button type="button" data-tool="link" title="Insert a link">Link</button>
+          <span class="sep" aria-hidden="true"></span>
+          <button type="button" data-tool="quote" title="Pulled quote">Quote</button>
+          <button type="button" data-tool="list" title="List item">List</button>
+          <button type="button" data-tool="rule" title="Horizontal rule">Rule</button>
+          <span class="sep" aria-hidden="true"></span>
+          <button type="button" data-tool="note" title="Footnote">Footnote</button>
+          <button type="button" data-tool="figure" title="Image with a caption">Figure</button>
+        </div>
+
+        <label class="visually-hidden" for="f-body">The issue text</label>
+        <div class="editor-wrap">
+          <pre class="editor-mirror" id="f-mirror" aria-hidden="true"></pre>
+          <textarea id="f-body" spellcheck="true"
+            placeholder="Open with a short lead. Everything before the first section heading sits above the contents list."></textarea>
+        </div>
+      </section>
+
+      <!-- ── PREVIEW ── -->
+      <section class="compose-pane" aria-label="Preview">
+        <div class="pane-label"><span>As it will publish</span></div>
+        <div class="compose-preview" id="f-preview" aria-live="off"></div>
+      </section>
+
+    </div>
+
+    <div class="compose-checks" id="f-checks" hidden></div>
+
+    <div class="compose-actions">
+      <button type="button" class="btn-primary" id="publish">Save issue</button>
+      <button type="button" class="btn-quiet" id="choose-folder">Choose the newsletter folder</button>
+      <button type="button" class="btn-quiet" id="new-issue">Start a new issue</button>
+      <span id="f-folder" hidden></span>
+      <button type="button" class="btn-quiet" id="set-passphrase" hidden>Set a passphrase</button>
+      <span class="compose-status" id="f-status"></span>
+    </div>
+
+    <p class="compose-status" id="save-note" style="padding: 0 2.5rem 2.5rem;">
+      Point this at <code>newsletter/</code> once and saving writes
+      <code>issues/&lt;folder&gt;/issue.md</code>, its <code>index.html</code>, and the
+      updated manifest straight into place. Then commit in GitHub Desktop.
+    </p>
+
+  </main>
+
+  <!-- lyceum:footer -->
+  <footer>
+    <div class="footer-left">
+      <span class="footer-name">West Essex High School Library Lyceum</span>
+    </div>
+    <div class="footer-right">
+      Questions? Reach out to <a href="mailto:sthompson@westex.org">Mr. Thompson</a>.<br>
+      &copy; <span id="yr">2026</span> West Essex High School
+    </div>
+  </footer>
+  <!-- /lyceum:footer -->
+
+  <script src="vendor/vendor-marked.js" defer></script>
+  <script src="lyceum.js" defer></script>
+  <script src="newsletter-render.js" defer></script>
+  <script src="mediumisthemassage.js" defer></script>
+</body>
+</html>

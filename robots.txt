@@ -1,0 +1,5 @@
+# West Essex High School Library Lyceum
+User-agent: *
+Allow: /
+
+Sitemap: https://mistertlibrary.github.io/librarylyceum/sitemap.xml

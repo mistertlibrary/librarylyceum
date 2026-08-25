@@ -13,6 +13,7 @@
        repository is renamed, or the site moves to a custom domain, update
        the paths in this file only. Every other page stays relative. -->
 
+  <!-- lyceum:head -->
   <link rel="icon" type="image/svg+xml" href="/librarylyceum/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/librarylyceum/favicon.png">
   <link rel="apple-touch-icon" href="/librarylyceum/favicon.png">
@@ -25,15 +26,21 @@
         var t = localStorage.getItem("lyceum-theme");
         var s = localStorage.getItem("lyceum-size");
         var f = localStorage.getItem("lyceum-font");
-        if (t === "dark") d.dataset.theme = "dark";
-        if (s && s !== "default") d.dataset.size = s;
+        if (t === "dark" || t === "contrast") d.dataset.theme = t;
+        if (s && s !== "small") d.dataset.size = s;
         if (f && f !== "serif") d.dataset.font = f;
+        if (f === "dyslexic") {
+          var L = document.createElement("link");
+          L.id = "lyceum-dyslexic"; L.rel = "stylesheet"; L.href = "/librarylyceum/lyceum-dyslexic.css";
+          document.head.appendChild(L);
+        }
       } catch (e) {}
     })();
   </script>
 
   <link rel="stylesheet" href="/librarylyceum/lyceum-fonts.css">
   <link rel="stylesheet" href="/librarylyceum/lyceum.css">
+  <!-- /lyceum:head -->
 
   <style>
     /* ── 404 PAGE ONLY ── */
@@ -81,7 +88,7 @@
       text-transform: uppercase;
       color: var(--on-red);
       background-color: var(--red);
-      border: 1px solid var(--red);
+      border: 1px solid var(--red-ink);
       padding: 0 1.6rem;
       cursor: pointer;
       transition: background-color 0.22s, color 0.22s;
@@ -166,9 +173,12 @@
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#search-input">Skip to main content</a>
+  <!-- lyceum:skiplink target="#main-content" search="#search-input" -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#search-input">Skip to search</a>
+  <!-- /lyceum:skiplink -->
 
-  <!-- ACCESSIBILITY PANEL -->
+  <!-- lyceum:a11y -->
   <button id="a11y-trigger" class="a11y-trigger" type="button"
           aria-expanded="false" aria-controls="a11y-panel"
           aria-label="Display and accessibility settings">
@@ -181,9 +191,9 @@
     <div class="a11y-group">
       <span class="a11y-label" id="a11y-size-label">Text size</span>
       <div class="a11y-row" role="group" aria-labelledby="a11y-size-label">
-        <button class="a11y-btn active" type="button" data-size="default" aria-pressed="true">A</button>
-        <button class="a11y-btn" type="button" data-size="large"  aria-pressed="false">A+</button>
-        <button class="a11y-btn" type="button" data-size="larger" aria-pressed="false">A++</button>
+        <button class="a11y-btn active" type="button" data-size="small" aria-pressed="true">A</button>
+        <button class="a11y-btn" type="button" data-size="medium" aria-pressed="false">A+</button>
+        <button class="a11y-btn" type="button" data-size="large"  aria-pressed="false">A++</button>
       </div>
     </div>
 
@@ -192,6 +202,7 @@
       <div class="a11y-row" role="group" aria-labelledby="a11y-font-label">
         <button class="a11y-btn active" type="button" data-font="serif" aria-pressed="true">Serif</button>
         <button class="a11y-btn" type="button" data-font="sans" aria-pressed="false">Sans</button>
+        <button class="a11y-btn" type="button" data-font="dyslexic" aria-pressed="false" aria-label="OpenDyslexic">Dyslexic</button>
       </div>
     </div>
 
@@ -200,11 +211,12 @@
       <div class="a11y-row" role="group" aria-labelledby="a11y-theme-label">
         <button class="a11y-btn active" type="button" data-theme-choice="light" aria-pressed="true">Light</button>
         <button class="a11y-btn" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        <button class="a11y-btn" type="button" data-theme-choice="contrast" aria-pressed="false">Contrast</button>
       </div>
     </div>
   </div>
-
-  <!-- HEADER -->
+  <!-- /lyceum:a11y -->
+  <!-- lyceum:header -->
   <header>
     <a href="/librarylyceum/index.html" class="header-brand" aria-label="WEHS Library Lyceum home">
       <div class="header-wordmark">
@@ -216,12 +228,14 @@
       <a href="/librarylyceum/index.html">Home</a>
       <a href="/librarylyceum/databases.html">Find a Database</a>
       <a href="/librarylyceum/guides.html">Research Guides</a>
+      <a href="/librarylyceum/search.html">Search</a>
       <a href="/librarylyceum/newsletter/">Newsletter</a>
       <a href="/librarylyceum/about.html">About</a>
     </nav>
   </header>
+  <!-- /lyceum:header -->
 
-  <main>
+  <main id="main-content">
 
     <!-- THE EMPTY SHELF -->
     <div class="page-header notfound-header">
@@ -295,7 +309,7 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- lyceum:footer -->
   <footer>
     <div class="footer-left">
       <span class="footer-name">West Essex High School Library Lyceum</span>
@@ -305,6 +319,7 @@
       &copy; <span id="yr">2026</span> West Essex High School
     </div>
   </footer>
+  <!-- /lyceum:footer -->
 
   <script src="/librarylyceum/lyceum.js" defer></script>
   <script>

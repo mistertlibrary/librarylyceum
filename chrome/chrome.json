@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "_comment": "Canonical source for the Lyceum's shared chrome. Edit here, then run: node build-chrome.js",
+  "fontsUrl": "/librarylyceum/lyceum-fonts.css",
+  "_absoluteBase": "Pages served from an unpredictable URL depth cannot use relative asset paths. 404.html is served by GitHub Pages in place of ANY missing path, so it must address assets from the site root.",
+  "absoluteBase": "/librarylyceum/",
+  "absoluteBaseFiles": [
+    "404.html"
+  ],
+  "brand": {
+    "school": "West Essex High School",
+    "name": "Library Lyceum",
+    "homeHref": "index.html",
+    "ariaLabel": "WEHS Library Lyceum home"
+  },
+  "nav": [
+    {
+      "id": "home",
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "id": "databases",
+      "label": "Find a Database",
+      "href": "databases.html"
+    },
+    {
+      "id": "guides",
+      "label": "Research Guides",
+      "href": "guides.html"
+    },
+    {
+      "id": "search",
+      "label": "Search",
+      "href": "search.html"
+    },
+    {
+      "id": "newsletter",
+      "label": "Newsletter",
+      "href": "newsletter/"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "href": "about.html"
+    }
+  ],
+  "footer": {
+    "name": "West Essex High School Library Lyceum",
+    "contactEmail": "sthompson@westex.org",
+    "contactName": "Mr. Thompson",
+    "school": "West Essex High School"
+  }
+}

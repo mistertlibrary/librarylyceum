@@ -1,0 +1,36 @@
+  <button id="a11y-trigger" class="a11y-trigger" type="button"
+          aria-expanded="false" aria-controls="a11y-panel"
+          aria-label="Display and accessibility settings">
+    <span class="a11y-trigger-glyph" aria-hidden="true">Aa</span>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-panel-title" hidden>
+    <p class="a11y-panel-title" id="a11y-panel-title">Display Settings</p>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-size-label">Text size</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-size-label">
+        <button class="a11y-btn active" type="button" data-size="small" aria-pressed="true">A</button>
+        <button class="a11y-btn" type="button" data-size="medium" aria-pressed="false">A+</button>
+        <button class="a11y-btn" type="button" data-size="large"  aria-pressed="false">A++</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-font-label">Typeface</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-font-label">
+        <button class="a11y-btn active" type="button" data-font="serif" aria-pressed="true">Serif</button>
+        <button class="a11y-btn" type="button" data-font="sans" aria-pressed="false">Sans</button>
+        <button class="a11y-btn" type="button" data-font="dyslexic" aria-pressed="false" aria-label="OpenDyslexic">Dyslexic</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-theme-label">Theme</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-theme-label">
+        <button class="a11y-btn active" type="button" data-theme-choice="light" aria-pressed="true">Light</button>
+        <button class="a11y-btn" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        <button class="a11y-btn" type="button" data-theme-choice="contrast" aria-pressed="false">Contrast</button>
+      </div>
+    </div>
+  </div>

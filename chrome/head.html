@@ -1,0 +1,26 @@
+  <link rel="icon" type="image/svg+xml" href="{{base}}favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{base}}favicon.png">
+  <link rel="apple-touch-icon" href="{{base}}favicon.png">
+
+  <script>
+    /* Reader preferences, applied before first paint. Keep inline, in the head. */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem("lyceum-theme");
+        var s = localStorage.getItem("lyceum-size");
+        var f = localStorage.getItem("lyceum-font");
+        if (t === "dark" || t === "contrast") d.dataset.theme = t;
+        if (s && s !== "small") d.dataset.size = s;
+        if (f && f !== "serif") d.dataset.font = f;
+        if (f === "dyslexic") {
+          var L = document.createElement("link");
+          L.id = "lyceum-dyslexic"; L.rel = "stylesheet"; L.href = "{{dyslexicFonts}}";
+          document.head.appendChild(L);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="{{fonts}}">
+  <link rel="stylesheet" href="{{base}}lyceum.css">

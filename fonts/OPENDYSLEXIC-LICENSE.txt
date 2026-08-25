@@ -1,0 +1,18 @@
+OpenDyslexic
+Created by Abbie Gonzalez.
+https://opendyslexic.org/
+
+Released under the SIL Open Font License, Version 1.1.
+
+From the project's own site: "The newest version of OpenDyslexic now uses the
+SIL-OFL license, giving you freedom to use it for personal use, business use,
+education, commercial, books, ebook readers, applications, websites, and any
+other project or purpose you need."
+
+The faces bundled in lyceum-dyslexic.css (regular and bold woff2, italic and
+bold-italic woff) were taken from the copies already self-hosted in the WEHS
+guide network rather than downloaded afresh.
+
+The full OFL 1.1 text ships with the font project at
+https://github.com/antijingoist/opendyslexic — drop OFL.txt in beside this note
+if you want the same completeness as MARKED-LICENSE.txt.

@@ -4,7 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const ISSUES_DIR = path.join(__dirname, 'newsletter', 'issues');
+const ISSUES_DIR = path.join(__dirname, '..', 'newsletter', 'issues');
 const MANIFEST = path.join(ISSUES_DIR, 'index.json');
 const FIELDS = ['number', 'date', 'title', 'dek', 'audience'];
 const AUDIENCES = ['students', 'faculty', 'both'];
