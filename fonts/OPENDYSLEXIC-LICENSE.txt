@@ -13,6 +13,14 @@ The faces bundled in lyceum-dyslexic.css (regular and bold woff2, italic and
 bold-italic woff) were taken from the copies already self-hosted in the WEHS
 guide network rather than downloaded afresh.
 
-The full OFL 1.1 text ships with the font project at
-https://github.com/antijingoist/opendyslexic — drop OFL.txt in beside this note
-if you want the same completeness as MARKED-LICENSE.txt.
+That has a consequence worth stating plainly. Only the two woff2 files carry
+the newer OFL licensing. The two italic woff files are the older generation:
+their own metadata reads "Original Fonts are © Bitstream. OpenDyslexic changes
+and additional glyphs by Abelardo Gonzalez are licensed under a Creative
+Commons Attribution 3.0 Unported License," with the Bitstream terms at
+http://opendyslexic.org/legal/. CC BY 3.0 asks for attribution, which this note
+and FONTS.md give. Refetching the two italics from the current project would
+put the whole family under one licence and would make them woff2 besides.
+
+The full OFL 1.1 text now sits beside this note as OFL.txt, and FONTS.md lists
+every family in this folder with the copyright line read out of its own binary.

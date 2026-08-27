@@ -193,6 +193,26 @@
       return String(str).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
     },
 
+    /* A CSV cell written with line breaks, rendered as the prose it is.
+       A blank line starts a new paragraph; a single line break inside a
+       paragraph stays a line break. Everything is escaped first, so the
+       only markup that reaches the page is the markup this function
+       makes — a description can contain angle brackets and be safe.
+       Returns "" for empty input, so callers can test it as a condition. */
+    paragraphs: function (text) {
+      var esc = window.Lyceum.escHtml;
+      var paras = String(text == null ? "" : text)
+        .replace(/\r\n?/g, "\n")
+        .trim()
+        .split(/\n[ \t]*\n+/);
+      var html = paras.map(function (p) {
+        p = p.trim();
+        if (!p) return "";
+        return "<p>" + esc(p).replace(/\n/g, "<br>") + "</p>";
+      }).join("");
+      return html;
+    },
+
     pipeList: function (cell) {
       return String(cell || "").split("|").map(function (s) { return s.trim(); }).filter(Boolean);
     },

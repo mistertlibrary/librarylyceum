@@ -108,7 +108,9 @@ build/             every script; nothing here is ever served
 data/              databases.csv, guides.csv, and the generated search-index.json
 docs/              these three documents
 vendor/            pinned third-party libraries, licences beside them
-fonts/             self-hosted faces, the OFL beside them
+fonts/             self-hosted faces; OFL.txt is the licence, FONTS.md the
+                   notice — every family with the copyright line read out of
+                   its own binary
 newsletter/        the archive and its issues
 
 lyceum.css         design tokens and shared components

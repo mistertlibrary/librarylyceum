@@ -7,6 +7,7 @@
   var DEFAULT_VIEW = "az";
 
   var esc      = window.Lyceum.escHtml;
+  var paras    = window.Lyceum.paragraphs;
   var slug     = window.Lyceum.slug;
   var pipeList = window.Lyceum.pipeList;
   var debounce = window.Lyceum.debounce;
@@ -187,7 +188,7 @@
         "</a>" +
         ARROW +
       "</div>" +
-      '<p class="db-card-desc">' + esc(db.desc) + "</p>" +
+      '<div class="db-card-desc">' + paras(db.desc) + "</div>" +
       (tags ? '<div class="db-card-tags">' + tags + "</div>" : "") +
       "</article>";
   }

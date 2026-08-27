@@ -12,6 +12,7 @@
     "</div>";
 
   var esc      = window.Lyceum.escHtml;
+  var paras    = window.Lyceum.paragraphs;
   var ARROW    = window.Lyceum.externalArrow;
   var NEWTAB   = window.Lyceum.newTabNote;
   var pipeList = window.Lyceum.pipeList;
@@ -138,7 +139,7 @@
         ARROW +
       "</div>" +
       (g.course ? '<p class="guide-course">' + esc(g.course) + "</p>" : "") +
-      (g.desc ? '<p class="guide-desc">' + esc(g.desc) + "</p>" : "") +
+      (g.desc ? '<div class="guide-desc">' + paras(g.desc) + "</div>" : "") +
       (tags ? '<div class="guide-tags">' + tags + "</div>" : "") +
     "</a>";
   }

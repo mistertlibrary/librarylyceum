@@ -113,6 +113,11 @@
       flex-grow: 1;
     }
 
+    /* Descriptions are written with line breaks in the spreadsheet, and are
+       rendered as real paragraphs rather than one run-on block. */
+    .db-card-desc p { margin: 0; }
+    .db-card-desc p + p { margin-top: 0.75em; }
+
     .db-card-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.4rem; }
 
     @media (max-width: 820px) {

@@ -6,6 +6,7 @@
   "use strict";
 
   var esc      = window.Lyceum.escHtml;
+  var paras    = window.Lyceum.paragraphs;
   var debounce = window.Lyceum.debounce;
   var ARROW    = window.Lyceum.externalArrow;
   var NEWTAB   = window.Lyceum.newTabNote;
@@ -215,7 +216,7 @@
           '<span class="result-title">' + esc(r.title) + (ext ? NEWTAB : "") + "</span>" +
           (ext ? ARROW : "") +
         "</div>" +
-        (r.text ? '<p class="result-desc">' + esc(r.text) + "</p>" : "") +
+        (r.text ? '<div class="result-desc">' + paras(r.text) + "</div>" : "") +
         tagsHtml(r) +
       "</a>" +
       sections +
