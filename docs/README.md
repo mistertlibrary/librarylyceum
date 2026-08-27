@@ -40,12 +40,24 @@ changed. Then review the diff and commit.
 ```
 node build/build.js --check    verify only; writes nothing; exits 1 if anything
                                is stale, drifted, or broken
-node build/build.js --links    additionally check every external URL (slow;
-                               needs the network)
 ```
 
-Run `--links` from the school network as well as off it — EBSCO profile links
-resolve differently on and off campus.
+## Link checking
+
+Separate, and deliberately so: `build/Check-Links.ps1` asks every URL in
+`data/databases.csv` and `data/guides.csv` whether it is still there. It is
+PowerShell rather than Node because it is the one check that has to run on the
+work machine, and the work machine has PowerShell.
+
+Open PowerShell in the repository root and either dot-source the file or — if
+script files are not permitted there — select the whole file, copy it, and paste
+it at the prompt. Execution policy governs script *files*; pasted commands are
+unaffected by it, which is why the script carries no `param()` block that would
+make it unpasteable.
+
+Run it twice: once on the school network and once off it. EBSCO profile links
+resolve differently on and off campus, so a link that fails at home may be
+perfectly healthy in the building.
 
 **Where it runs.** Not on the work machine, which has no Node. A change to
 `data/databases.csv`, `data/guides.csv`, or anything in `chrome/` needs the
@@ -62,7 +74,6 @@ pushing — needs nothing but GitHub Desktop.
 | newsletter | `newsletter/issues/*/issue.md` and the manifest | nothing; reports disagreements |
 | sitemap | every page and issue | `sitemap.xml`, `robots.txt` |
 | preferences | `lyceum-prefs.js` | nothing; runs its test suite |
-| links | `data/*.csv` | nothing; reports dead URLs |
 
 Each step is also its own script in `build/`, if you want to work on one in
 isolation. Each resolves its paths against its own location, so it gives the
@@ -138,7 +149,8 @@ degradation.
 
 ## Dependencies
 
-Node, for the build scripts only. Three vendored browser libraries — Papa Parse,
+Node, for the build scripts only, and PowerShell — already on the work machine —
+for the link check. Three vendored browser libraries — Papa Parse,
 Fuse, and marked — pinned in the repository with their licences, fetched from
 nobody at runtime. No package manager, no lockfile, no toolchain to maintain.
 

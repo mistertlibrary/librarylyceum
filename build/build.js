@@ -6,10 +6,6 @@
  *   node build.js            regenerate everything, then validate
  *   node build.js --check    validate only; write nothing; exit 1 if anything
  *                            is stale, drifted, or broken
- *   node build.js --links    also check every external URL (slow, needs the
- *                            network, and should be run on the school network
- *                            as well as off it, since EBSCO profile links can
- *                            resolve differently on and off campus)
  *
  * The individual scripts still run on their own if you want to work on one
  * thing in isolation. This exists so you do not have to remember the set or the
@@ -19,7 +15,10 @@
  *   build-index.js     the collections -> search-index.json
  *   check-issues.js    newsletter front matter vs. the manifest
  *   test-prefs.js      the preference shim, against every guide's storage shape
- *   check-links.js     every URL in databases.csv and guides.csv
+ *
+ * Link checking is deliberately not here. It lives in build/Check-Links.ps1,
+ * which runs on the work machine — where Node does not — and which has to be
+ * run twice anyway, on the school network and off it.
  *
  * Nothing here runs at deploy time. Output is committed; the served site is the
  * repository exactly as it sits.
@@ -33,7 +32,6 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");   /* the repository root, one level up */
 const HERE = __dirname;                    /* build/, where the scripts live */
 const check = process.argv.includes("--check");
-const links = process.argv.includes("--links");
 
 /* Generators accept --check and report staleness rather than writing.
    Validators only ever read, so they run identically in both modes. */
@@ -43,8 +41,6 @@ const STEPS = [
   { script: "check-issues.js", label: "newsletter", passCheck: false },
   { script: "test-prefs.js",   label: "preferences", passCheck: false },
 ];
-
-if (links) STEPS.push({ script: "check-links.js", label: "links", passCheck: false });
 
 const width = STEPS.reduce((n, s) => Math.max(n, s.label.length), 0);
 const results = [];
