@@ -47,94 +47,78 @@
   <!-- /lyceum:head -->
 
   <style>
-    .tools-intro {
-      max-width: 46rem;
-      margin: 0 auto 2.5rem;
-      text-align: center;
-    }
-
-
-    .tools-access {
-      font-family: var(--sans);
-      font-size: calc(var(--base-size) * 0.8);
-      color: var(--text-muted);
-      margin-top: 0.9rem;
+    .tool-list {
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+      background-color: var(--bg);
+      animation: fadeUp 0.7s 0.15s cubic-bezier(0.22,1,0.36,1) both;
     }
 
     .tool {
-      border: 1px solid var(--border);
-      background: var(--surface);
-      border-radius: 3px;
-      padding: 1.6rem 1.75rem;
-      margin-bottom: 1.5rem;
+      background-color: var(--bg);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2.2rem 2.2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: background-color 0.2s;
     }
 
+    .tool:hover { background-color: var(--surface); }
+
     .tool-head {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 0.6rem 1rem;
+      text-align: center;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 0.8rem;
-      margin-bottom: 1.1rem;
+      padding-bottom: 1rem;
+      margin-bottom: 0.6rem;
     }
 
     .tool-name {
       font-family: var(--display);
       font-size: calc(var(--base-size) * 1.5);
       font-weight: 600;
-      line-height: 1.15;
-      margin: 0;
-      color: var(--text);
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      margin: 0 0 0.6rem;
+      text-align: center;
     }
 
+    .tool-name a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .tool-name a:hover,
+    .tool-name a:focus-visible { color: var(--red-ink); }
+    .tool-name .card-arrow { vertical-align: -0.12em; margin-left: 0.2em; }
+
     .tool-band {
+      display: inline-block;
       font-family: var(--sans);
-      font-size: calc(var(--base-size) * 0.66);
+      font-size: calc(var(--base-size) * 0.62);
       font-weight: 600;
-      letter-spacing: 0.11em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       color: var(--gold-ink);
       border: 1px solid var(--gold-ink);
       border-radius: 30px;
-      padding: 0.18em 0.7em;
+      padding: 0.18em 0.8em;
       white-space: nowrap;
     }
 
     .tool-vendor {
+      display: block;
       font-family: var(--sans);
-      font-size: calc(var(--base-size) * 0.7);
+      font-size: calc(var(--base-size) * 0.68);
       color: var(--text-muted);
-      margin-left: auto;
+      margin-top: 0.55rem;
     }
 
     .tool-vendor a { color: var(--red-ink); }
 
-    .tools-intro a { color: var(--red-ink); }
-
-    .tool-quote {
-      font-family: var(--serif);
-      line-height: 1.55;
-      font-style: italic;
-      font-size: calc(var(--base-size) * 0.92);
-      color: var(--text-muted);
-      border-left: 2px solid var(--rule-color);
-      padding-left: 0.9rem;
-      margin: 0 0 1.2rem;
-    }
-
-    .tool-quote cite {
-      display: block;
-      font-style: normal;
-      font-family: var(--sans);
-      font-size: calc(var(--base-size) * 0.66);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-top: 0.4rem;
-    }
-
-    .tool-field { margin-bottom: 1.1rem; }
+    .tool-field { margin-bottom: 0.4rem; }
     .tool-field:last-child { margin-bottom: 0; }
 
     .tool-field-label {
@@ -145,24 +129,47 @@
       letter-spacing: 0.13em;
       text-transform: uppercase;
       color: var(--text);
-      margin-bottom: 0.35rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
     }
 
-    .tool-field p { margin: 0 0 0.7rem; }
+    .tool-field p {
+      font-family: var(--body-font);
+      font-size: calc(var(--base-size) * 0.92);
+      line-height: 1.75;
+      color: var(--text);
+      margin: 0 0 0.7rem;
+    }
+
     .tool-field p:last-child { margin-bottom: 0; }
 
+    .tool-quote {
+      font-style: italic;
+      color: var(--text-muted) !important;
+    }
 
+    .tools-outro {
+      text-align: center;
+      padding: 2.5rem 2.5rem 0;
+      max-width: 46rem;
+      margin: 0 auto;
+    }
 
+    .tools-outro p {
+      font-family: var(--body-font);
+      font-size: calc(var(--base-size) * 0.95);
+      color: var(--text);
+      margin-bottom: 0.8rem;
+    }
 
-
+    .tools-outro a { color: var(--red-ink); }
 
     @media print {
       .tool { break-inside: avoid; border-color: #999; background: none; }
     }
 
     @media (max-width: 620px) {
-      .tool { padding: 1.25rem 1.1rem; }
-      .tool-vendor { margin-left: 0; width: 100%; }
+      .tool { padding: 1.8rem 1.5rem; }
     }
   </style>
 </head>
@@ -231,34 +238,26 @@
   <!-- /lyceum:header -->
 
   <main id="main-content">
-    <div class="wrap">
 
-      <h1 class="page-title">Classroom Tools</h1>
+    <div class="page-header">
+      <h1>Classroom Tools</h1>
+      <div class="page-rule" aria-hidden="true"></div>
+      <p>These digital tools offer educators options for structured practice and gamification to improve engagement and retention. Students, feel free to look here, but know there isn't much worth looking at!</p>
+    </div>
 
-      <div class="tools-intro">
-        <p>These digital tools offer educators options for structured practice and gamification to improve engagement and retention. Students, feel free to look here, but know there isn't much worth looking at!</p>
-  <p class="tools-access">See your supervisor if you need access assistance.</p>
-      </div>
-
-
+    <div class="tool-list">
 
       <article class="tool" id="tool-nearpod-and-flocabulary">
         <div class="tool-head">
-          <h2 class="tool-name">Nearpod &amp; Flocabulary</h2>
+          <h2 class="tool-name"><a href="https://nearpod.com/" target="_blank" rel="noopener noreferrer">Nearpod &amp; Flocabulary<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
           <span class="tool-band">Middle School</span>
-          <span class="tool-vendor">Renaissance &middot;
-            <a href="https://nearpod.com/" target="_blank" rel="noopener noreferrer">nearpod.com</a> &middot;
-            <a href="https://www.flocabulary.com/" target="_blank" rel="noopener noreferrer">flocabulary.com</a>
-          </span>
+          <span class="tool-vendor">Renaissance &middot; <a href="https://nearpod.com/" target="_blank" rel="noopener noreferrer">nearpod.com</a> &middot; <a href="https://www.flocabulary.com/" target="_blank" rel="noopener noreferrer">flocabulary.com</a></span>
         </div>
 
-        <p class="tool-quote">
-          &ldquo;Create active learning experiences students can&rsquo;t wait to be a part of.&rdquo;
-          &mdash; Nearpod<br>
-          &ldquo;A library of songs, videos and activities for K&ndash;12 online learning.&rdquo;
-          &mdash; Flocabulary
-          <cite>What the platforms claim</cite>
-        </p>
+        <div class="tool-field">
+          <span class="tool-field-label">Vendor Copy</span>
+          <p class="tool-quote">&ldquo;Create active learning experiences students can&rsquo;t wait to be a part of.&rdquo; &mdash; Nearpod<br> &ldquo;A library of songs, videos and activities for K&ndash;12 online learning.&rdquo; &mdash; Flocabulary</p>
+        </div>
 
         <div class="tool-field">
           <span class="tool-field-label">What it does</span>
@@ -275,21 +274,17 @@
 
       </article>
 
-
       <article class="tool" id="tool-albert">
         <div class="tool-head">
-          <h2 class="tool-name">Albert</h2>
+          <h2 class="tool-name"><a href="https://www.albert.io/" target="_blank" rel="noopener noreferrer">Albert<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
           <span class="tool-band">High School</span>
-          <span class="tool-vendor">
-            <a href="https://www.albert.io/" target="_blank" rel="noopener noreferrer">albert.io</a>
-          </span>
+          <span class="tool-vendor"><a href="https://www.albert.io/" target="_blank" rel="noopener noreferrer">albert.io</a></span>
         </div>
 
-        <p class="tool-quote">
-          &ldquo;Adaptive skills practice + premium question banks for all subjects and exams
-          in grades 3&ndash;12.&rdquo;
-          <cite>What the platform claims</cite>
-        </p>
+        <div class="tool-field">
+          <span class="tool-field-label">Vendor Copy</span>
+          <p class="tool-quote">&ldquo;Adaptive skills practice + premium question banks for all subjects and exams in grades 3&ndash;12.&rdquo;</p>
+        </div>
 
         <div class="tool-field">
           <span class="tool-field-label">What it does</span>
@@ -305,20 +300,17 @@
 
       </article>
 
-
       <article class="tool" id="tool-edpuzzle">
         <div class="tool-head">
-          <h2 class="tool-name">Edpuzzle</h2>
+          <h2 class="tool-name"><a href="https://edpuzzle.com/" target="_blank" rel="noopener noreferrer">Edpuzzle<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
           <span class="tool-band">Middle &amp; High School</span>
-          <span class="tool-vendor">
-            <a href="https://edpuzzle.com/" target="_blank" rel="noopener noreferrer">edpuzzle.com</a>
-          </span>
+          <span class="tool-vendor"><a href="https://edpuzzle.com/" target="_blank" rel="noopener noreferrer">edpuzzle.com</a></span>
         </div>
 
-        <p class="tool-quote">
-          &ldquo;Make any video your lesson.&rdquo;
-          <cite>What the platform claims</cite>
-        </p>
+        <div class="tool-field">
+          <span class="tool-field-label">Vendor Copy</span>
+          <p class="tool-quote">&ldquo;Make any video your lesson.&rdquo;</p>
+        </div>
 
         <div class="tool-field">
           <span class="tool-field-label">What it does</span>
@@ -335,21 +327,17 @@
 
       </article>
 
-
       <article class="tool" id="tool-gimkit">
         <div class="tool-head">
-          <h2 class="tool-name">Gimkit</h2>
+          <h2 class="tool-name"><a href="https://www.gimkit.com/" target="_blank" rel="noopener noreferrer">Gimkit<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
           <span class="tool-band">Middle &amp; High School</span>
-          <span class="tool-vendor">
-            <a href="https://www.gimkit.com/" target="_blank" rel="noopener noreferrer">gimkit.com</a>
-          </span>
+          <span class="tool-vendor"><a href="https://www.gimkit.com/" target="_blank" rel="noopener noreferrer">gimkit.com</a></span>
         </div>
 
-        <p class="tool-quote">
-          &ldquo;A game show for the classroom that requires knowledge, collaboration,
-          and strategy to win.&rdquo;
-          <cite>What the platform claims</cite>
-        </p>
+        <div class="tool-field">
+          <span class="tool-field-label">Vendor Copy</span>
+          <p class="tool-quote">&ldquo;A game show for the classroom that requires knowledge, collaboration, and strategy to win.&rdquo;</p>
+        </div>
 
         <div class="tool-field">
           <span class="tool-field-label">What it does</span>
@@ -366,21 +354,17 @@
 
       </article>
 
-
       <article class="tool" id="tool-gizmos">
         <div class="tool-head">
-          <h2 class="tool-name">Gizmos</h2>
+          <h2 class="tool-name"><a href="https://gizmos.explorelearning.com/" target="_blank" rel="noopener noreferrer">Gizmos<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
           <span class="tool-band">Middle &amp; High School</span>
-          <span class="tool-vendor">ExploreLearning &middot;
-            <a href="https://gizmos.explorelearning.com/" target="_blank" rel="noopener noreferrer">gizmos.explorelearning.com</a>
-          </span>
+          <span class="tool-vendor">ExploreLearning &middot; <a href="https://gizmos.explorelearning.com/" target="_blank" rel="noopener noreferrer">gizmos.explorelearning.com</a></span>
         </div>
 
-        <p class="tool-quote">
-          &ldquo;Interactive online simulations and case studies for math and science that power
-          inquiry and understanding through hands-on learning and experimentation.&rdquo;
-          <cite>What the platform claims</cite>
-        </p>
+        <div class="tool-field">
+          <span class="tool-field-label">Vendor Copy</span>
+          <p class="tool-quote">&ldquo;Interactive online simulations and case studies for math and science that power inquiry and understanding through hands-on learning and experimentation.&rdquo;</p>
+        </div>
 
         <div class="tool-field">
           <span class="tool-field-label">What it does</span>
@@ -397,13 +381,18 @@
 
       </article>
 
-
-      <div class="tools-intro" style="margin-top:2.5rem">
-        <p>Don&rsquo;t forget about our <a href="databases.html">database collection</a>!</p>
-        <p>Want a hand experimenting with anything here? Stop by or shoot me an email!</p>
-      </div>
-
     </div>
+
+    <aside class="access-notice" aria-labelledby="tools-access-heading">
+      <h2 class="visually-hidden" id="tools-access-heading">Access</h2>
+      <p class="access-notice-body">See your supervisor if you need access assistance.</p>
+    </aside>
+
+    <div class="tools-outro">
+      <p>Don&rsquo;t forget about our <a href="databases.html">database collection</a>!</p>
+      <p>Want a hand experimenting with anything here? Stop by or shoot me an email!</p>
+    </div>
+
   </main>
 
   <!-- lyceum:footer -->

@@ -140,7 +140,10 @@ function readTools() {
   if (!fs.existsSync(file)) { warnings.push("tools.html not found; no tool records"); return []; }
   const html = fs.readFileSync(file, "utf8");
 
-  const strip = h => h.replace(/<[^>]+>/g, " ")
+  const strip = h => h
+    .replace(/<span class="visually-hidden">[\s\S]*?<\/span>/g, "")
+    .replace(/<svg[\s\S]*?<\/svg>/g, "")
+    .replace(/<[^>]+>/g, " ")
     .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
     .replace(/&nbsp;/g, " ").replace(/&mdash;/g, "\u2014").replace(/&ndash;/g, "\u2013")
     .replace(/&ldquo;|&rdquo;/g, '"').replace(/&rsquo;/g, "\u2019")

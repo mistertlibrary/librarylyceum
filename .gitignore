@@ -4,3 +4,21 @@
 node_modules/
 .DS_Store
 Thumbs.db
+
+# Working material. Nothing that is only for us belongs in a public repository:
+# students can read every byte of it, and drafts invite exactly the curiosity
+# they should not satisfy. Notes live in the Claude project instead.
+*-draft*.txt
+*-drafts*.txt
+*-factsheet*.md
+*-notes.md
+code-notes.md
+NOTES.md
+TODO.md
+todo.md
+progress-log.md
+*.bak
+*.orig
+*.rej
+*.tmp
+~$*
