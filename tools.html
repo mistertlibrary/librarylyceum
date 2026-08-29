@@ -74,6 +74,10 @@
       margin-bottom: 0.6rem;
     }
 
+    /* Any link inside a card. lyceum.css styles no bare <a>, so an unstyled
+       one falls back to the browser's #0000EE: 1.96:1 on the dark ground. */
+    .tool a { color: var(--red-ink); }
+
     .tool-name {
       font-family: var(--display);
       font-size: calc(var(--base-size) * 1.5);
@@ -115,8 +119,6 @@
       color: var(--text-muted);
       margin-top: 0.55rem;
     }
-
-    .tool-vendor a { color: var(--red-ink); }
 
     .tool-field { margin-bottom: 0.4rem; }
     .tool-field:last-child { margin-bottom: 0; }
@@ -164,9 +166,6 @@
 
     .tools-outro a { color: var(--red-ink); }
 
-    @media print {
-      .tool { break-inside: avoid; border-color: #999; background: none; }
-    }
 
     @media (max-width: 620px) {
       .tool { padding: 1.8rem 1.5rem; }
@@ -249,14 +248,14 @@
 
       <article class="tool" id="tool-nearpod-and-flocabulary">
         <div class="tool-head">
-          <h2 class="tool-name"><a href="https://nearpod.com/" target="_blank" rel="noopener noreferrer">Nearpod &amp; Flocabulary<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
+          <h2 class="tool-name"><a href="https://nearpod.com/login" target="_blank" rel="noopener noreferrer">Nearpod<span class="visually-hidden"> (opens in a new tab)</span></a> &amp; <a href="https://www.flocabulary.com/login/" target="_blank" rel="noopener noreferrer">Flocabulary<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
           <span class="tool-band">Middle School</span>
-          <span class="tool-vendor">Renaissance &middot; <a href="https://nearpod.com/" target="_blank" rel="noopener noreferrer">nearpod.com</a> &middot; <a href="https://www.flocabulary.com/" target="_blank" rel="noopener noreferrer">flocabulary.com</a></span>
+          <span class="tool-vendor">Renaissance</span>
         </div>
 
         <div class="tool-field">
           <span class="tool-field-label">Vendor Copy</span>
-          <p class="tool-quote">&ldquo;Create active learning experiences students can&rsquo;t wait to be a part of.&rdquo; &mdash; Nearpod<br> &ldquo;A library of songs, videos and activities for K&ndash;12 online learning.&rdquo; &mdash; Flocabulary</p>
+          <p class="tool-quote">&ldquo;Create active learning experiences students can&rsquo;t wait to be a part of.&rdquo; &mdash; <a href="https://nearpod.com/" target="_blank" rel="noopener noreferrer">Nearpod<span class="visually-hidden"> (opens in a new tab)</span></a><br> &ldquo;A library of songs, videos and activities for K&ndash;12 online learning.&rdquo; &mdash; <a href="https://www.flocabulary.com/" target="_blank" rel="noopener noreferrer">Flocabulary<span class="visually-hidden"> (opens in a new tab)</span></a></p>
         </div>
 
         <div class="tool-field">
@@ -276,14 +275,13 @@
 
       <article class="tool" id="tool-albert">
         <div class="tool-head">
-          <h2 class="tool-name"><a href="https://www.albert.io/" target="_blank" rel="noopener noreferrer">Albert<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
+          <h2 class="tool-name"><a href="https://www.albert.io/log-in" target="_blank" rel="noopener noreferrer">Albert<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
           <span class="tool-band">High School</span>
-          <span class="tool-vendor"><a href="https://www.albert.io/" target="_blank" rel="noopener noreferrer">albert.io</a></span>
         </div>
 
         <div class="tool-field">
           <span class="tool-field-label">Vendor Copy</span>
-          <p class="tool-quote">&ldquo;Adaptive skills practice + premium question banks for all subjects and exams in grades 3&ndash;12.&rdquo;</p>
+          <p class="tool-quote">&ldquo;Adaptive skills practice + premium question banks for all subjects and exams in grades 3&ndash;12.&rdquo; &mdash; <a href="https://www.albert.io/" target="_blank" rel="noopener noreferrer">Albert<span class="visually-hidden"> (opens in a new tab)</span></a></p>
         </div>
 
         <div class="tool-field">
@@ -302,14 +300,13 @@
 
       <article class="tool" id="tool-edpuzzle">
         <div class="tool-head">
-          <h2 class="tool-name"><a href="https://edpuzzle.com/" target="_blank" rel="noopener noreferrer">Edpuzzle<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
+          <h2 class="tool-name"><a href="https://edpuzzle.com/login" target="_blank" rel="noopener noreferrer">Edpuzzle<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
           <span class="tool-band">Middle &amp; High School</span>
-          <span class="tool-vendor"><a href="https://edpuzzle.com/" target="_blank" rel="noopener noreferrer">edpuzzle.com</a></span>
         </div>
 
         <div class="tool-field">
           <span class="tool-field-label">Vendor Copy</span>
-          <p class="tool-quote">&ldquo;Make any video your lesson.&rdquo;</p>
+          <p class="tool-quote">&ldquo;Make any video your lesson.&rdquo; &mdash; <a href="https://edpuzzle.com/" target="_blank" rel="noopener noreferrer">Edpuzzle<span class="visually-hidden"> (opens in a new tab)</span></a></p>
         </div>
 
         <div class="tool-field">
@@ -329,14 +326,13 @@
 
       <article class="tool" id="tool-gimkit">
         <div class="tool-head">
-          <h2 class="tool-name"><a href="https://www.gimkit.com/" target="_blank" rel="noopener noreferrer">Gimkit<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
+          <h2 class="tool-name"><a href="https://www.gimkit.com/login" target="_blank" rel="noopener noreferrer">Gimkit<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
           <span class="tool-band">Middle &amp; High School</span>
-          <span class="tool-vendor"><a href="https://www.gimkit.com/" target="_blank" rel="noopener noreferrer">gimkit.com</a></span>
         </div>
 
         <div class="tool-field">
           <span class="tool-field-label">Vendor Copy</span>
-          <p class="tool-quote">&ldquo;A game show for the classroom that requires knowledge, collaboration, and strategy to win.&rdquo;</p>
+          <p class="tool-quote">&ldquo;A game show for the classroom that requires knowledge, collaboration, and strategy to win.&rdquo; &mdash; <a href="https://www.gimkit.com/" target="_blank" rel="noopener noreferrer">Gimkit<span class="visually-hidden"> (opens in a new tab)</span></a></p>
         </div>
 
         <div class="tool-field">
@@ -356,14 +352,14 @@
 
       <article class="tool" id="tool-gizmos">
         <div class="tool-head">
-          <h2 class="tool-name"><a href="https://gizmos.explorelearning.com/" target="_blank" rel="noopener noreferrer">Gizmos<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
+          <h2 class="tool-name"><a href="https://www.explorelearning.com/logins" target="_blank" rel="noopener noreferrer">Gizmos<span class="visually-hidden"> (opens in a new tab)</span></a><svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="15" x2="15" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,3 15,3 15,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></h2>
           <span class="tool-band">Middle &amp; High School</span>
-          <span class="tool-vendor">ExploreLearning &middot; <a href="https://gizmos.explorelearning.com/" target="_blank" rel="noopener noreferrer">gizmos.explorelearning.com</a></span>
+          <span class="tool-vendor">ExploreLearning</span>
         </div>
 
         <div class="tool-field">
           <span class="tool-field-label">Vendor Copy</span>
-          <p class="tool-quote">&ldquo;Interactive online simulations and case studies for math and science that power inquiry and understanding through hands-on learning and experimentation.&rdquo;</p>
+          <p class="tool-quote">&ldquo;Interactive online simulations and case studies for math and science that power inquiry and understanding through hands-on learning and experimentation.&rdquo; &mdash; <a href="https://www.explorelearning.com/our-products/gizmos" target="_blank" rel="noopener noreferrer">ExploreLearning<span class="visually-hidden"> (opens in a new tab)</span></a></p>
         </div>
 
         <div class="tool-field">
@@ -383,12 +379,9 @@
 
     </div>
 
-    <aside class="access-notice" aria-labelledby="tools-access-heading">
-      <h2 class="visually-hidden" id="tools-access-heading">Access</h2>
-      <p class="access-notice-body">See your supervisor if you need access assistance.</p>
-    </aside>
 
     <div class="tools-outro">
+      <p>See your supervisor if you need access assistance.</p>
       <p>Don&rsquo;t forget about our <a href="databases.html">database collection</a>!</p>
       <p>Want a hand experimenting with anything here? Stop by or shoot me an email!</p>
     </div>

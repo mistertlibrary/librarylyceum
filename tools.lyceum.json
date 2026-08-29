@@ -1,0 +1,37 @@
+{
+  "lyceum": 1,
+  "_note": "Descriptor for the hub's own Classroom Tools page, in the same shape the guide repositories publish. The prose on tools.html stays the single source of what each tool is; this file declares the page's identity and its sections, and carries the keywords lever. 'keywords' is never displayed: it lets a product name stay a product name while still being found by what the thing actually does. Leave the arrays empty until you have something to add.",
+  "title": "Classroom Tools",
+  "description": "The digital teaching resources available to West Essex staff and students.",
+  "url": "https://mistertlibrary.github.io/librarylyceum/tools.html",
+  "series": "",
+  "course": "",
+  "subjects": [],
+  "sections": [
+    {
+      "title": "Nearpod & Flocabulary",
+      "anchor": "#tool-nearpod-and-flocabulary",
+      "keywords": []
+    },
+    {
+      "title": "Albert",
+      "anchor": "#tool-albert",
+      "keywords": []
+    },
+    {
+      "title": "Edpuzzle",
+      "anchor": "#tool-edpuzzle",
+      "keywords": []
+    },
+    {
+      "title": "Gimkit",
+      "anchor": "#tool-gimkit",
+      "keywords": []
+    },
+    {
+      "title": "Gizmos",
+      "anchor": "#tool-gizmos",
+      "keywords": []
+    }
+  ]
+}

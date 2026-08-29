@@ -156,6 +156,22 @@ function readTools() {
     return m ? strip(m[1]) : "";
   };
 
+  /* The page's identity and its keywords come from a descriptor, in the same
+     shape the guide repositories publish, so a product name can stay a product
+     name and still be found by what the thing does. Absent, the page still
+     indexes; the lever is simply unavailable. */
+  let desc = {};
+  const dfile = path.join(ROOT, "tools.lyceum.json");
+  if (fs.existsSync(dfile)) {
+    try {
+      const d = JSON.parse(fs.readFileSync(dfile, "utf8"));
+      if (d.lyceum !== 1) warnings.push(`tools.lyceum.json: unexpected schema version ${d.lyceum}`);
+      else for (const s of (d.sections || [])) if (s && s.anchor) desc[s.anchor.replace(/^#/, "")] = s;
+    } catch (e) { warnings.push("tools.lyceum.json is not valid JSON: " + e.message); }
+  } else {
+    warnings.push("no tools.lyceum.json; tool records carry no keywords");
+  }
+
   const out = [];
   const cards = html.match(/<article class="tool"[\s\S]*?<\/article>/g) || [];
   for (const card of cards) {
@@ -172,6 +188,7 @@ function readTools() {
       vendor: strip((/<span class="tool-vendor">([\s\S]*?)<\/span>/.exec(card) || [])[1] || ""),
       /* Not shown in a result, but a teacher searching "flipped" or "retrieval"
          should still land on the right card. */
+      keywords: (desc[id] && Array.isArray(desc[id].keywords)) ? desc[id].keywords.map(String) : [],
       sectionText: [field(card, "In the classroom"),
                     strip((/<p class="tool-quote">([\s\S]*?)<\/p>/.exec(card) || [])[1] || "")]
                    .filter(Boolean).join(" ")
