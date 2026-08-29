@@ -40,9 +40,6 @@
   <link rel="stylesheet" href="newsletter.css">
 
   <style>
-    /* ── COMPOSER ──
-       A drafting desk, not a published page: it deliberately runs wider than
-       the newsletter measure so the preview can sit beside the writing. */
 
     .compose-head {
       padding: 2rem 2.5rem 1.4rem;
@@ -101,7 +98,6 @@
       color: var(--text-muted);
     }
 
-    /* ── the form ── */
 
     .compose-fields {
       display: grid;
@@ -146,7 +142,6 @@
     .field select { font-family: var(--sans); font-size: 0.74rem; }
     .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); }
 
-    /* ── the toolbar ── */
 
     .compose-toolbar {
       display: flex;
@@ -184,12 +179,6 @@
       align-self: stretch;
     }
 
-    /* The writing surface is two layers. A <pre> underneath carries the same
-       text with its structural marks dimmed; a transparent <textarea> on top
-       carries the caret, the selection, and the spellchecker. Every property
-       that affects where a glyph lands is declared once, for both, so the
-       layers cannot drift apart. Colour is the only thing that differs —
-       weight or size would change the metrics and break the alignment. */
 
     .editor-wrap { position: relative; }
 
@@ -219,7 +208,6 @@
       pointer-events: none;
     }
 
-    /* The marks. Present enough to show structure, quiet enough to read past. */
     .editor-mirror .mk { color: var(--text-muted); opacity: 0.45; }
     .editor-mirror .gloss-mk { color: var(--gold-ink); opacity: 0.75; }
     .editor-mirror .note-mk { color: var(--red-ink); opacity: 0.65; }
@@ -242,11 +230,9 @@
     [data-theme="contrast"] .editor-mirror .mk,
     [data-theme="contrast"] .editor-mirror .url-mk { opacity: 0.85; }
 
-    /* ── the preview ── */
 
     .compose-preview {
       padding: 0 2rem 3rem;
-      /* The published issue centres itself; here it fills the pane. */
     }
 
     .compose-preview .issue-masthead,
@@ -256,7 +242,6 @@
 
     .compose-preview h1 { font-size: calc(var(--base-size) * 1.7); }
 
-    /* ── checks and actions ── */
 
     .compose-checks {
       margin: 0 2rem 1.2rem;
@@ -332,8 +317,6 @@
     [data-theme="contrast"] .btn-primary:hover,
     [data-theme="contrast"] .btn-primary:focus-visible { background-color: var(--bg); color: var(--gold); }
 
-    /* ── the lock ──
-       A cupboard door, not a vault door. See the note in compose.js. */
 
     body.is-locked { overflow: hidden; }
     body.is-locked > main,
@@ -501,6 +484,7 @@
       <a href="index.html">Home</a>
       <a href="databases.html">Find a Database</a>
       <a href="guides.html">Research Guides</a>
+      <a href="tools.html">Classroom Tools</a>
       <a href="search.html">Search</a>
       <a href="newsletter/" class="active" aria-current="page">Newsletter</a>
       <a href="about.html">About</a>
@@ -537,7 +521,6 @@
 
     <div class="compose-grid">
 
-      <!-- ── WRITING ── -->
       <section class="compose-pane" aria-label="Draft">
         <div class="pane-label">
           <span>The issue</span>
@@ -609,7 +592,6 @@
         </div>
       </section>
 
-      <!-- ── PREVIEW ── -->
       <section class="compose-pane" aria-label="Preview">
         <div class="pane-label"><span>As it will publish</span></div>
         <div class="compose-preview" id="f-preview" aria-live="off"></div>

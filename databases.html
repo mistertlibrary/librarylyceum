@@ -53,7 +53,6 @@
   <script src="databases.js" defer></script>
 
   <style>
-    /* ── DATABASE PAGE ONLY ── */
 
     .db-grid {
       display: grid;
@@ -113,8 +112,6 @@
       flex-grow: 1;
     }
 
-    /* Descriptions are written with line breaks in the spreadsheet, and are
-       rendered as real paragraphs rather than one run-on block. */
     .db-card-desc p { margin: 0; }
     .db-card-desc p + p { margin-top: 0.75em; }
 
@@ -181,6 +178,7 @@
       <a href="index.html">Home</a>
       <a href="databases.html" class="active" aria-current="page">Find a Database</a>
       <a href="guides.html">Research Guides</a>
+      <a href="tools.html">Classroom Tools</a>
       <a href="search.html">Search</a>
       <a href="newsletter/">Newsletter</a>
       <a href="about.html">About</a>
@@ -190,21 +188,18 @@
 
   <main id="main-content">
 
-    <!-- PAGE HEADER -->
     <div class="page-header">
       <h1>Find a Database</h1>
       <div class="page-rule" aria-hidden="true"></div>
       <p>Search or filter by subject to find the right resource for your research.</p>
     </div>
 
-    <!-- OFF-CAMPUS ACCESS -->
     <aside class="access-notice" aria-labelledby="access-notice-heading">
       <h2 class="visually-hidden" id="access-notice-heading">Off-campus access</h2>
       <p class="access-notice-body">Away from campus? Having trouble logging in? You can access any of our databases by using the login credentials available <a href="https://docs.google.com/document/d/1oGCj_JLUUAQV9jOgOQpNmrZlYmntAysr68tuXCWGCy4/view" target="_blank" rel="noopener noreferrer">here<span class="visually-hidden"> (opens in a new tab)</span></a></p>
       <p class="access-notice-sub">You must be logged into your West Essex High School Google account to access this document.</p>
     </aside>
 
-    <!-- CONTROLS -->
     <div class="controls" id="controls" role="search">
       <div class="search-wrap">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -239,13 +234,10 @@
       </div>
     </div>
 
-    <!-- SUBJECT INDEX (grouped view only) -->
     <nav class="subject-index" id="subject-index" aria-label="Jump to subject" hidden></nav>
 
-    <!-- RESULTS META -->
     <div class="results-meta" id="results-meta" aria-live="polite" aria-atomic="true"></div>
 
-    <!-- GRID -->
     <div id="db-grid" aria-label="Database results">
       <p style="text-align:center;padding:4rem;font-family:var(--sans);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);">Loading collection&hellip;</p>
     </div>

@@ -1,12 +1,3 @@
-/* LIBRARY LYCEUM: ISSUE COMPOSER
- *
- * A drafting desk for Knightly Muse. Front matter is a form, prose is a plain
- * textarea with a toolbar so no syntax has to be remembered, and the preview is
- * rendered by newsletter-render.js — the same function the published page uses,
- * over the same stylesheet. What you approve here is what publishes.
- *
- * Nothing is sent anywhere. The draft lives in this browser until you save it.
- */
 
 (function () {
   "use strict";
@@ -16,34 +7,9 @@
   var UNLOCK_KEY = "lyceum-compose-unlocked";
 
 
-  /* ── THE LOCK ─────────────────────────────────────────────
-   *
-   * Paste the line the page gives you here. Leave it empty and the page will
-   * offer to make one; it never leaves your browser and is never sent anywhere.
-   *
-   *     var PASSPHRASE = "sha256-....";
-   */
 
   var PASSPHRASE = "";
 
-  /* WHAT THIS IS, AND WHAT IT IS NOT
-   *
-   * This is a lock on a cupboard door, not a lock on a vault. The page and this
-   * script are public files on a public site; anyone determined enough to read
-   * the source can walk around the check. Storing a hash rather than the word
-   * itself means the passphrase is not sitting in plain view, and nothing more.
-   *
-   * That is enough, because there is nothing here worth taking. The composer
-   * cannot publish. It writes files to whichever folder the person at the
-   * keyboard has personally granted through a browser permission prompt — their
-   * own machine, their own Downloads folder. A student who got past this could
-   * write a fake issue and save it to their own laptop. The repository, and
-   * therefore the site, is untouched.
-   *
-   * So the lock is for clarity, not defence: it says "this is not the page you
-   * are looking for" to anyone who wanders in. The real protection is that the
-   * tool has no power over anything but the disk of whoever is using it.
-   */
 
   async function sha256(text) {
     var bytes = new TextEncoder().encode(text);
@@ -53,10 +19,6 @@
       .join("");
   }
 
-  /* Remembered for a working day, in localStorage rather than sessionStorage:
-     sessionStorage is per-tab, so a new tab meant answering again, which is a
-     nuisance without being a protection. The stamp holds the hash, so changing
-     the passphrase invalidates every remembered unlock at once. */
 
   var UNLOCK_HOURS = 12;
 
@@ -78,16 +40,9 @@
     } catch (e) {}
   }
 
-  /* Resolves when the desk should open. Rejects nothing — a wrong passphrase
-     simply asks again, because there is no attacker to rate-limit. */
   function unlock() {
     return new Promise(function (resolve) {
       var gate = $("gate");
-      /* No passphrase set is the default state, and the default state should not
-         make him click past a door that is already open. The desk opens; a quiet
-         line in the actions row offers to set one. */
-      /* Hidden, not removed: the offer in the actions row reopens it in setup
-         mode, and it cannot reopen what is no longer there. */
       if (!PASSPHRASE) { gate.hidden = true; resolve(); return; }
       if (unlocked()) { gate.remove(); resolve(); return; }
 
@@ -115,8 +70,6 @@
     });
   }
 
-  /* Opened from the desk, not on the way in: help him make a passphrase without
-     ever seeing it. */
   function setupMode() {
     var gate = $("gate");
     if (!gate) return;
@@ -163,7 +116,6 @@
   function esc(s) { return window.Lyceum.escHtml(s); }
 
 
-  /* ── THE DRAFT ────────────────────────────────────────── */
 
   function draft() {
     return {
@@ -194,8 +146,6 @@
     };
   }
 
-  /* The issue shell, with the per-issue meta filled in. Hand-editing seven meta
-     lines was the most error-prone step in publishing; this removes it. */
   function issueShell(d) {
     if (!templateHtml) return null;
     var title = d.title || "Untitled";
@@ -218,9 +168,6 @@
   }
 
 
-  /* ── SLUG ─────────────────────────────────────────────────
-     Suggested from the title, but editable: the folder name is the URL, and a
-     URL is worth choosing deliberately. Once touched, it stops following. */
 
   var slugTouched = false;
 
@@ -230,32 +177,18 @@
   }
 
 
-  /* ── PREVIEW ──────────────────────────────────────────── */
 
-  /* ── THE MIRROR ───────────────────────────────────────────
-     The structural marks are dimmed rather than hidden. Hiding them would mean
-     the caret moving through characters that are not there, which is worse than
-     seeing a faint hash. Only colour changes: any difference in weight, size or
-     spacing between the two layers would put the text out of register with the
-     caret. */
 
   var MARK = [
-    /* heading marks and the gloss braces that trail them */
     [/^(#{1,6})(\s+)/gm,            function (m, h, sp) { return tok("mk", h) + sp; }],
-    /* [ \t]*$ rather than \s*$: \s swallows the newline itself, which deleted a
-       blank line from the mirror and put every following row out of register. */
     [/(\{)([^}\n]*)(\})[ \t]*$/gm, function (m, a, inner, b) { return tok("gloss-mk", a + inner + b); }],
-    /* footnote references and definitions */
     [/(\[\^[^\]\n]+\]:?)/g,        function (m) { return tok("note-mk", m); }],
-    /* block marks at the start of a line */
     [/^(&gt;)(\s+)/gm,              function (m, q, sp) { return tok("mk", q) + sp; }],
     [/^([-*+])(\s+)/gm,            function (m, b, sp) { return tok("mk", b) + sp; }],
     [/^(\d+\.)(\s+)/gm,           function (m, b, sp) { return tok("mk", b) + sp; }],
     [/^(---+)$/gm,                function (m) { return tok("mk", m); }],
-    /* emphasis: dim the asterisks, leave the words alone */
     [/(\*\*)([^*\n]+)(\*\*)/g,     function (m, a, t, b) { return tok("mk", a) + t + tok("mk", b); }],
     [/(?<![*\w])(\*)([^*\n]+)(\*)(?!\w)/g, function (m, a, t, b) { return tok("mk", a) + t + tok("mk", b); }],
-    /* links: the label stays, the plumbing recedes */
     [/(\[)([^\]\n]*)(\]\()([^)\n]*)(\))/g,
       function (m, a, label, mid, url, close) {
         return tok("mk", a) + label + tok("url-mk", mid + url + close);
@@ -265,39 +198,16 @@
   function tok(cls, text) { return '\u0001' + cls + '\u0002' + text + '\u0003'; }
 
   function paintMirror(text) {
-    /* Escape first, so nothing in the draft can become markup, then mark, then
-       turn the sentinels into real spans. */
     var out = window.Lyceum.escHtml(text);
     MARK.forEach(function (rule) { out = out.replace(rule[0], rule[1]); });
     out = out
       .replace(/\u0001([a-z-]+)\u0002/g, '<span class="$1">')
       .replace(/\u0003/g, "</span>");
-    /* pre-wrap drops a single trailing newline, so a draft ending in one needs a
-       companion to keep the last empty row. A draft that does NOT end in one must
-       get nothing, or the mirror grows a phantom line and every scroll position
-       after it is wrong by a row. */
     el.mirror.innerHTML = out + (/\n$/.test(text) ? "\n" : "");
   }
 
-  /* Raw HTML passes through marked untouched, which is how the <figure> block in
-     the template works. On a published page that is a convenience: the author is
-     the only one who writes those files. Here it is not, because text arrives by
-     paste, and this page holds both the saved draft and — once a folder has been
-     chosen — permission to write into the newsletter directory. So the preview
-     renders markup but refuses to run it.
-
-     This is the single place the preview deliberately differs from the published
-     page. Nothing that belongs in a newsletter is affected: images, figures,
-     captions and links all render. An inline event handler would not fire here
-     and would fire there, which is a good reason not to write one. */
 
   function defuse(html) {
-    /* DOMParser, not a detached div. Assigning innerHTML on a div begins loading
-       any <img> it contains, and a failed load fires the onerror handler before
-       a single attribute can be stripped — which is exactly how the first
-       attempt at this function was defeated. A DOMParser document has no
-       browsing context: nothing loads, nothing runs, and the markup can be
-       inspected at leisure. */
     var frag = new DOMParser().parseFromString(html, "text/html").body;
     Array.prototype.forEach.call(frag.querySelectorAll("script, iframe, object, embed"),
       function (n) { n.remove(); });
@@ -324,7 +234,6 @@
     paintMirror(d.body);
     var out = window.LyceumIssue.render(issueMarkdown(d));
     el.preview.innerHTML = defuse(out.html);
-    /* Anchors inside the preview would navigate the composer away. */
     Array.prototype.forEach.call(el.preview.querySelectorAll("a[href]"), function (a) {
       a.addEventListener("click", function (e) { e.preventDefault(); });
     });
@@ -365,9 +274,6 @@
   }
 
 
-  /* ── TOOLBAR ──────────────────────────────────────────────
-     Every button wraps or inserts around the selection, then restores focus, so
-     the caret never has to be hunted for. */
 
   function surround(before, after, placeholder) {
     var t = el.body;
@@ -402,8 +308,6 @@
   function insertBlock(text) {
     var t = el.body;
     var s = t.selectionStart;
-    /* Blocks need blank lines around them or Markdown folds them into the
-       paragraph above. */
     var before = t.value.slice(0, s).replace(/\n*$/, "");
     var after = t.value.slice(t.selectionEnd).replace(/^\n*/, "");
     var joined = (before ? before + "\n\n" : "") + text + "\n\n" + after;
@@ -455,10 +359,6 @@
   };
 
 
-  /* ── SAVING ───────────────────────────────────────────────
-     Chrome and Edge can be pointed at a folder once and then written to
-     directly. Everywhere else, and if permission is refused, the same three
-     files arrive as downloads. */
 
   var canPickFolder = typeof window.showDirectoryPicker === "function";
 
@@ -469,7 +369,6 @@
       el.folder.hidden = false;
       status("Folder set to " + dirHandle.name + ". Saving writes the issue folder inside it.");
     } catch (e) {
-      /* The picker throws on cancel; that is not an error worth reporting. */
     }
   }
 
@@ -539,9 +438,6 @@
   }
 
 
-  /* ── LOCAL DRAFT ──────────────────────────────────────────
-     One draft, in this browser, so a closed tab is not a lost afternoon. It is
-     a convenience and not a store: the issue exists once it is saved to disk. */
 
   function save() {
     try { localStorage.setItem(DRAFT_KEY, JSON.stringify(draft())); } catch (e) {}
@@ -573,7 +469,6 @@
   }
 
 
-  /* ── BOOT ─────────────────────────────────────────────── */
 
   function seedDefaults() {
     if (!el.date.value) {
@@ -628,7 +523,6 @@
     });
     el.audience.addEventListener("change", render);
     el.body.addEventListener("input", render);
-    /* The mirror scrolls with the text it sits under. */
     el.body.addEventListener("scroll", syncScroll);
     window.addEventListener("resize", syncScroll);
     el.title.addEventListener("input", suggestSlug);
@@ -653,7 +547,6 @@
     $("publish").addEventListener("click", publish);
     $("new-issue").addEventListener("click", startFresh);
 
-    /* Ctrl/Cmd+B and +I, because muscle memory is real. */
     el.body.addEventListener("keydown", function (e) {
       if (!(e.ctrlKey || e.metaKey)) return;
       var k = e.key.toLowerCase();

@@ -20,7 +20,7 @@ and additional glyphs by Abelardo Gonzalez are licensed under a Creative
 Commons Attribution 3.0 Unported License," with the Bitstream terms at
 http://opendyslexic.org/legal/. CC BY 3.0 asks for attribution, which this note
 and FONTS.md give. Refetching the two italics from the current project would
-put the whole family under one licence and would make them woff2 besides.
+put the whole family under one license and would make them woff2 besides.
 
 The full OFL 1.1 text now sits beside this note as OFL.txt, and FONTS.md lists
 every family in this folder with the copyright line read out of its own binary.

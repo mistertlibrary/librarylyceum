@@ -1,7 +1,3 @@
-/* LIBRARY LYCEUM: SUBJECT TAXONOMY
-   Single source for databases.html and guides.html.
-   Order controls the filter bar, the subject index, and the grouped view.
-   Subjects with no matching rows are skipped at render time. */
 
 window.SUBJECTS = [
   "Basic Information and General Reference",

@@ -1,6 +1,3 @@
-/* LIBRARY LYCEUM: UNIFIED SEARCH
-   Requires vendor-fuse.js and lyceum.js.
-   Reads search-index.json, built by build-index.js. */
 
 (function () {
   "use strict";
@@ -11,13 +8,10 @@
   var ARROW    = window.Lyceum.externalArrow;
   var NEWTAB   = window.Lyceum.newTabNote;
 
-  /* Guides first. A student searching a topic is best served by the resource
-     built for their assignment before the general collection, which is also the
-     order the homepage recommends. Databases outnumber guides roughly 25 to 1,
-     so ordering by count would bury the bespoke work. */
   var TYPES = [
     { id: "guide",    label: "Research Guides", heading: "Research Guides" },
     { id: "database", label: "Databases",       heading: "Databases" },
+    { id: "tool",     label: "Classroom Tools", heading: "Classroom Tools" },
     { id: "issue",    label: "Newsletter",      heading: "Newsletter" }
   ];
 
@@ -29,7 +23,6 @@
   var activeType  = "all";
 
 
-  /* ── URL STATE ────────────────────────────────────────── */
 
   function readStateFromUrl() {
     var p = new URLSearchParams(window.location.search);
@@ -49,7 +42,6 @@
   }
 
 
-  /* ── CONTROLS ─────────────────────────────────────────── */
 
   function buildTypeBar() {
     var bar = document.getElementById("type-bar");
@@ -120,7 +112,6 @@
   }
 
 
-  /* ── RENDERING ────────────────────────────────────────── */
 
   function contextLine(r) {
     var bits = [];
@@ -129,6 +120,9 @@
       if (r.course) bits.push(r.course);
     } else if (r.type === "database") {
       if (r.primary) bits.push(r.primary);
+    } else if (r.type === "tool") {
+      if (r.band) bits.push(r.band);
+      if (r.vendor) bits.push(r.vendor.split("\u00b7")[0].trim());
     } else if (r.type === "issue") {
       if (r.number) bits.push("Issue " + r.number);
       if (r.date) bits.push(longDate(r.date));
@@ -139,8 +133,6 @@
     return bits.length ? '<p class="result-context">' + esc(bits.join(" &middot; ")).replace(/&amp;middot;/g, "&middot;") + "</p>" : "";
   }
 
-  /* Parsed as UTC so the date does not slip a day west of the meridian,
-     matching the newsletter's own handling. */
   function longDate(iso) {
     var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
     if (!m) return iso;
@@ -157,18 +149,12 @@
     }).join("") + "</div>";
   }
 
-  /* Which of a guide's sections match the current query.
-     Sections are not results in their own right — they are ways into the guide
-     that contains them — so they render as jump links on the guide's own card
-     rather than as sibling rows competing with it. */
   function matchingSections(r) {
     if (!r.sections || !r.sections.length) return [];
     if (searchQuery.length < MIN_QUERY) return [];
 
     var q = searchQuery.toLowerCase();
 
-    /* Drop connectives before matching. Without this, "style and grammar" also
-       lights up "Tables and Figures", because "and" occurs in both. */
     var STOP = ["and", "the", "for", "with", "of", "in", "on", "to", "a", "an", "or", "at", "by"];
     var terms = q.split(/\s+/).filter(function (w) {
       return w.length > 1 && STOP.indexOf(w) === -1;
@@ -180,8 +166,6 @@
       return terms.some(function (term) { return hay.indexOf(term) !== -1; });
     });
 
-    /* A query that matches the guide itself but no particular section — say the
-       guide's title — should offer the whole contents rather than nothing. */
     if (!hits.length && r.title.toLowerCase().indexOf(q) !== -1) return r.sections;
     return hits;
   }
@@ -205,9 +189,6 @@
     var attrs = ext ? ' target="_blank" rel="noopener noreferrer"' : "";
     var sections = sectionsHtml(r);
 
-    /* The card is a link, so the section links cannot be nested inside it —
-       an anchor inside an anchor is invalid and browsers unnest it. The card
-       body is the link; the section row sits outside it, in the same list item. */
     return '<li class="result-item">' +
       '<a class="result' + (sections ? " result-has-sections" : "") + '" href="' +
         esc(r.url) + '"' + attrs + '>' +
@@ -242,7 +223,6 @@
     var box  = document.getElementById("results");
     var meta = document.getElementById("results-meta");
 
-    /* Idle state: no query yet. Show the way in rather than the whole index. */
     if (searchQuery.length < MIN_QUERY) {
       meta.textContent = "";
       box.innerHTML =
@@ -290,7 +270,6 @@
   }
 
 
-  /* ── LOAD ─────────────────────────────────────────────── */
 
   function boot() {
     readStateFromUrl();
@@ -323,14 +302,6 @@
       .then(function (data) {
         allRecords = data.records || [];
 
-        /* threshold 0.20, not the 0.35 used by the single-collection pages.
-           Measured against exact-substring ground truth over ten representative
-           queries, 0.35 yielded mean precision 0.42 and 0.20 yielded 0.85, with
-           recall unchanged at 1.00 in both cases — the looser setting adds only
-           noise. At 0.35 a search for "citation" returned 44 records of which 7
-           were genuine, trailing off into JSTOR and Culturegrams. Fuzziness
-           still earns its place: "biography" reaches "bibliography", which is a
-           useful near-miss rather than a false positive. */
         fuse = new Fuse(allRecords, {
           keys: [
             { name: "title",    weight: 3 },
@@ -339,6 +310,7 @@
             { name: "text",        weight: 1 },
             { name: "sectionText", weight: 1.5 },
             { name: "subjects",    weight: 1 },
+            { name: "vendor",      weight: 1 },
             { name: "tags",        weight: 1 }
           ],
           threshold: 0.20,

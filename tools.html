@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classroom Tools &mdash; WEHS Library Lyceum</title>
+
+  <meta name="description" content="The digital teaching resources available to West Essex staff and students.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WEHS Library Lyceum">
+  <meta property="og:title" content="Classroom Tools &mdash; WEHS Library Lyceum">
+  <meta property="og:description" content="The digital teaching resources available to West Essex staff and students.">
+  <meta property="og:url" content="https://mistertlibrary.github.io/librarylyceum/tools.html">
+  <meta property="og:image" content="https://mistertlibrary.github.io/librarylyceum/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Classroom Tools &mdash; WEHS Library Lyceum">
+  <meta name="twitter:description" content="The digital teaching resources available to West Essex staff and students.">
+  <meta name="twitter:image" content="https://mistertlibrary.github.io/librarylyceum/og-image.png">
+
+  <!-- lyceum:head -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <script>
+    /* Reader preferences, applied before first paint. Keep inline, in the head. */
+    (function () {
+      try {
+        var d = document.documentElement;
+        var t = localStorage.getItem("lyceum-theme");
+        var s = localStorage.getItem("lyceum-size");
+        var f = localStorage.getItem("lyceum-font");
+        if (t === "dark" || t === "contrast") d.dataset.theme = t;
+        if (s && s !== "small") d.dataset.size = s;
+        if (f && f !== "serif") d.dataset.font = f;
+        if (f === "dyslexic") {
+          var L = document.createElement("link");
+          L.id = "lyceum-dyslexic"; L.rel = "stylesheet"; L.href = "/librarylyceum/lyceum-dyslexic.css";
+          document.head.appendChild(L);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/librarylyceum/lyceum-fonts.css">
+  <link rel="stylesheet" href="lyceum.css">
+  <!-- /lyceum:head -->
+
+  <style>
+    .tools-intro {
+      max-width: 46rem;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+
+
+    .tools-access {
+      font-family: var(--sans);
+      font-size: calc(var(--base-size) * 0.8);
+      color: var(--text-muted);
+      margin-top: 0.9rem;
+    }
+
+    .tool {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 3px;
+      padding: 1.6rem 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tool-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .tool-name {
+      font-family: var(--display);
+      font-size: calc(var(--base-size) * 1.5);
+      font-weight: 600;
+      line-height: 1.15;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .tool-band {
+      font-family: var(--sans);
+      font-size: calc(var(--base-size) * 0.66);
+      font-weight: 600;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--gold-ink);
+      border: 1px solid var(--gold-ink);
+      border-radius: 30px;
+      padding: 0.18em 0.7em;
+      white-space: nowrap;
+    }
+
+    .tool-vendor {
+      font-family: var(--sans);
+      font-size: calc(var(--base-size) * 0.7);
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+
+    .tool-vendor a { color: var(--red-ink); }
+
+    .tools-intro a { color: var(--red-ink); }
+
+    .tool-quote {
+      font-family: var(--serif);
+      line-height: 1.55;
+      font-style: italic;
+      font-size: calc(var(--base-size) * 0.92);
+      color: var(--text-muted);
+      border-left: 2px solid var(--rule-color);
+      padding-left: 0.9rem;
+      margin: 0 0 1.2rem;
+    }
+
+    .tool-quote cite {
+      display: block;
+      font-style: normal;
+      font-family: var(--sans);
+      font-size: calc(var(--base-size) * 0.66);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .tool-field { margin-bottom: 1.1rem; }
+    .tool-field:last-child { margin-bottom: 0; }
+
+    .tool-field-label {
+      display: block;
+      font-family: var(--sans);
+      font-size: calc(var(--base-size) * 0.64);
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+
+    .tool-field p { margin: 0 0 0.7rem; }
+    .tool-field p:last-child { margin-bottom: 0; }
+
+
+
+
+
+
+    @media print {
+      .tool { break-inside: avoid; border-color: #999; background: none; }
+    }
+
+    @media (max-width: 620px) {
+      .tool { padding: 1.25rem 1.1rem; }
+      .tool-vendor { margin-left: 0; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- lyceum:skiplink target="#main-content" -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <!-- /lyceum:skiplink -->
+
+  <!-- lyceum:a11y -->
+  <button id="a11y-trigger" class="a11y-trigger" type="button"
+          aria-expanded="false" aria-controls="a11y-panel"
+          aria-label="Display and accessibility settings">
+    <span class="a11y-trigger-glyph" aria-hidden="true">Aa</span>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-panel-title" hidden>
+    <p class="a11y-panel-title" id="a11y-panel-title">Display Settings</p>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-size-label">Text size</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-size-label">
+        <button class="a11y-btn active" type="button" data-size="small" aria-pressed="true">A</button>
+        <button class="a11y-btn" type="button" data-size="medium" aria-pressed="false">A+</button>
+        <button class="a11y-btn" type="button" data-size="large"  aria-pressed="false">A++</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-font-label">Typeface</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-font-label">
+        <button class="a11y-btn active" type="button" data-font="serif" aria-pressed="true">Serif</button>
+        <button class="a11y-btn" type="button" data-font="sans" aria-pressed="false">Sans</button>
+        <button class="a11y-btn" type="button" data-font="dyslexic" aria-pressed="false" aria-label="OpenDyslexic">Dyslexic</button>
+      </div>
+    </div>
+
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-theme-label">Theme</span>
+      <div class="a11y-row" role="group" aria-labelledby="a11y-theme-label">
+        <button class="a11y-btn active" type="button" data-theme-choice="light" aria-pressed="true">Light</button>
+        <button class="a11y-btn" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        <button class="a11y-btn" type="button" data-theme-choice="contrast" aria-pressed="false">Contrast</button>
+      </div>
+    </div>
+  </div>
+  <!-- /lyceum:a11y -->
+
+  <!-- lyceum:header page="tools" -->
+  <header>
+    <a href="index.html" class="header-brand" aria-label="WEHS Library Lyceum home">
+      <div class="header-wordmark">
+        <span class="wordmark-school">West Essex High School</span>
+        <span class="wordmark-name">Library Lyceum</span>
+      </div>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="databases.html">Find a Database</a>
+      <a href="guides.html">Research Guides</a>
+      <a href="tools.html" class="active" aria-current="page">Classroom Tools</a>
+      <a href="search.html">Search</a>
+      <a href="newsletter/">Newsletter</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <!-- /lyceum:header -->
+
+  <main id="main-content">
+    <div class="wrap">
+
+      <h1 class="page-title">Classroom Tools</h1>
+
+      <div class="tools-intro">
+        <p>These digital tools offer educators options for structured practice and gamification to improve engagement and retention. Students, feel free to look here, but know there isn't much worth looking at!</p>
+  <p class="tools-access">See your supervisor if you need access assistance.</p>
+      </div>
+
+
+
+      <article class="tool" id="tool-nearpod-and-flocabulary">
+        <div class="tool-head">
+          <h2 class="tool-name">Nearpod &amp; Flocabulary</h2>
+          <span class="tool-band">Middle School</span>
+          <span class="tool-vendor">Renaissance &middot;
+            <a href="https://nearpod.com/" target="_blank" rel="noopener noreferrer">nearpod.com</a> &middot;
+            <a href="https://www.flocabulary.com/" target="_blank" rel="noopener noreferrer">flocabulary.com</a>
+          </span>
+        </div>
+
+        <p class="tool-quote">
+          &ldquo;Create active learning experiences students can&rsquo;t wait to be a part of.&rdquo;
+          &mdash; Nearpod<br>
+          &ldquo;A library of songs, videos and activities for K&ndash;12 online learning.&rdquo;
+          &mdash; Flocabulary
+          <cite>What the platforms claim</cite>
+        </p>
+
+        <div class="tool-field">
+          <span class="tool-field-label">What it does</span>
+          <p>Nearpod transforms slide decks into interactives by embedding polls, open-ended questions, draw-it prompts, and quizzes between the slides, with real-time results arriving on your screen as students respond. You can proceed at your pace or allow students to move at their own.</p>
+          <p>Flocabulary offers a collection of short videos that set vocabulary concepts and topics to hip-hop alongside supplementary learning activities.</p>
+          <p>Although Renaissance owns both Nearpod and Flocabulary, they aren't complementary tools. Flocabulary is a vocabulary-specific platform; Nearpod attaches to any lesson you already teach.</p>
+        </div>
+
+        <div class="tool-field">
+          <span class="tool-field-label">In the classroom</span>
+          <p>Nearpod provides opportunities for formative assessment with the benefit of a data trail. You can also get creative with student-paced lessons by offering them as homework or keeping them on the back burner for absentees.</p>
+          <p>Flocabulary's a great way to frontload material ahead of a challenging new read.</p>
+        </div>
+
+      </article>
+
+
+      <article class="tool" id="tool-albert">
+        <div class="tool-head">
+          <h2 class="tool-name">Albert</h2>
+          <span class="tool-band">High School</span>
+          <span class="tool-vendor">
+            <a href="https://www.albert.io/" target="_blank" rel="noopener noreferrer">albert.io</a>
+          </span>
+        </div>
+
+        <p class="tool-quote">
+          &ldquo;Adaptive skills practice + premium question banks for all subjects and exams
+          in grades 3&ndash;12.&rdquo;
+          <cite>What the platform claims</cite>
+        </p>
+
+        <div class="tool-field">
+          <span class="tool-field-label">What it does</span>
+          <p>Albert is a practice engine loaded with question banks across math, ELA, science, social studies, electives and world languages, plus dedicated preparation for standardized tests including AP, the SAT, and the ACT. The content adapts as students work and the teacher interface makes it clear which standards a class finds most challenging.</p>
+          <p>Albert sells practice questions, not curriculum or instruction. Its value stems from its style, especially for standardized exams.</p>
+        </div>
+
+        <div class="tool-field">
+          <span class="tool-field-label">In the classroom</span>
+          <p>Great for retrieval! Make Monday's Do Now an Albert bank with material from two weeks last Tuesday.</p>
+          <p>Have data from past exams? See where this year's students stand and/or where last year's students were most challenged and target those areas early.</p>
+        </div>
+
+      </article>
+
+
+      <article class="tool" id="tool-edpuzzle">
+        <div class="tool-head">
+          <h2 class="tool-name">Edpuzzle</h2>
+          <span class="tool-band">Middle &amp; High School</span>
+          <span class="tool-vendor">
+            <a href="https://edpuzzle.com/" target="_blank" rel="noopener noreferrer">edpuzzle.com</a>
+          </span>
+        </div>
+
+        <p class="tool-quote">
+          &ldquo;Make any video your lesson.&rdquo;
+          <cite>What the platform claims</cite>
+        </p>
+
+        <div class="tool-field">
+          <span class="tool-field-label">What it does</span>
+          <p>Edpuzzle lets you turducken questions into a video (could be yours, could be something from YouTube). The video stops and poses a question; the students answer and you receive a log of who watched for how long and how they responded. It integrates with Classroom, which should make scoring a breeze!</p>
+          <p>Edpuzzle makes video assignments accountable without being overtly punitive.</p>
+        </div>
+
+        <div class="tool-field">
+          <span class="tool-field-label">In the classroom</span>
+          <p>Fine, I'll use the buzzwords: use Edpuzzle for flipped instruction. Let the video lecture and provide comprehension checks so you can focus class time on practice.</p>
+          <p>If you aren't camera-shy, record yourself reading a text and jam your reading check right into the video.</p>
+          <p>Also, take a look at the analytics! The part where every student rewound three times is probably worth reviewing as a class.</p>
+        </div>
+
+      </article>
+
+
+      <article class="tool" id="tool-gimkit">
+        <div class="tool-head">
+          <h2 class="tool-name">Gimkit</h2>
+          <span class="tool-band">Middle &amp; High School</span>
+          <span class="tool-vendor">
+            <a href="https://www.gimkit.com/" target="_blank" rel="noopener noreferrer">gimkit.com</a>
+          </span>
+        </div>
+
+        <p class="tool-quote">
+          &ldquo;A game show for the classroom that requires knowledge, collaboration,
+          and strategy to win.&rdquo;
+          <cite>What the platform claims</cite>
+        </p>
+
+        <div class="tool-field">
+          <span class="tool-field-label">What it does</span>
+          <p>Gimkit takes the concept of an "information economy" quite literally. Students answer questions to earn in-game currency, then spend it on upgrades and power-ups that change how fast they earn.</p>
+          <p>If you've tried Kahoot and found wrong-answer click-spamming taxing, Gimkit, in theory, solves that specific problem. Speed matters less; accumulated correct answers matter more.</p>
+          <p>Question sets can be built from scratch, imported from Quizlet or pasted in from a spreadsheet. The set can play live with the whole class or be assigned for students to work through on their own time.</p>
+        </div>
+
+        <div class="tool-field">
+          <span class="tool-field-label">In the classroom</span>
+          <p>Great for vocabulary and formula recall, or anything that demands a ton of reps. The game structure helps make repetition tolerable.</p>
+          <p>Consider using it as an asynchronous assignment prior to an assessment to identify and target tricky content.</p>
+        </div>
+
+      </article>
+
+
+      <article class="tool" id="tool-gizmos">
+        <div class="tool-head">
+          <h2 class="tool-name">Gizmos</h2>
+          <span class="tool-band">Middle &amp; High School</span>
+          <span class="tool-vendor">ExploreLearning &middot;
+            <a href="https://gizmos.explorelearning.com/" target="_blank" rel="noopener noreferrer">gizmos.explorelearning.com</a>
+          </span>
+        </div>
+
+        <p class="tool-quote">
+          &ldquo;Interactive online simulations and case studies for math and science that power
+          inquiry and understanding through hands-on learning and experimentation.&rdquo;
+          <cite>What the platform claims</cite>
+        </p>
+
+        <div class="tool-field">
+          <span class="tool-field-label">What it does</span>
+          <p>Gizmos are interactive math and science simulations. The user changes a variable, the model responds, and the relationship becomes manifest in a way still diagrams cannot muster.</p>
+          <p>I'll repeat: this is not a science-only resource! The math library is substantial.</p>
+          <p>It's also worth noting that a simulation makes a poor substitute for a lab, though it is very good at running the experiment twenty times in four minutes to find a pattern.</p>
+        </div>
+
+        <div class="tool-field">
+          <span class="tool-field-label">In the classroom</span>
+          <p>Run a simulation before a lab! The hypothesis should carry a bit more water going into the physical activity given the modeled outcome.</p>
+          <p>Heading into a topic students reliably misunderstand? Break the model deliberately! Set the variable to an absurd value and ask why the model does what it does.</p>
+        </div>
+
+      </article>
+
+
+      <div class="tools-intro" style="margin-top:2.5rem">
+        <p>Don&rsquo;t forget about our <a href="databases.html">database collection</a>!</p>
+        <p>Want a hand experimenting with anything here? Stop by or shoot me an email!</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- lyceum:footer -->
+  <footer>
+    <div class="footer-left">
+      <span class="footer-name">West Essex High School Library Lyceum</span>
+    </div>
+    <div class="footer-right">
+      Questions? Reach out to <a href="mailto:sthompson@westex.org">Mr. Thompson</a>.<br>
+      &copy; <span id="yr">2026</span> West Essex High School
+    </div>
+  </footer>
+  <!-- /lyceum:footer -->
+
+  <script src="lyceum.js" defer></script>
+</body>
+</html>

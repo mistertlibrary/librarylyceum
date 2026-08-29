@@ -5,10 +5,10 @@ its `name` table, fields 0, 13 and 14 — not from a search result. Where a file
 could not say who made it, the line was taken from the family's upstream
 `OFL.txt` and the source is named.
 
-This file exists because the licence asks for it. OFL 1.1, condition 2:
-redistributed copies must each carry the copyright notice and the licence,
+This file exists because the license asks for it. OFL 1.1, condition 2:
+redistributed copies must each carry the copyright notice and the license,
 "either as stand-alone text files, human-readable headers or in the appropriate
-machine-readable metadata fields." `OFL.txt` beside this note is the licence;
+machine-readable metadata fields." `OFL.txt` beside this note is the license;
 this note is the notice.
 
 ---
@@ -36,23 +36,23 @@ See `OFL.txt`.
 Reserved Font Names are declared for IM Fell English, Lora and Playfair Display.
 Under condition 3 a modified version may not be released under those names. We
 subset and re-encode; we do not rename or redraw, so nothing here is a Modified
-Version in the licence's sense.
+Version in the license's sense.
 
-## OpenDyslexic — two licences, not one
+## OpenDyslexic — two licenses, not one
 
 The four files do not agree with each other, and the difference is real.
 
 | Files | What the binary says |
 | --- | --- |
-| `opendyslexic-400.woff2`, `opendyslexic-700.woff2` | Copyright © 2019 by Abbie Gonzalez. Licence field names the SIL OFL and a Reserved Font Name. |
+| `opendyslexic-400.woff2`, `opendyslexic-700.woff2` | Copyright © 2019 by Abbie Gonzalez. License field names the SIL OFL and a Reserved Font Name. |
 | `opendyslexic-400-italic.woff`, `opendyslexic-700-italic.woff` | "Original Fonts are © Bitstream. OpenDyslexic changes and additional glyphs by Abelardo Gonzalez are licensed under a Creative Commons Attribution 3.0 Unported License." Bitstream terms at http://opendyslexic.org/legal/ |
 
 The two italics are the older, pre-OFL generation of the project, carried
 forward from the copies already self-hosted in the guide network. CC BY 3.0
 requires attribution, which this note gives; it does not require that its own
-text travel with the work, so there is no third licence file here. Replacing the
+text travel with the work, so there is no third license file here. Replacing the
 two `.woff` italics with current OpenDyslexic builds would collapse the family
-back onto a single licence, and would let them be `.woff2` besides. See
+back onto a single license, and would let them be `.woff2` besides. See
 `OPENDYSLEXIC-LICENSE.txt`.
 
 ## Five files that cannot say what they are
@@ -60,7 +60,7 @@ back onto a single licence, and would let them be `.woff2` besides. See
 `cormorant-garamond-300-700.woff2`, `cormorant-garamond-300-700-italic.woff2`,
 `eb-garamond-400-800.woff2`, `eb-garamond-400-800-italic.woff2` and
 `libre-franklin-100-900.woff2` have **no `name` table at all** — no family, no
-copyright, no licence field. Whatever subsetting pipeline produced them stripped
+copyright, no license field. Whatever subsetting pipeline produced them stripped
 it. Their copyright lines in the table above therefore come from the families'
 upstream `OFL.txt` in `github.com/google/fonts`, not from the files.
 
@@ -70,7 +70,7 @@ the binaries cannot be identified from themselves, and one of them, EB Garamond,
 is the body face of the Babel catalogue. Re-fetching those five from upstream
 with their metadata intact would close it.
 
-## One more artefact worth noting
+## One more artifact worth noting
 
 The Newsreader files report their typographic family as `Newsreader 16pt 16pt` —
 the optical-size token doubled. Harmless, since the `@font-face` rules name the

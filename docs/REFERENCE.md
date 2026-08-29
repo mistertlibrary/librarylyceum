@@ -242,7 +242,7 @@ One line in each guide's `<head>`, before its own scripts, changing only
 
 Installed in `mla`, `apa`, `annotation`, `rbgettingstarted`,
 `rbsearchesandsources`, `imageclearinghouse`, and `babel`. `crusades` and
-`summerreading2026` store no preferences and need nothing. An unrecognised
+`summerreading2026` store no preferences and need nothing. An unrecognized
 `data-guide` makes the shim inert rather than erroneous.
 
 ## Degradation
@@ -315,7 +315,7 @@ The writing surface is two layers. A `<pre>` underneath carries the text with
 its structural marks dimmed; a transparent `<textarea>` on top carries the
 caret, the selection, and the spellchecker. Every property that affects where a
 glyph lands is declared once for both, so they cannot fall out of register.
-Colour is the only difference — a change in weight or size would move the text.
+Color is the only difference — a change in weight or size would move the text.
 
 **One deliberate divergence.** Raw HTML passes through `marked` untouched, which
 is how the `<figure>` block works. The composer's preview renders such markup but

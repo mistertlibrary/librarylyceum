@@ -51,7 +51,6 @@
   <script src="search.js" defer></script>
 
   <style>
-    /* ── SEARCH PAGE ONLY ── */
 
     .search-page-input {
       font-size: calc(var(--base-size) * 1.05);
@@ -148,8 +147,6 @@
       margin-top: 0.7rem;
     }
 
-    /* --gold-ink, not --gold: gold on parchment measures 2.13:1, well below the
-       4.5:1 WCAG AA needs for text this size. */
     .result-context {
       font-family: var(--sans);
       font-size: 0.6rem;
@@ -160,9 +157,6 @@
       margin-bottom: 0.3rem;
     }
 
-    /* Matched sections, offered beneath the guide that contains them. The card
-       above is itself a link, so these sit outside it in the same list item —
-       an anchor nested in an anchor is invalid markup. */
     .result-item { list-style: none; }
 
     .result-has-sections { border-bottom: 0; padding-bottom: 0.9rem; }
@@ -298,6 +292,7 @@
       <a href="index.html">Home</a>
       <a href="databases.html">Find a Database</a>
       <a href="guides.html">Research Guides</a>
+      <a href="tools.html">Classroom Tools</a>
       <a href="search.html" class="active" aria-current="page">Search</a>
       <a href="newsletter/">Newsletter</a>
       <a href="about.html">About</a>
@@ -307,14 +302,12 @@
 
   <main id="main-content">
 
-    <!-- PAGE HEADER -->
     <div class="page-header">
       <h1>Search</h1>
       <div class="page-rule" aria-hidden="true"></div>
       <p>Universal search! Find databases, research guides, and more.</p>
     </div>
 
-    <!-- CONTROLS -->
     <div class="controls" role="search">
       <div class="search-wrap">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -335,10 +328,8 @@
       </div>
     </div>
 
-    <!-- RESULTS META -->
     <div class="results-meta" id="results-meta" aria-live="polite" aria-atomic="true"></div>
 
-    <!-- RESULTS -->
     <div id="results"></div>
 
   </main>

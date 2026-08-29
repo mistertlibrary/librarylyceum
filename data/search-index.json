@@ -3,7 +3,8 @@
   "generated": "2026-08-28",
   "counts": {
     "database": 81,
-    "guide": 9
+    "guide": 9,
+    "tool": 5
   },
   "records": [
     {
@@ -1306,6 +1307,56 @@
       ],
       "series": "",
       "course": ""
+    },
+    {
+      "type": "tool",
+      "title": "Nearpod & Flocabulary",
+      "url": "tools.html#tool-nearpod-and-flocabulary",
+      "external": false,
+      "text": "Nearpod transforms slide decks into interactives by embedding polls, open-ended questions, draw-it prompts, and quizzes between the slides, with real-time results arriving on your screen as students respond. You can proceed at your pace or allow students to move at their own. Flocabulary offers a collection of short videos that set vocabulary concepts and topics to hip-hop alongside supplementary learning activities. Although Renaissance owns both Nearpod and Flocabulary, they aren't complementary tools. Flocabulary is a vocabulary-specific platform; Nearpod attaches to any lesson you already teach.",
+      "band": "Middle School",
+      "vendor": "Renaissance · nearpod.com · flocabulary.com",
+      "sectionText": "Nearpod provides opportunities for formative assessment with the benefit of a data trail. You can also get creative with student-paced lessons by offering them as homework or keeping them on the back burner for absentees. Flocabulary's a great way to frontload material ahead of a challenging new read. \"Create active learning experiences students can’t wait to be a part of.\" — Nearpod \"A library of songs, videos and activities for K–12 online learning.\" — Flocabulary What the platforms claim"
+    },
+    {
+      "type": "tool",
+      "title": "Albert",
+      "url": "tools.html#tool-albert",
+      "external": false,
+      "text": "Albert is a practice engine loaded with question banks across math, ELA, science, social studies, electives and world languages, plus dedicated preparation for standardized tests including AP, the SAT, and the ACT. The content adapts as students work and the teacher interface makes it clear which standards a class finds most challenging. Albert sells practice questions, not curriculum or instruction. Its value stems from its style, especially for standardized exams.",
+      "band": "High School",
+      "vendor": "albert.io",
+      "sectionText": "Great for retrieval! Make Monday's Do Now an Albert bank with material from two weeks last Tuesday. Have data from past exams? See where this year's students stand and/or where last year's students were most challenged and target those areas early. \"Adaptive skills practice + premium question banks for all subjects and exams in grades 3–12.\" What the platform claims"
+    },
+    {
+      "type": "tool",
+      "title": "Edpuzzle",
+      "url": "tools.html#tool-edpuzzle",
+      "external": false,
+      "text": "Edpuzzle lets you turducken questions into a video (could be yours, could be something from YouTube). The video stops and poses a question; the students answer and you receive a log of who watched for how long and how they responded. It integrates with Classroom, which should make scoring a breeze! Edpuzzle makes video assignments accountable without being overtly punitive.",
+      "band": "Middle & High School",
+      "vendor": "edpuzzle.com",
+      "sectionText": "Fine, I'll use the buzzwords: use Edpuzzle for flipped instruction. Let the video lecture and provide comprehension checks so you can focus class time on practice. If you aren't camera-shy, record yourself reading a text and jam your reading check right into the video. Also, take a look at the analytics! The part where every student rewound three times is probably worth reviewing as a class. \"Make any video your lesson.\" What the platform claims"
+    },
+    {
+      "type": "tool",
+      "title": "Gimkit",
+      "url": "tools.html#tool-gimkit",
+      "external": false,
+      "text": "Gimkit takes the concept of an \"information economy\" quite literally. Students answer questions to earn in-game currency, then spend it on upgrades and power-ups that change how fast they earn. If you've tried Kahoot and found wrong-answer click-spamming taxing, Gimkit, in theory, solves that specific problem. Speed matters less; accumulated correct answers matter more. Question sets can be built from scratch, imported from Quizlet or pasted in from a spreadsheet. The set can play live with the whole class or be assigned for students to work through on their own time.",
+      "band": "Middle & High School",
+      "vendor": "gimkit.com",
+      "sectionText": "Great for vocabulary and formula recall, or anything that demands a ton of reps. The game structure helps make repetition tolerable. Consider using it as an asynchronous assignment prior to an assessment to identify and target tricky content. \"A game show for the classroom that requires knowledge, collaboration, and strategy to win.\" What the platform claims"
+    },
+    {
+      "type": "tool",
+      "title": "Gizmos",
+      "url": "tools.html#tool-gizmos",
+      "external": false,
+      "text": "Gizmos are interactive math and science simulations. The user changes a variable, the model responds, and the relationship becomes manifest in a way still diagrams cannot muster. I'll repeat: this is not a science-only resource! The math library is substantial. It's also worth noting that a simulation makes a poor substitute for a lab, though it is very good at running the experiment twenty times in four minutes to find a pattern.",
+      "band": "Middle & High School",
+      "vendor": "ExploreLearning · gizmos.explorelearning.com",
+      "sectionText": "Run a simulation before a lab! The hypothesis should carry a bit more water going into the physical activity given the modeled outcome. Heading into a topic students reliably misunderstand? Break the model deliberately! Set the variable to an absurd value and ask why the model does what it does. \"Interactive online simulations and case studies for math and science that power inquiry and understanding through hands-on learning and experimentation.\" What the platform claims"
     }
   ]
 }

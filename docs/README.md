@@ -91,7 +91,7 @@ same answer wherever it is invoked from.
 | A research guide entry | `data/guides.csv` | rebuild |
 | A guide's sections in search | that guide's own `lyceum.json` | rebuild |
 | Page copy | the page itself | nothing |
-| Colours, type, spacing | `lyceum.css` | nothing |
+| Colors, type, spacing | `lyceum.css` | nothing |
 | A single page's own styles | that page's `<style>` block | nothing |
 
 Anything between `<!-- lyceum:… -->` markers is generated. Hand edits there are
@@ -107,8 +107,8 @@ chrome/            the shared furniture
 build/             every script; nothing here is ever served
 data/              databases.csv, guides.csv, and the generated search-index.json
 docs/              these three documents
-vendor/            pinned third-party libraries, licences beside them
-fonts/             self-hosted faces; OFL.txt is the licence, FONTS.md the
+vendor/            pinned third-party libraries, licenses beside them
+fonts/             self-hosted faces; OFL.txt is the license, FONTS.md the
                    notice — every family with the copyright line read out of
                    its own binary
 newsletter/        the archive and its issues
@@ -153,7 +153,7 @@ degradation.
 
 Node, for the build scripts only, and PowerShell — already on the work machine —
 for the link check. Three vendored browser libraries — Papa Parse,
-Fuse, and marked — pinned in the repository with their licences, fetched from
+Fuse, and marked — pinned in the repository with their licenses, fetched from
 nobody at runtime. No package manager, no lockfile, no toolchain to maintain.
 
 Nothing on this site calls a third-party server at page load. Fonts, scripts,

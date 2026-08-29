@@ -30,6 +30,11 @@
       "href": "guides.html"
     },
     {
+      "id": "tools",
+      "label": "Classroom Tools",
+      "href": "tools.html"
+    },
+    {
       "id": "search",
       "label": "Search",
       "href": "search.html"

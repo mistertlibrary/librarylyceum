@@ -1,14 +1,3 @@
-/* Library Lyceum: self-hosted variable fonts.
-   Faces live as real files in fonts/ rather than base64 inside this stylesheet.
-   Three reasons: the files are ~25% smaller than their base64 form; they cache
-   independently, so editing this file no longer invalidates ~200KB of font
-   data; and, most importantly, a browser fetches a face only when text actually
-   needs it — inlined, every visitor downloaded all five whether or not a single
-   italic ever rendered.
-
-   URLs are relative to THIS stylesheet, not to the page, so they resolve
-   correctly from any directory depth and from any site that links this file.
-   Replaces any Google Fonts request. */
 
 @font-face {
   font-family: "Cormorant Garamond";

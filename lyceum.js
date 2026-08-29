@@ -1,6 +1,3 @@
-/* LIBRARY LYCEUM: SHARED BEHAVIOUR
-   Reader preferences, the accessibility panel, and small helpers.
-   The pre-paint snippet in each page's <head> is separate. */
 
 (function () {
   "use strict";
@@ -19,7 +16,6 @@
   }
 
 
-  /* ── PREFERENCES ──────────────────────────────────────── */
 
   var root = document.documentElement;
 
@@ -28,13 +24,6 @@
     else root.dataset.size = val;
   }
 
-  /* OpenDyslexic lives in its own stylesheet so that its ~130KB is fetched only
-     by readers who choose it, rather than by everyone on every page. The URL is
-     derived from the canonical fonts link rather than hard-coded, so this keeps
-     working at any directory depth and in any repository that vendors the
-     chrome. The pre-paint snippet in the head injects the same link when the
-     stored preference is already "dyslexic", so a reader who needs the face
-     does not get a flash of the fallback first. */
   function ensureDyslexicCss() {
     if (document.getElementById("lyceum-dyslexic")) return;
     var base = document.querySelector('link[href*="lyceum-fonts.css"]');
@@ -53,10 +42,6 @@
     root.dataset.font = val;
   }
 
-  /* A reader may arrive holding a theme this stylesheet cannot render — a value
-     from a future palette, or a corrupted entry. Rather than discard the choice,
-     which would silently reset it for every guide that CAN honour it, the stored
-     value is left alone and only the rendering falls back. */
   var THEMES = ["light", "dark", "contrast"];
   function renderable(val) { return THEMES.indexOf(val) === -1 ? "light" : val; }
 
@@ -86,7 +71,6 @@
   function setTheme(val) { applyTheme(val); write(STORE.theme, val); updateThemeButtons(val); }
 
 
-  /* ── ACCESSIBILITY PANEL ──────────────────────────────── */
 
   var trigger = null;
   var panel   = null;
@@ -133,7 +117,6 @@
   }
 
 
-  /* ── BOOT ─────────────────────────────────────────────── */
 
   function init() {
     var year = document.getElementById("yr");
@@ -153,9 +136,6 @@
       });
     }
 
-    /* The size scale was renamed to match the vocabulary every guide already
-       used, so one choice now carries across the whole network. Anyone holding a
-       value from the old scale is migrated rather than silently reset. */
     var LEGACY_SIZE = { "default": "small", "large": "medium", "larger": "large" };
     var stored = read(STORE.size, DEFAULTS.size);
     if (LEGACY_SIZE.hasOwnProperty(stored) && ["small","medium","large"].indexOf(stored) === -1) {
@@ -177,7 +157,6 @@
   else init();
 
 
-  /* ── HELPERS ──────────────────────────────────────────── */
 
   window.Lyceum = {
     escHtml: function (str) {
@@ -193,12 +172,6 @@
       return String(str).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
     },
 
-    /* A CSV cell written with line breaks, rendered as the prose it is.
-       A blank line starts a new paragraph; a single line break inside a
-       paragraph stays a line break. Everything is escaped first, so the
-       only markup that reaches the page is the markup this function
-       makes — a description can contain angle brackets and be safe.
-       Returns "" for empty input, so callers can test it as a condition. */
     paragraphs: function (text) {
       var esc = window.Lyceum.escHtml;
       var paras = String(text == null ? "" : text)

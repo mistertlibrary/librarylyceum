@@ -57,7 +57,7 @@ Recorded here because they shape the plan and because a future session will need
 | `databases.csv` holds 74 rows, all with descriptions and a `Primary` subject; 14 subjects in use | Sound data. Detail pages generate cleanly from it. |
 | Newsletter ships two `sample-` placeholder issues and three `PLACEHOLDER` meta tags in production | Blocks launch. Phase 5. |
 | `.nojekyll` present; `newsletter/issues/_template/` is underscore-prefixed | Consistent with the decision against Jekyll, which ignores underscore-prefixed directories by default. |
-| `check-links.js` and `check-issues.js` exist but run only when invoked manually | Link rot is currently discovered by students. Addressed in the continuous track. *(27 Aug: `check-links.js` is now `build/Check-Links.ps1`. Still manual, deliberately — it is the one check that has to run on the work machine, where Node does not.)* |
+| `check-links.js` and `check-issues.js` exist but run only when invoked manually | Link rot is currently discovered by students. Addressed in the continuous track. |
 
 ---
 
@@ -75,7 +75,7 @@ chrome/
   header.html          wordmark and navigation
   footer.html          contact and copyright
   lyceum-chrome.css    design tokens and shared component styles
-  lyceum-chrome.js     preference logic, a11y panel behaviour, shared helpers
+  lyceum-chrome.js     preference logic, a11y panel behavior, shared helpers
 ```
 
 Each HTML page carries marker comments:
@@ -193,8 +193,6 @@ being tedious enough to abandon.
 
 ### Continuous — Maintenance automation
 A weekly GitHub Action running `check-links.js`, `check-issues.js`, and the chrome drift check, opening a repository issue on failure. Lands any time after Phase 1.
-
-*27 Aug — overtaken in part. The chrome drift check was dropped in the 25 August pruning. Link checking left Node entirely: it is `build/Check-Links.ps1` now, because it has to run on the work machine and has to be run twice, on the school network and off it, and neither of those is something a scheduled Action can do. What is left for an Action is `check-issues.js` alone, which is not obviously worth a workflow file.*
 
 Note this does not violate the source-equals-output principle: the Action is a *monitor*, not a build. The site deploys whether or not it passes.
 

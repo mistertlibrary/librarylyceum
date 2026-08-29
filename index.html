@@ -47,7 +47,6 @@
   <!-- /lyceum:head -->
 
   <style>
-    /* ── HOMEPAGE ONLY ── */
 
     .hero {
       background-color: var(--bg);
@@ -77,7 +76,6 @@
 
     .hero-rule { width: 72px; height: 2px; background: var(--gold); margin: 1.2rem auto 3rem; }
 
-    /* ── INVOCATION ── */
     .invocation { max-width: 700px; margin: 0 auto; text-align: center; }
 
     .invocation p {
@@ -91,7 +89,6 @@
 
     .invocation p:last-child { margin-bottom: 0; }
 
-    /* ── INVOCATION DISCLOSURE ── */
     .invocation-more { margin-top: 1.4rem; }
 
     .invocation-more > summary {
@@ -133,7 +130,6 @@
       .invocation-body { animation: none; }
     }
 
-    /* ── GATEWAYS ── */
     .gateways {
       display: grid;
       grid-template-columns: 1fr 1px 1fr;
@@ -209,7 +205,6 @@
 
     .gateway-link:hover { background-color: transparent; color: var(--red-ink); }
 
-    /* ── START HERE ── */
     .start-here {
       background-color: #111111;
       padding: 4rem 2.5rem;
@@ -255,7 +250,6 @@
       font-style: italic;
     }
 
-    /* auto-fit so the row reads correctly with two entries or three */
     .start-here-links {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -375,6 +369,7 @@
       <a href="index.html" class="active" aria-current="page">Home</a>
       <a href="databases.html">Find a Database</a>
       <a href="guides.html">Research Guides</a>
+      <a href="tools.html">Classroom Tools</a>
       <a href="search.html">Search</a>
       <a href="newsletter/">Newsletter</a>
       <a href="about.html">About</a>
@@ -384,7 +379,6 @@
 
   <main id="main-content">
 
-    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
 
       <svg class="catalog-ornament" width="132" height="84" viewBox="0 0 88 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -431,7 +425,6 @@
       </div>
     </section>
 
-    <!-- GATEWAYS -->
     <section class="gateways" aria-label="Library Lyceum main sections">
 
       <div class="gateway">
@@ -479,7 +472,6 @@
 
     </section>
 
-    <!-- START HERE -->
     <section class="start-here" aria-labelledby="start-here-title">
       <div class="start-here-inner">
         <p class="start-here-label">Not sure where to begin?</p>

@@ -1,12 +1,3 @@
-/* LIBRARY LYCEUM: PUBLISHED ISSUE
- *
- * Fetches this folder's issue.md and renders it. All of the rendering lives in
- * newsletter-render.js, which compose.html loads too — so the draft you approve
- * in the editor and the page a reader gets are produced by the same function.
- *
- * Load order, all deferred so they execute in document order:
- *   vendor-marked.js -> lyceum.js -> newsletter-render.js -> newsletter-issue.js
- */
 
 (function () {
   "use strict";
@@ -35,7 +26,6 @@
     });
   }
 
-  /* Previous and next, resolved from the manifest by issue number. */
   function renderIssueNav(number) {
     var n = parseInt(number, 10);
     if (!n) return;

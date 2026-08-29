@@ -125,6 +125,60 @@ function readGuides() {
   return out;
 }
 
+
+/* Classroom tools.
+ *
+ * Unlike the collections, this one has no CSV behind it: the prose on
+ * tools.html is the source, hand-written and not tabular. Rather than keep a
+ * second copy that could drift, the page is parsed. Each <article class="tool">
+ * yields one record, deep-linked to its own id, with the "What it does" text as
+ * the summary and everything else on the card folded into what Fuse can reach.
+ * If the markup on that page changes shape, this returns nothing and the count
+ * drops — which --check will surface rather than swallow. */
+function readTools() {
+  const file = path.join(ROOT, "tools.html");
+  if (!fs.existsSync(file)) { warnings.push("tools.html not found; no tool records"); return []; }
+  const html = fs.readFileSync(file, "utf8");
+
+  const strip = h => h.replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ").replace(/&mdash;/g, "\u2014").replace(/&ndash;/g, "\u2013")
+    .replace(/&ldquo;|&rdquo;/g, '"').replace(/&rsquo;/g, "\u2019")
+    .replace(/&middot;/g, "\u00b7").replace(/&quot;/g, '"')
+    .replace(/\s+/g, " ").trim();
+
+  const field = (card, label) => {
+    const re = new RegExp('<span class="tool-field-label">' + label + "</span>([\\s\\S]*?)</div>");
+    const m = re.exec(card);
+    return m ? strip(m[1]) : "";
+  };
+
+  const out = [];
+  const cards = html.match(/<article class="tool"[\s\S]*?<\/article>/g) || [];
+  for (const card of cards) {
+    const id    = (/<article class="tool" id="([^"]+)"/.exec(card) || [])[1];
+    const title = strip((/<h2 class="tool-name">([\s\S]*?)<\/h2>/.exec(card) || [])[1] || "");
+    if (!id || !title) { warnings.push("tools.html: a card is missing its id or name"); continue; }
+    out.push({
+      type: "tool",
+      title,
+      url: "tools.html#" + id,
+      external: false,
+      text: field(card, "What it does"),
+      band: strip((/<span class="tool-band">([\s\S]*?)<\/span>/.exec(card) || [])[1] || ""),
+      vendor: strip((/<span class="tool-vendor">([\s\S]*?)<\/span>/.exec(card) || [])[1] || ""),
+      /* Not shown in a result, but a teacher searching "flipped" or "retrieval"
+         should still land on the right card. */
+      sectionText: [field(card, "In the classroom"),
+                    strip((/<p class="tool-quote">([\s\S]*?)<\/p>/.exec(card) || [])[1] || "")]
+                   .filter(Boolean).join(" ")
+    });
+  }
+  if (!out.length) warnings.push("tools.html parsed but yielded no records");
+  return out;
+}
+
+
 /* Satellite descriptors.
  *
  * Each guide repository publishes lyceum.json at its root. We read it from the
@@ -225,6 +279,7 @@ const sectionStats = attachSections(guides);
 const records = [
   ...readDatabases(),
   ...guides,
+  ...readTools(),
   ...readIssues()
 ];
 
@@ -285,6 +340,7 @@ function buildSitemap() {
     { loc: "/",                 file: "index.html",           priority: "1.0" },
     { loc: "/databases.html",   file: "databases.html",       priority: "0.9" },
     { loc: "/guides.html",      file: "guides.html",          priority: "0.9" },
+    { loc: "/tools.html",       file: "tools.html",           priority: "0.8" },
     { loc: "/search.html",      file: "search.html",          priority: "0.6" },
     { loc: "/about.html",       file: "about.html",           priority: "0.5" },
     { loc: "/newsletter/",      file: "newsletter/index.html", priority: "0.7" },

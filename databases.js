@@ -1,5 +1,3 @@
-/* LIBRARY LYCEUM: DATABASE DIRECTORY
-   Requires vendor-papaparse.js, vendor-fuse.js, subjects.js, lyceum.js. */
 
 (function () {
   "use strict";
@@ -24,7 +22,6 @@
   var activeView    = DEFAULT_VIEW;
 
 
-  /* ── URL STATE ────────────────────────────────────────── */
 
   function readStateFromUrl() {
     var p = new URLSearchParams(window.location.search);
@@ -47,7 +44,6 @@
   }
 
 
-  /* ── FILTER CONTROLS ──────────────────────────────────── */
 
   function buildFilterControls() {
     var bar = document.getElementById("filter-bar");
@@ -103,7 +99,6 @@
   }
 
 
-  /* ── TOOLBAR ──────────────────────────────────────────── */
 
   function effectiveView() {
     if (searchQuery.length >= 2) return "az";
@@ -174,7 +169,6 @@
   }
 
 
-  /* ── RENDERING ────────────────────────────────────────── */
 
   function cardHtml(db) {
     var tags = db.subjects.map(function (s) {
@@ -286,7 +280,6 @@
   }
 
 
-  /* ── LOAD ─────────────────────────────────────────────── */
 
   function boot() {
     readStateFromUrl();
@@ -345,9 +338,6 @@
             { name: "desc",     weight: 1 },
             { name: "subjects", weight: 1 }
           ],
-          /* 0.20, tightened from 0.35. Measured against exact-substring ground
-             truth over ten queries: mean precision rose 0.42 -> 0.85 with recall
-             unchanged at 1.00, so the looser setting was adding only noise. */
           threshold: 0.20,
           ignoreLocation: true
         });

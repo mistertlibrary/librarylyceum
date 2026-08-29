@@ -1,19 +1,3 @@
-/* LIBRARY LYCEUM: ISSUE RENDERING
- *
- * The single implementation of how an issue.md becomes a rendered issue.
- * Two pages load it:
- *
- *   newsletter/issues/<slug>/index.html   via newsletter-issue.js — the published issue
- *   mediumisthemassage.html               via its own script — the live preview
- *
- * That sharing is the point. The preview is not an approximation of what
- * publishes; it is the same function, over the same stylesheet, with the same
- * vendored marked. A change to footnote handling or contents building changes
- * both at once, so the preview cannot drift into a comfortable lie.
- *
- * Pure functions only. Nothing here fetches, and nothing here touches the
- * document except the detached element buildContents is handed.
- */
 
 (function () {
   "use strict";
@@ -24,12 +8,9 @@
     both: "For everyone"
   };
 
-  /* Your standing colophon. An empty string omits the block entirely. Plain
-     HTML, since it is injected into every issue and into every preview. */
   var COLOPHON_HTML = "";
 
 
-  /* ── FRONT MATTER ─────────────────────────────────────── */
 
   function splitFrontMatter(text) {
     var meta = {};
@@ -49,9 +30,6 @@
     return { meta: meta, body: body };
   }
 
-  /* The inverse, for the compose tool: form fields back to a front matter
-     block. Values are written bare; a value containing a colon followed by a
-     space would otherwise re-parse wrongly, so those are quoted. */
   function buildFrontMatter(meta) {
     var order = ["number", "date", "title", "dek", "audience", "tags"];
     var lines = order.filter(function (k) {
@@ -65,10 +43,6 @@
   }
 
 
-  /* ── FOOTNOTES ────────────────────────────────────────────
-     marked has no footnote support, so references and definitions are handled
-     before it ever sees the text. Notes are renumbered in order of first
-     appearance, so definitions may sit anywhere in the file. */
 
   function extractFootnotes(body) {
     var notes = [];
@@ -88,8 +62,6 @@
         '" aria-label="Footnote ' + n + '">' + n + "</a></sup>";
     });
     var ordered = order.map(function (id) { return notes[seen[id] - 1]; });
-    /* A definition nothing refers to is a typo worth surfacing rather than
-       silently dropping. */
     var orphans = notes.filter(function (n) { return order.indexOf(n.id) < 0; });
     return { body: body, notes: ordered, orphans: orphans };
   }
@@ -105,9 +77,6 @@
   }
 
 
-  /* ── CONTENTS ─────────────────────────────────────────────
-     A brace at the end of an H2 becomes the gloss and is stripped from the
-     heading. Built only when an issue has two or more sections. */
 
   function buildContents(container) {
     var headings = container.querySelectorAll("h2");
@@ -130,8 +99,6 @@
       "<h2>In this issue</h2><ol>" + items.join("") + "</ol></div>";
   }
 
-  /* Parsed as UTC so the date does not slip a day for readers west of the
-     meridian. */
   function formatDate(iso) {
     var parts = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || "");
     if (!parts) return iso || "";
@@ -142,22 +109,12 @@
   }
 
 
-  /* ── RENDER ───────────────────────────────────────────────
-     Returns the issue's complete inner HTML, plus what was parsed out of it,
-     plus anything worth warning about. The caller decides where to put it. */
 
   function render(text) {
     var parsed = splitFrontMatter(text);
     var meta = parsed.meta;
     var fn = extractFootnotes(parsed.body);
 
-    /* Parsed inertly rather than into a live element. Assigning innerHTML on an
-       element made with document.createElement starts loading any <img> in the
-       markup, and a failed load fires its onerror handler — so the issue text
-       would execute merely by being rendered, before any caller could inspect
-       it. A DOMParser document has no browsing context: nothing loads and
-       nothing runs. The published page still inserts the result normally; this
-       only removes a place where code could run that nobody was watching. */
     var doc = new DOMParser().parseFromString(
       '<article class="issue-body">' + window.marked.parse(fn.body) + "</article>",
       "text/html");

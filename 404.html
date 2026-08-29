@@ -6,12 +6,6 @@
   <title>Page Not Found &mdash; WEHS Library Lyceum</title>
   <meta name="robots" content="noindex">
 
-  <!-- 404.html is served for ANY unmatched path, including deep ones such as
-       /librarylyceum/guides/2026/annotation. Relative paths would resolve
-       against that phantom directory and break. Every path in this file is
-       therefore root-absolute and hard-coded to the repository name. If the
-       repository is renamed, or the site moves to a custom domain, update
-       the paths in this file only. Every other page stays relative. -->
 
   <!-- lyceum:head -->
   <link rel="icon" type="image/svg+xml" href="/librarylyceum/favicon.svg">
@@ -43,7 +37,6 @@
   <!-- /lyceum:head -->
 
   <style>
-    /* ── 404 PAGE ONLY ── */
 
     .shelf-ornament { margin: 0 auto 2rem; display: block; }
 
@@ -96,7 +89,6 @@
 
     .interview-submit:hover { background-color: transparent; color: var(--red-ink); }
 
-    /* ── DESTINATIONS ── */
     .destinations {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -152,7 +144,6 @@
       line-height: 1.75;
     }
 
-    /* ── REQUESTED PATH ── */
     .requested-path {
       text-align: center;
       padding: 1.6rem 2.5rem 2.4rem;
@@ -228,6 +219,7 @@
       <a href="/librarylyceum/index.html">Home</a>
       <a href="/librarylyceum/databases.html">Find a Database</a>
       <a href="/librarylyceum/guides.html">Research Guides</a>
+      <a href="/librarylyceum/tools.html">Classroom Tools</a>
       <a href="/librarylyceum/search.html">Search</a>
       <a href="/librarylyceum/newsletter/">Newsletter</a>
       <a href="/librarylyceum/about.html">About</a>
@@ -237,7 +229,6 @@
 
   <main id="main-content">
 
-    <!-- THE EMPTY SHELF -->
     <div class="page-header notfound-header">
 
       <svg class="shelf-ornament" width="190" height="114" viewBox="0 0 120 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -263,7 +254,6 @@
       <p>Not to worry! We&rsquo;ll find what you&rsquo;re after.</p>
     </div>
 
-    <!-- THE REFERENCE INTERVIEW -->
     <div class="interview">
       <label class="interview-label" for="search-input">What are you looking for?</label>
       <form class="interview-form" action="/librarylyceum/databases.html" method="get" role="search">
@@ -278,7 +268,6 @@
       </form>
     </div>
 
-    <!-- DESTINATIONS -->
     <div class="destinations">
       <a class="destination-card" href="/librarylyceum/databases.html">
         <div class="destination-header">
