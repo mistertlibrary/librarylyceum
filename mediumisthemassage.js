@@ -248,17 +248,34 @@
   }
 
 
-  var render = window.Lyceum.debounce(function () {
-    var d = draft();
-    paintMirror(d.body);
-    var out = window.LyceumIssue.render(issueMarkdown(d), { resolveImage: resolveImage });
-    el.preview.innerHTML = defuse(out.html);
-    Array.prototype.forEach.call(el.preview.querySelectorAll("a[href]"), function (a) {
-      a.addEventListener("click", function (e) { e.preventDefault(); });
+  var mirrorPending = false;
+
+  function paintMirrorSoon() {
+    if (mirrorPending) return;
+    mirrorPending = true;
+    requestAnimationFrame(function () {
+      mirrorPending = false;
+      paintMirror(el.body.value);
+      syncScroll();
     });
+  }
+
+  var refresh = window.Lyceum.debounce(function () {
+    var d = draft();
+    var out = window.LyceumIssue.render(issueMarkdown(d), { resolveImage: resolveImage });
+    var top = el.preview.scrollTop;
+    el.preview.innerHTML = defuse(out.html);
+    el.preview.scrollTop = top;
     showChecks(d, out.warnings);
-    save();
-  }, 180);
+  }, 220);
+
+  var persist = window.Lyceum.debounce(save, 1200);
+
+  function render() {
+    paintMirrorSoon();
+    refresh();
+    persist();
+  }
 
   function showChecks(d, warnings) {
     var problems = warnings.slice();
@@ -308,20 +325,29 @@
 
 
 
+  function replaceRange(start, end, text) {
+    var t = el.body;
+    t.focus();
+    t.setSelectionRange(start, end);
+
+    var native = false;
+    try { native = document.execCommand("insertText", false, text); }
+    catch (e) { native = false; }
+
+    if (!native) {
+      t.setRangeText(text, start, end, "end");
+      render();
+    }
+    return start + text.length;
+  }
+
   function surround(before, after, placeholder) {
     var t = el.body;
     var s = t.selectionStart, e = t.selectionEnd;
     var chosen = t.value.slice(s, e) || placeholder || "";
-    t.setRangeText(before + chosen + after, s, e, "select");
-    if (!t.value.slice(s, e)) {
-      t.selectionStart = s + before.length;
-      t.selectionEnd = s + before.length + chosen.length;
-    } else {
-      t.selectionStart = s + before.length;
-      t.selectionEnd = s + before.length + chosen.length;
-    }
-    t.focus();
-    render();
+    replaceRange(s, e, before + chosen + after);
+    t.setSelectionRange(s + before.length, s + before.length + chosen.length);
+    lastCaret = t.selectionStart;
   }
 
   function atLineStart(prefix, placeholder) {
@@ -333,24 +359,24 @@
     var line = t.value.slice(lineStart, lineEnd);
     var stripped = line.replace(/^(#{1,6}\s+|>\s+|-\s+)/, "");
     var text = stripped || placeholder || "";
-    t.setRangeText(prefix + text, lineStart, lineEnd, "end");
-    t.focus();
-    render();
+    lastCaret = replaceRange(lineStart, lineEnd, prefix + text);
   }
 
   function insertBlock(text, at) {
     var t = el.body;
     var s = (at === null || at === undefined) ? t.selectionStart : Math.min(at, t.value.length);
     var e = (at === null || at === undefined) ? t.selectionEnd : s;
+
     var before = t.value.slice(0, s).replace(/\n*$/, "");
-    var after = t.value.slice(e).replace(/^\n*/, "");
-    var joined = (before ? before + "\n\n" : "") + text + "\n\n" + after;
-    var caret = (before ? before.length + 2 : 0) + text.length;
-    t.value = joined;
-    t.selectionStart = t.selectionEnd = caret;
+    var afterAt = e + (/^\n*/.exec(t.value.slice(e)) || [""])[0].length;
+
+    var lead = before ? "\n\n" : "";
+    var tail = afterAt < t.value.length ? "\n\n" : "\n";
+    var caret = replaceRange(before.length, afterAt, lead + text + tail);
+
+    caret = before.length + lead.length + text.length;
+    t.setSelectionRange(caret, caret);
     lastCaret = caret;
-    t.focus();
-    render();
     return caret;
   }
 
@@ -605,13 +631,18 @@
       var t = el.body;
       var id = "n" + nextNote++;
       while (t.value.indexOf("[^" + id + "]") !== -1) id = "n" + nextNote++;
+
       var s = t.selectionEnd;
-      t.setRangeText("[^" + id + "]", s, s, "end");
-      t.value = t.value.replace(/\s*$/, "") + "\n\n[^" + id + "]: The note text.\n";
-      t.selectionStart = t.selectionEnd = t.value.lastIndexOf("The note text.");
-      t.setSelectionRange(t.selectionStart, t.selectionStart + "The note text.".length);
-      t.focus();
-      render();
+      replaceRange(s, s, "[^" + id + "]");
+
+      var tail = /\s*$/.exec(t.value);
+      var end = replaceRange(tail.index, t.value.length,
+        "\n\n[^" + id + "]: The note text.\n");
+
+      var at = t.value.lastIndexOf("The note text.");
+      t.setSelectionRange(at, at + "The note text.".length);
+      lastCaret = at;
+      return end;
     },
     figure: function () {
       var picker = $("img-file-input");
@@ -808,6 +839,15 @@
     el.audience.addEventListener("change", render);
     el.body.addEventListener("input", render);
     el.body.addEventListener("scroll", syncScroll);
+
+    el.preview.addEventListener("click", function (e) {
+      if (e.target.closest("a[href]")) e.preventDefault();
+    });
+
+    window.addEventListener("pagehide", save);
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "hidden") save();
+    });
     window.addEventListener("resize", syncScroll);
     el.title.addEventListener("input", suggestSlug);
     el.slug.addEventListener("input", function () { slugTouched = true; });
@@ -866,12 +906,19 @@
     });
 
     el.body.addEventListener("paste", function (e) {
-      var files = e.clipboardData && e.clipboardData.files;
+      var data = e.clipboardData;
+      if (!data) return;
+
+      var text = data.getData("text/plain");
+      if (text && text.trim()) return;
+
+      var files = data.files;
       if (!files || !files.length) return;
-      var any = Array.prototype.some.call(files, function (f) {
+      var picture = Array.prototype.some.call(files, function (f) {
         return /^image\//i.test(f.type || "");
       });
-      if (!any) return;
+      if (!picture) return;
+
       e.preventDefault();
       addImages(files, el.body.selectionStart);
     });

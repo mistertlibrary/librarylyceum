@@ -157,6 +157,14 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+a {
+  color: var(--red-ink);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+a:hover { color: var(--text); }
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
