@@ -110,7 +110,46 @@
 
 
 
-  function render(text) {
+  function localImages(text) {
+    var out = [], m;
+    var re = /!\[[^\]]*\]\(\s*([^)\s]+)(?:\s+"[^"]*")?\s*\)/g;
+    while ((m = re.exec(text))) {
+      if (!/^(https?:|data:|\/)/i.test(m[1])) out.push(decodeURIComponent(m[1]));
+    }
+    return out;
+  }
+
+  function dressImages(article, resolve) {
+    var imgs = article.querySelectorAll("img");
+    var unlabelled = 0;
+    Array.prototype.forEach.call(imgs, function (img) {
+      if (!img.getAttribute("alt")) unlabelled++;
+      img.setAttribute("loading", "lazy");
+      img.setAttribute("decoding", "async");
+      if (resolve) {
+        var mapped = resolve(img.getAttribute("src"));
+        if (mapped) img.setAttribute("src", mapped);
+      }
+      var p = img.parentElement;
+      if (!p || p.tagName !== "P") return;
+      if (p.textContent.trim() !== "" ) return;
+      if (p.querySelectorAll("img").length !== 1) return;
+      var fig = article.ownerDocument.createElement("figure");
+      fig.appendChild(img.cloneNode(true));
+      var cap = img.getAttribute("title");
+      if (cap) {
+        var fc = article.ownerDocument.createElement("figcaption");
+        fc.textContent = cap;
+        fig.appendChild(fc);
+      }
+      fig.querySelector("img").removeAttribute("title");
+      p.parentNode.replaceChild(fig, p);
+    });
+    return { count: imgs.length, unlabelled: unlabelled };
+  }
+
+  function render(text, opts) {
+    opts = opts || {};
     var parsed = splitFrontMatter(text);
     var meta = parsed.meta;
     var fn = extractFootnotes(parsed.body);
@@ -119,6 +158,8 @@
       '<article class="issue-body">' + window.marked.parse(fn.body) + "</article>",
       "text/html");
     var article = doc.body.firstElementChild;
+
+    var pictures = dressImages(article, opts.resolveImage);
 
     var contents = buildContents(article);
     var audience = (meta.audience || "both").toLowerCase();
@@ -143,12 +184,16 @@
     if (!meta.dek) warnings.push("No dek. The archive card and the meta description both use it.");
     if (!/^\d{4}-\d{2}-\d{2}$/.test(meta.date || "")) warnings.push("Date should be YYYY-MM-DD.");
     if (!meta.number) warnings.push("No issue number. Previous and next links need it.");
+    if (pictures.unlabelled) {
+      warnings.push(pictures.unlabelled + " image" + (pictures.unlabelled === 1 ? "" : "s") +
+        " with no alt text. A reader using a screen reader gets nothing at all there.");
+    }
     if (fn.orphans.length) {
       warnings.push("Footnote " + fn.orphans.map(function (n) { return "[^" + n.id + "]"; }).join(", ") +
         " defined but never referenced.");
     }
 
-    return { html: html, meta: meta, warnings: warnings, notes: fn.notes };
+    return { html: html, meta: meta, warnings: warnings, notes: fn.notes, images: pictures.count };
   }
 
 
@@ -161,6 +206,7 @@
     renderFootnotes: renderFootnotes,
     buildContents: buildContents,
     formatDate: formatDate,
-    render: render
+    render: render,
+    localImages: localImages
   };
 })();

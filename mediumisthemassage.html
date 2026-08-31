@@ -306,6 +306,80 @@
 
     .compose-status.is-bad { color: var(--red-ink); }
 
+    .editor-wrap #f-body.is-dropping {
+      outline: 2px dashed var(--gold);
+      outline-offset: -4px;
+    }
+
+    .img-dialog {
+      width: min(30rem, calc(100vw - 2rem));
+      padding: 0;
+      border: 1px solid var(--border);
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    .img-dialog::backdrop { background: rgba(0, 0, 0, 0.55); }
+
+    .img-dialog form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      padding: 1.8rem;
+    }
+
+    .img-dialog h2 {
+      font-family: var(--display);
+      font-size: calc(var(--base-size) * 1.15);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--text);
+      text-align: center;
+    }
+
+    .img-dialog-preview {
+      border: 1px solid var(--border);
+      background-color: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 6rem;
+      max-height: 14rem;
+      overflow: hidden;
+    }
+
+    .img-dialog-preview img {
+      max-width: 100%;
+      max-height: 14rem;
+      display: block;
+    }
+
+    .img-dialog-file {
+      font-family: var(--sans);
+      font-size: 0.66rem;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      text-align: center;
+      word-break: break-all;
+    }
+
+    .img-dialog-note {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      line-height: 1.6;
+      color: var(--red-ink);
+      border-left: 2px solid var(--red-ink);
+      background-color: var(--surface);
+      padding: 0.6rem 0.8rem;
+    }
+
+    .img-dialog-actions {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
     #save-note, #f-folder {
       font-family: var(--sans);
       font-size: 0.68rem;
@@ -581,8 +655,11 @@
           <button type="button" data-tool="rule" title="Horizontal rule">Rule</button>
           <span class="sep" aria-hidden="true"></span>
           <button type="button" data-tool="note" title="Footnote">Footnote</button>
-          <button type="button" data-tool="figure" title="Image with a caption">Figure</button>
+          <button type="button" data-tool="figure" title="Add an image — or just drop one into the text">Image</button>
         </div>
+
+        <input type="file" id="img-file-input" class="visually-hidden"
+               accept="image/*" multiple tabindex="-1" aria-hidden="true">
 
         <label class="visually-hidden" for="f-body">The issue text</label>
         <div class="editor-wrap">
@@ -612,11 +689,45 @@
 
     <p class="compose-status" id="save-note" style="padding: 0 2.5rem 2.5rem;">
       Point this at <code>newsletter/</code> once and saving writes
-      <code>issues/&lt;folder&gt;/issue.md</code>, its <code>index.html</code>, and the
-      updated manifest straight into place. Then commit in GitHub Desktop.
+      <code>issues/&lt;folder&gt;/issue.md</code>, its <code>index.html</code>, any images
+      you have added, and the updated manifest straight into place. Then commit in
+      GitHub Desktop. Images live beside the issue that uses them, so an issue folder
+      is the whole issue.
     </p>
 
   </main>
+
+  <dialog id="img-dialog" class="img-dialog" aria-labelledby="img-dialog-title">
+    <form id="img-form" method="dialog" novalidate>
+      <h2 id="img-dialog-title">Describe this image</h2>
+
+      <div class="img-dialog-preview">
+        <img id="img-preview" alt="">
+      </div>
+      <p class="img-dialog-file" id="img-file"></p>
+
+      <div class="field">
+        <label for="img-alt">Alt text
+          <span class="hint">&mdash; required; what a reader who cannot see the image needs from it</span>
+        </label>
+        <textarea id="img-alt" rows="3" required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="img-caption">Caption
+          <span class="hint">&mdash; optional; printed beneath the image for everyone</span>
+        </label>
+        <input id="img-caption" type="text" autocomplete="off">
+      </div>
+
+      <p class="img-dialog-note" id="img-note" role="alert" hidden></p>
+
+      <div class="img-dialog-actions">
+        <button type="submit" class="btn-primary">Insert</button>
+        <button type="button" class="btn-quiet" id="img-cancel">Cancel</button>
+      </div>
+    </form>
+  </dialog>
 
   <!-- lyceum:footer -->
   <footer>

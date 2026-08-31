@@ -180,9 +180,17 @@
 
 .issue-body strong { font-weight: 600; }
 
+.issue-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .issue-body figure { margin: 2.6rem 0; }
 
-.issue-body figure img { display: block; width: 100%; height: auto; }
+.issue-body figure img { width: 100%; }
 
 .issue-body figcaption {
   margin-top: 0.7rem;
@@ -405,6 +413,8 @@
   .colophon { max-width: none; }
 
   .issue-masthead { background-image: none; }
+
+  .issue-body figure { break-inside: avoid; }
 }
 
 @media (max-width: 640px) {

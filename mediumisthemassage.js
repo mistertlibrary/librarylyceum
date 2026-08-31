@@ -112,6 +112,25 @@
   var templateHtml = "";
   var dirHandle = null;
 
+  var MAX_EDGE = 1600;
+  var WEBP_QUALITY = 0.86;
+
+  var PASS_THROUGH = { "image/gif": ".gif", "image/svg+xml": ".svg" };
+
+  var EXT = {
+    "image/jpeg": ".jpg",
+    "image/png": ".png",
+    "image/webp": ".webp",
+    "image/gif": ".gif",
+    "image/svg+xml": ".svg",
+    "image/avif": ".avif"
+  };
+
+  var images = Object.create(null);
+  var pendingBytes = false;
+  var working = false;
+  var lastCaret = 0;
+
   function $(id) { return document.getElementById(id); }
   function esc(s) { return window.Lyceum.escHtml(s); }
 
@@ -232,7 +251,7 @@
   var render = window.Lyceum.debounce(function () {
     var d = draft();
     paintMirror(d.body);
-    var out = window.LyceumIssue.render(issueMarkdown(d));
+    var out = window.LyceumIssue.render(issueMarkdown(d), { resolveImage: resolveImage });
     el.preview.innerHTML = defuse(out.html);
     Array.prototype.forEach.call(el.preview.querySelectorAll("a[href]"), function (a) {
       a.addEventListener("click", function (e) { e.preventDefault(); });
@@ -259,6 +278,20 @@
         problems.push("A folder named " + d.slug + " already exists, as issue " + i.number + ".");
       }
     });
+
+    var seen = Object.create(null);
+    var missing = [];
+    window.LyceumIssue.localImages(d.body).forEach(function (n) {
+      if (images[n] || seen[n]) return;
+      seen[n] = true;
+      missing.push(n);
+    });
+    if (missing.length) {
+      problems.push(missing.join(", ") + (missing.length === 1 ? " is" : " are") +
+        " referenced but not held here. Drop the file in again before saving, or " +
+        "the published issue will point at nothing. Reloading this page clears " +
+        "held images; the words survive, the bytes do not.");
+    }
 
     var words = d.body.trim() ? d.body.trim().split(/\s+/).length : 0;
     el.count.textContent = words + (words === 1 ? " word" : " words");
@@ -305,17 +338,244 @@
     render();
   }
 
-  function insertBlock(text) {
+  function insertBlock(text, at) {
     var t = el.body;
-    var s = t.selectionStart;
+    var s = (at === null || at === undefined) ? t.selectionStart : Math.min(at, t.value.length);
+    var e = (at === null || at === undefined) ? t.selectionEnd : s;
     var before = t.value.slice(0, s).replace(/\n*$/, "");
-    var after = t.value.slice(t.selectionEnd).replace(/^\n*/, "");
+    var after = t.value.slice(e).replace(/^\n*/, "");
     var joined = (before ? before + "\n\n" : "") + text + "\n\n" + after;
     var caret = (before ? before.length + 2 : 0) + text.length;
     t.value = joined;
     t.selectionStart = t.selectionEnd = caret;
+    lastCaret = caret;
     t.focus();
     render();
+    return caret;
+  }
+
+  function extFor(file) {
+    if (EXT[file.type]) return EXT[file.type];
+    var m = /(\.[a-z0-9]{1,5})$/i.exec(file.name || "");
+    return m ? m[1].toLowerCase() : ".img";
+  }
+
+  function baseName(file) {
+    var raw = String(file.name || "image").replace(/\.[^.]+$/, "");
+    return window.Lyceum.slug(raw).slice(0, 40) || "image";
+  }
+
+  function uniqueName(base, ext) {
+    var name = base + ext;
+    var n = 2;
+    while (images[name]) { name = base + "-" + n + ext; n++; }
+    return name;
+  }
+
+  function weigh(bytes) {
+    return bytes >= 1048576
+      ? (bytes / 1048576).toFixed(1) + " MB"
+      : Math.max(1, Math.round(bytes / 1024)) + " KB";
+  }
+
+  function loadBitmap(file) {
+    if (typeof createImageBitmap === "function") return createImageBitmap(file);
+    return new Promise(function (resolve, reject) {
+      var url = URL.createObjectURL(file);
+      var img = new Image();
+      img.onload = function () { URL.revokeObjectURL(url); resolve(img); };
+      img.onerror = function () { URL.revokeObjectURL(url); reject(new Error("decode")); };
+      img.src = url;
+    });
+  }
+
+  function canvasBlob(canvas, type, quality) {
+    return new Promise(function (resolve) {
+      canvas.toBlob(function (b) { resolve(b); }, type, quality);
+    });
+  }
+
+  async function convert(file) {
+    if (PASS_THROUGH[file.type]) {
+      return { blob: file, ext: PASS_THROUGH[file.type], note: "" };
+    }
+
+    var bmp;
+    try { bmp = await loadBitmap(file); }
+    catch (e) { return { blob: file, ext: extFor(file), note: "" }; }
+
+    var w = bmp.width;
+    var h = bmp.height;
+    var scale = Math.min(1, MAX_EDGE / Math.max(w, h));
+    var cw = Math.max(1, Math.round(w * scale));
+    var ch = Math.max(1, Math.round(h * scale));
+
+    var canvas = document.createElement("canvas");
+    canvas.width = cw;
+    canvas.height = ch;
+    canvas.getContext("2d").drawImage(bmp, 0, 0, cw, ch);
+    if (bmp.close) bmp.close();
+
+    var out = await canvasBlob(canvas, "image/webp", WEBP_QUALITY);
+    if (!out || out.type !== "image/webp") {
+      return { blob: file, ext: extFor(file), note: "" };
+    }
+    if (scale === 1 && out.size >= file.size) {
+      return { blob: file, ext: extFor(file), note: "" };
+    }
+
+    var note = weigh(file.size) + " to " + weigh(out.size);
+    if (cw !== w || ch !== h) note += ", " + w + "×" + h + " to " + cw + "×" + ch;
+    return { blob: out, ext: ".webp", note: note };
+  }
+
+  function askAbout(name, url) {
+    return new Promise(function (resolve) {
+      var dlg = $("img-dialog");
+      if (!dlg || typeof dlg.showModal !== "function") {
+        var typed = window.prompt("Describe this image for a reader who cannot see it.", "");
+        resolve(typed && typed.trim() ? { alt: typed.trim(), caption: "" } : null);
+        return;
+      }
+
+      var form = $("img-form");
+      var altField = $("img-alt");
+      var capField = $("img-caption");
+      var note = $("img-note");
+      var cancel = $("img-cancel");
+
+      altField.value = "";
+      capField.value = "";
+      note.hidden = true;
+      $("img-file").textContent = name;
+      $("img-preview").src = url;
+
+      function finish(value) {
+        form.removeEventListener("submit", onSubmit);
+        dlg.removeEventListener("cancel", onCancel);
+        cancel.removeEventListener("click", onCancel);
+        $("img-preview").removeAttribute("src");
+        if (dlg.open) dlg.close();
+        resolve(value);
+      }
+
+      function onSubmit(e) {
+        e.preventDefault();
+        if (!altField.value.trim()) {
+          note.textContent = "Alt text is required. Say what a reader who cannot see " +
+            "the image would need to know from it.";
+          note.hidden = false;
+          altField.focus();
+          return;
+        }
+        finish({ alt: altField.value.trim(), caption: capField.value.trim() });
+      }
+
+      function onCancel(e) {
+        if (e) e.preventDefault();
+        finish(null);
+      }
+
+      form.addEventListener("submit", onSubmit);
+      dlg.addEventListener("cancel", onCancel);
+      cancel.addEventListener("click", onCancel);
+      dlg.showModal();
+      altField.focus();
+    });
+  }
+
+  function insertImage(name, alt, caption, at) {
+    var label = alt.replace(/[\[\]]/g, "");
+    var title = caption ? ' "' + caption.replace(/"/g, "”") + '"' : "";
+    return insertBlock("![" + label + "](" + encodeURI(name) + title + ")", at);
+  }
+
+  function caretFromPoint(x, y) {
+    var t = el.body;
+    try {
+      if (document.caretPositionFromPoint) {
+        var p = document.caretPositionFromPoint(x, y);
+        if (p && (p.offsetNode === t || t.contains(p.offsetNode))) return p.offset;
+      }
+      if (document.caretRangeFromPoint) {
+        var r = document.caretRangeFromPoint(x, y);
+        if (r && (r.startContainer === t || t.contains(r.startContainer))) return r.startOffset;
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  async function addOne(file, at) {
+    status("Preparing " + (file.name || "image") + "…");
+
+    var made;
+    try { made = await convert(file); }
+    catch (e) {
+      status("Could not read that image (" + (e.name || "error") + ").", true);
+      return at;
+    }
+
+    var name = uniqueName(baseName(file), made.ext);
+    var url = URL.createObjectURL(made.blob);
+    var answer = await askAbout(name, url);
+
+    if (!answer) {
+      URL.revokeObjectURL(url);
+      status("Image not inserted.");
+      return at;
+    }
+
+    images[name] = { blob: made.blob, url: url };
+    pendingBytes = true;
+    status("Added " + name + (made.note ? " — " + made.note : "") +
+           ". It is written into the issue folder when you save.");
+    return insertImage(name, answer.alt, answer.caption, at);
+  }
+
+  async function addImages(files, caret) {
+    if (working) return;
+    var list = Array.prototype.filter.call(files || [], function (f) {
+      return f && /^image\//i.test(f.type || "");
+    });
+    if (!list.length) return;
+
+    working = true;
+    var at = (caret === null || caret === undefined) ? lastCaret : caret;
+    at = Math.max(0, Math.min(at, el.body.value.length));
+    try {
+      for (var i = 0; i < list.length; i++) at = await addOne(list[i], at);
+    } finally {
+      working = false;
+    }
+  }
+
+  function resolveImage(src) {
+    if (!src) return null;
+    var name;
+    try { name = decodeURIComponent(String(src).replace(/^\.\//, "")); }
+    catch (e) { name = String(src); }
+    var rec = images[name];
+    return rec ? rec.url : null;
+  }
+
+  function referenced(body) {
+    var used = Object.create(null);
+    window.LyceumIssue.localImages(body).forEach(function (n) { used[n] = true; });
+    return used;
+  }
+
+  function prune(used) {
+    Object.keys(images).forEach(function (n) {
+      if (used[n]) return;
+      URL.revokeObjectURL(images[n].url);
+      delete images[n];
+    });
+  }
+
+  function hasFiles(e) {
+    var dt = e.dataTransfer;
+    if (!dt || !dt.types) return false;
+    return Array.prototype.indexOf.call(dt.types, "Files") !== -1;
   }
 
   var nextNote = 1;
@@ -354,7 +614,10 @@
       render();
     },
     figure: function () {
-      insertBlock('<figure>\n  <img src="../../../img/FILE.jpg" alt="Describe the image for a screen reader.">\n  <figcaption>Caption text.</figcaption>\n</figure>');
+      var picker = $("img-file-input");
+      if (!picker) return;
+      picker.value = "";
+      picker.click();
     }
   };
 
@@ -379,8 +642,7 @@
     await w.close();
   }
 
-  function download(name, contents, type) {
-    var blob = new Blob([contents], { type: type || "text/plain;charset=utf-8" });
+  function downloadBlob(name, blob) {
     var a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
     a.download = name;
@@ -388,6 +650,10 @@
     a.click();
     document.body.removeChild(a);
     setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  }
+
+  function download(name, contents, type) {
+    downloadBlob(name, new Blob([contents], { type: type || "text/plain;charset=utf-8" }));
   }
 
   function nextManifest(d) {
@@ -410,15 +676,26 @@
     var shell = issueShell(d);
     var manifestJson = nextManifest(d);
 
+    var used = referenced(d.body);
+    var pictures = Object.keys(images).filter(function (n) { return used[n]; });
+    var tally = pictures.length
+      ? " and " + pictures.length + (pictures.length === 1 ? " image" : " images")
+      : "";
+
     if (dirHandle) {
       try {
         var issues = await dirHandle.getDirectoryHandle("issues", { create: true });
         var folder = await issues.getDirectoryHandle(d.slug, { create: true });
         await writeFile(folder, "issue.md", md);
         if (shell) await writeFile(folder, "index.html", shell);
+        for (var i = 0; i < pictures.length; i++) {
+          await writeFile(folder, pictures[i], images[pictures[i]].blob);
+        }
         await writeFile(issues, "index.json", manifestJson);
-        status("Saved to issues/" + d.slug + "/ — issue.md, index.html, and the manifest. " +
-               "Commit in GitHub Desktop when you are ready.");
+        prune(used);
+        pendingBytes = false;
+        status("Saved to issues/" + d.slug + "/ — issue.md, index.html" + tally +
+               ", and the manifest. Commit in GitHub Desktop when you are ready.");
         return;
       } catch (e) {
         status("Could not write to that folder (" + e.name + "). Downloading instead.", true);
@@ -427,9 +704,12 @@
 
     download(d.slug + "--issue.md", md, "text/markdown;charset=utf-8");
     if (shell) download(d.slug + "--index.html", shell, "text/html;charset=utf-8");
+    pictures.forEach(function (n) { downloadBlob(n, images[n].blob); });
     download("index.json", manifestJson, "application/json;charset=utf-8");
-    status("Downloaded three files. Put issue.md and index.html in " +
-           "newsletter/issues/" + d.slug + "/, and index.json in newsletter/issues/.");
+    pendingBytes = false;
+    status("Downloaded " + (3 + pictures.length) + " files. Put issue.md, index.html" +
+           (pictures.length ? ", and the image" + (pictures.length === 1 ? "" : "s") : "") +
+           " in newsletter/issues/" + d.slug + "/, and index.json in newsletter/issues/.");
   }
 
   function status(msg, bad) {
@@ -462,6 +742,9 @@
     if (!confirm("Discard this draft and start a new issue?")) return;
     ["number", "title", "dek", "tags", "slug", "body"].forEach(function (k) { el[k].value = ""; });
     el.audience.value = "both";
+    prune(Object.create(null));
+    pendingBytes = false;
+    lastCaret = 0;
     slugTouched = false;
     seedDefaults();
     render();
@@ -514,6 +797,7 @@
       }
       var had = restore();
       seedDefaults();
+      lastCaret = el.body.value.length;
       render();
       if (had) status("Picked up where you left off.");
     });
@@ -552,6 +836,54 @@
       var k = e.key.toLowerCase();
       if (k === "b") { e.preventDefault(); TOOLBAR.bold(); }
       if (k === "i") { e.preventDefault(); TOOLBAR.italic(); }
+    });
+
+    var picker = $("img-file-input");
+    if (picker) {
+      picker.addEventListener("change", function () {
+        addImages(picker.files, null);
+        picker.value = "";
+      });
+    }
+
+    el.body.addEventListener("dragover", function (e) {
+      if (!hasFiles(e)) return;
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "copy";
+      el.body.classList.add("is-dropping");
+    });
+
+    el.body.addEventListener("dragleave", function () {
+      el.body.classList.remove("is-dropping");
+    });
+
+    el.body.addEventListener("drop", function (e) {
+      if (!hasFiles(e)) return;
+      e.preventDefault();
+      el.body.classList.remove("is-dropping");
+      var dropped = caretFromPoint(e.clientX, e.clientY);
+      addImages(e.dataTransfer.files, dropped === null ? el.body.selectionStart : dropped);
+    });
+
+    el.body.addEventListener("paste", function (e) {
+      var files = e.clipboardData && e.clipboardData.files;
+      if (!files || !files.length) return;
+      var any = Array.prototype.some.call(files, function (f) {
+        return /^image\//i.test(f.type || "");
+      });
+      if (!any) return;
+      e.preventDefault();
+      addImages(files, el.body.selectionStart);
+    });
+
+    ["keyup", "mouseup", "input", "select", "focus"].forEach(function (evt) {
+      el.body.addEventListener(evt, function () { lastCaret = el.body.selectionStart; });
+    });
+
+    window.addEventListener("beforeunload", function (e) {
+      if (!pendingBytes || !Object.keys(images).length) return;
+      e.preventDefault();
+      e.returnValue = "";
     });
   }
 
