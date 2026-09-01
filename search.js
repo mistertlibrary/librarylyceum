@@ -309,6 +309,7 @@
             { name: "series",   weight: 1.5 },
             { name: "text",        weight: 1 },
             { name: "sectionText", weight: 1.5 },
+            { name: "keywords",    weight: 1.5 },
             { name: "subjects",    weight: 1 },
             { name: "vendor",      weight: 1 },
             { name: "tags",        weight: 1 }

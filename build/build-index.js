@@ -247,17 +247,23 @@ function attachSections(guides) {
         keywords: Array.isArray(s.keywords) ? s.keywords.filter(Boolean).map(String) : []
       }));
 
-    if (!sections.length) continue;
+    /* A descriptor may also carry keywords of its own, for the whole guide.
+       Sections are the usual place for them, but two guides have no sections
+       at all, and without this they would have no keyword lever — a project
+       findable only by the words already in its own description. */
+    const own = Array.isArray(doc.keywords) ? doc.keywords.filter(Boolean).map(String) : [];
 
-    g.sections = sections;
-    /* Fold section titles and keywords into the guide's searchable text so a
-       query matching any section surfaces the guide that contains it. */
-    g.sectionText = sections
-      .map(s => [s.title].concat(s.keywords).join(" "))
-      .join(" ");
+    if (sections.length) {
+      g.sections = sections;
+      withSections++;
+      sectionCount += sections.length;
+    }
 
-    withSections++;
-    sectionCount += sections.length;
+    /* Fold the guide's own keywords, and every section title and keyword, into
+       the guide's searchable text so a query matching any of them surfaces the
+       guide that contains it. */
+    const folded = own.concat(sections.map(s => [s.title].concat(s.keywords).join(" ")));
+    if (folded.length) g.sectionText = folded.join(" ");
   }
 
   return { withSections, sectionCount };
