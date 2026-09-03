@@ -269,6 +269,57 @@ function attachSections(guides) {
   return { withSections, sectionCount };
 }
 
+/* The name of the publication, carried on every issue so that searching for it
+   finds them. `series` is the slot guides already use for the same purpose and
+   is already a search key; it is not rendered for issues, whose context line
+   shows the number and date instead. */
+const NEWSLETTER = "Knightly Muse";
+
+/* The same slug the renderer uses to make heading ids, so a jump link built
+   here lands on the heading the reader is looking for. Kept in step with
+   Lyceum.slug in lyceum.js. */
+function headingSlug(text) {
+  return String(text).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+/* An issue's prose, with the Markdown taken off. Link labels are kept and their
+   URLs dropped — a reader searches for what a link said, not where it went —
+   and image alt text is kept for the same reason. Footnote definitions stay,
+   since they are prose the writer wrote. */
+function issueProse(body) {
+  return body
+    .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, "")
+    .replace(/!\[([^\]]*)\][^)]*\)/g, " $1 ")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, " $1 ")
+    .replace(/\[\^[^\]]+\]:?/g, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/^[ \t]*[#>*+-]+[ \t]+/gm, " ")
+    .replace(/^[ \t]*\d+\.[ \t]+/gm, " ")
+    .replace(/[*_`]+/g, "")
+    .replace(/\{[^}\n]*\}/g, " ")
+    .replace(/^[ \t]*-{3,}[ \t]*$/gm, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/* The section headings, with the brace gloss stripped exactly as the renderer
+   strips it, so the titles here read as they do on the page. */
+function issueSections(body) {
+  const out = [];
+  const re = /^##[ \t]+(.+?)[ \t]*$/gm;
+  let m;
+  while ((m = re.exec(body))) {
+    const raw = m[1];
+    const title = raw.replace(/\{[^}]*\}\s*$/, "").trim();
+    if (!title) continue;
+    /* The gloss is not part of the heading and must not be part of the id, but
+       it is prose the writer wrote and belongs in what a search can reach. */
+    const g = /\{([^}]*)\}\s*$/.exec(raw);
+    out.push({ title, anchor: "#" + headingSlug(title), gloss: g ? g[1].trim() : "" });
+  }
+  return out;
+}
+
 function readIssues() {
   const file = path.join(ROOT, "newsletter", "issues", "index.json");
   if (!fs.existsSync(file)) { warnings.push("newsletter/issues/index.json not found"); return []; }
@@ -280,18 +331,47 @@ function readIssues() {
   const out = [];
   for (const i of manifest.issues || []) {
     if (!i.slug || !i.title) { warnings.push(`newsletter manifest: issue missing slug or title`); continue; }
-    out.push({
+
+    /* The manifest says an issue exists; issue.md is what it says. An issue
+       whose file is missing still indexes on its front matter, which is what
+       happened before this read existed. */
+    let sections = [], prose = "";
+    const md = path.join(ROOT, "newsletter", "issues", i.slug, "issue.md");
+    if (fs.existsSync(md)) {
+      const body = fs.readFileSync(md, "utf8");
+      sections = issueSections(body);
+      prose = issueProse(body);
+    } else {
+      warnings.push(`newsletter: no issue.md for "${i.slug}", indexed on front matter only`);
+    }
+
+    const record = {
       type: "issue",
       title: i.title,
       url: `newsletter/issues/${i.slug}/`,
       external: false,
       text: i.dek || "",
+      series: NEWSLETTER,
+      keywords: ["newsletter"],
       subjects: [],
       number: i.number,
       date: i.date || "",
       audience: i.audience || "both",
       tags: Array.isArray(i.tags) ? i.tags : []
-    });
+    };
+
+    if (sections.length) {
+      record.sections = sections.map(s => ({ title: s.title, anchor: s.anchor }));
+    }
+
+    /* Headings first, then the prose. Both go in one searchable field, the same
+       one guides use, so an issue behaves like every other record rather than
+       needing a rule of its own. */
+    const folded = sections.map(s => [s.title, s.gloss].filter(Boolean).join(" "))
+                           .concat(prose ? [prose] : []);
+    if (folded.length) record.sectionText = folded.join(" ");
+
+    out.push(record);
   }
   return out;
 }

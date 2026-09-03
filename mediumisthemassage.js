@@ -661,9 +661,27 @@
       dirHandle = await window.showDirectoryPicker({ id: "lyceum-newsletter", mode: "readwrite" });
       el.folder.textContent = dirHandle.name;
       el.folder.hidden = false;
-      status("Folder set to " + dirHandle.name + ". Saving writes the issue folder inside it.");
+
+      var seat = await resolveIssues(dirHandle);
+      status("Folder set. Issues will be written to " + seat.where + "/." +
+             (seat.fresh ? " That folder did not exist yet and has been created — " +
+              "if you meant to point at an existing one, choose again." : ""));
     } catch (e) {
     }
+  }
+
+  async function resolveIssues(root) {
+    try {
+      var child = await root.getDirectoryHandle("issues", { create: false });
+      return { dir: child, where: root.name + "/issues" };
+    } catch (e) {}
+
+    if (String(root.name).toLowerCase() === "issues") {
+      return { dir: root, where: root.name };
+    }
+
+    var made = await root.getDirectoryHandle("issues", { create: true });
+    return { dir: made, where: root.name + "/issues", fresh: true };
   }
 
   async function writeFile(handle, name, contents) {
@@ -715,7 +733,8 @@
 
     if (dirHandle) {
       try {
-        var issues = await dirHandle.getDirectoryHandle("issues", { create: true });
+        var seat = await resolveIssues(dirHandle);
+        var issues = seat.dir;
         var folder = await issues.getDirectoryHandle(d.slug, { create: true });
         await writeFile(folder, "issue.md", md);
         if (shell) await writeFile(folder, "index.html", shell);
@@ -725,8 +744,8 @@
         await writeFile(issues, "index.json", manifestJson);
         prune(used);
         pendingBytes = false;
-        status("Saved to issues/" + d.slug + "/ — issue.md, index.html" + tally +
-               ", and the manifest. Commit in GitHub Desktop when you are ready.");
+        status("Saved to " + seat.where + "/" + d.slug + "/ — issue.md, index.html" +
+               tally + ", and the manifest. Commit in GitHub Desktop when you are ready.");
         return;
       } catch (e) {
         status("Could not write to that folder (" + e.name + "). Downloading instead.", true);
