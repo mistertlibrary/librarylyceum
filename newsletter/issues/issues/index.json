@@ -1,0 +1,19 @@
+{
+  "issues": [
+    {
+      "number": 1,
+      "slug": "welcome-back-2026",
+      "date": "2026-09-09",
+      "title": "Welcome Back!",
+      "dek": "A brief felicitation; a reminder about hours; a few shifts in policy.",
+      "audience": "students",
+      "tags": [
+        "hours",
+        "policies",
+        "lyceum",
+        "epistemology",
+        "purpose"
+      ]
+    }
+  ]
+}
