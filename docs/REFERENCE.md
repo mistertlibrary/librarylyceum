@@ -196,7 +196,7 @@ share one `localStorage` — but not a vocabulary. Six shapes grew independently
 
 | Site | Storage | Sizes | Fonts | Themes |
 | --- | --- | --- | --- | --- |
-| Hub | `lyceum-size/font/theme` | `small` `medium` `large` | `serif` `sans` `dyslexic` | `light` `dark` `contrast` |
+| Hub, Tenement Museum | `lyceum-size/font/theme` | `small` `medium` `large` | `serif` `sans` `dyslexic` | `light` `dark` `contrast` |
 | MLA, APA | JSON blob under `cs_a11y` | `s` `m` `l` | `serif` `sans` `dys` | `light` `dark` `contrast` |
 | RB: Getting Started | `gs_size/font/theme` | `s` `m` `l` | `serif` `sans` `dys` | `light` `dark` `contrast` |
 | RB: Searches & Sources | `rb_size/font/theme` | `s` `m` `l` | `serif` `sans` `dys` | `light` `dark` `contrast` |
@@ -242,8 +242,9 @@ One line in each guide's `<head>`, before its own scripts, changing only
 
 Installed in `mla`, `apa`, `annotation`, `rbgettingstarted`,
 `rbsearchesandsources`, `imageclearinghouse`, and `babel`. `crusades` and
-`summerreading2026` store no preferences and need nothing. An unrecognized
-`data-guide` makes the shim inert rather than erroneous.
+`summerreading2026` store no preferences and need nothing. `tenementmuseum`
+reads and writes the hub keys directly and needs nothing either. An
+unrecognized `data-guide` makes the shim inert rather than erroneous.
 
 ## Degradation
 
