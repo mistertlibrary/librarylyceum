@@ -5,8 +5,9 @@ collection, a network of research guides, and the *Knightly Muse* newsletter.
 
 Live at <https://mistertlibrary.github.io/librarylyceum/>.
 
-Three documents: this one to get oriented, `REFERENCE.md` for the four
-subsystems, `ROADMAP.md` for the plan.
+Four documents: this one to get oriented, `REFERENCE.md` for the four
+subsystems, `ROADMAP.md` for the plan, `GUIDE-PROCEDURE.md` for adding a
+guide.
 
 ---
 
@@ -106,7 +107,7 @@ overwritten on the next build.
 chrome/            the shared furniture
 build/             every script; nothing here is ever served
 data/              databases.csv, guides.csv, and the generated search-index.json
-docs/              these three documents
+docs/              these four documents
 vendor/            pinned third-party libraries, licenses beside them
 fonts/             self-hosted faces; OFL.txt is the license, FONTS.md the
                    notice — every family with the copyright line read out of
@@ -124,10 +125,10 @@ sitemap.xml        generated
 robots.txt         generated
 ```
 
-The four `lyceum-*` files and `fonts/` sit at the root and stay there: nine
+The four `lyceum-*` files and `fonts/` sit at the root and stay there: ten
 satellite repositories address them absolutely, as `/librarylyceum/lyceum.css`
 and the like. Those paths are public API — moving one means a coordinated edit
-across ten repositories.
+across eleven repositories.
 
 ---
 

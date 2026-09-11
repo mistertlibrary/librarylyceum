@@ -3,7 +3,7 @@
   "generated": "2026-09-11",
   "counts": {
     "database": 82,
-    "guide": 9,
+    "guide": 10,
     "tool": 5,
     "issue": 1
   },
@@ -1187,6 +1187,46 @@
         }
       ],
       "sectionText": "Start Here Common Licenses at a Glance Copyright-Flexible Image Sources How to Cite Images Copyright & Fair Use Ethics and AI Images"
+    },
+    {
+      "type": "guide",
+      "title": "Museum Studies Crash Course: The Tenement Museum",
+      "url": "https://mistertlibrary.github.io/tenementmuseum/",
+      "external": true,
+      "text": "A crash course in core museum studies concepts treating New York City's Tenement Museum as a case study.",
+      "subjects": [
+        "Social Studies"
+      ],
+      "series": "",
+      "course": "",
+      "sections": [
+        {
+          "title": "Hook",
+          "anchor": "#hook",
+          "keywords": []
+        },
+        {
+          "title": "Case study: the Tenement Museum",
+          "anchor": "#case",
+          "keywords": []
+        },
+        {
+          "title": "Whole group: tour the building",
+          "anchor": "#tour",
+          "keywords": []
+        },
+        {
+          "title": "Roles",
+          "anchor": "#roles",
+          "keywords": []
+        },
+        {
+          "title": "Bridge",
+          "anchor": "#bridge",
+          "keywords": []
+        }
+      ],
+      "sectionText": "Hook Case study: the Tenement Museum Whole group: tour the building Roles Bridge"
     },
     {
       "type": "guide",

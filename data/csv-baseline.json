@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01",
+  "generated": "2026-09-11",
   "files": {
     "databases.csv": {
       "rows": 82,
@@ -90,13 +90,14 @@
       ]
     },
     "guides.csv": {
-      "rows": 9,
-      "sha256": "86b74e9c9413158678ccc986623f789f7e0816d6adffdf915edaa919c0600c73",
+      "rows": 10,
+      "sha256": "be98066845e696144ae4df4196be8a98516d395131516eada9a46b9236b3fd2e",
       "names": [
         "Babel: The Thompson Catalogue of Engines",
         "Citation Station: APA Format",
         "Citation Station: MLA Format",
         "Image Clearinghouse",
+        "Museum Studies Crash Course: The Tenement Museum",
         "On Annotation: A Handbook for Active Readers",
         "Research Basics: Getting Started",
         "Research Basics: Searches & Sources",
