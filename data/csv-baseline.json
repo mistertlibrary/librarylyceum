@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-11",
+  "generated": "2026-09-18",
   "files": {
     "databases.csv": {
       "rows": 82,
-      "sha256": "461beb3fe6600567455a2a2d48fe9dd5f2514572826e8db8a3e11fbf7aafabba",
+      "sha256": "deea0cd6ca694b4dd46b8c60d9cf87d7fe3dfaa93c266173608a1710410b2ab9",
       "names": [
         "Academic Search Complete",
         "African-American History",
@@ -90,8 +90,8 @@
       ]
     },
     "guides.csv": {
-      "rows": 10,
-      "sha256": "78a869994576dbba585be3878720418f0b607e051839c0fe666c7c8bc39d1098",
+      "rows": 11,
+      "sha256": "e682a4f6f9f8ecf65d888fff76c0e9764839030b8950f9829fc85293fc9db803",
       "names": [
         "Babel: The Thompson Catalogue of Engines",
         "Citation Station: APA Format",
@@ -100,6 +100,7 @@
         "Museum Studies Crash Course: The Lower East Side Tenement Museum",
         "On Annotation: A Handbook for Active Readers",
         "Research Basics: Getting Started",
+        "Research Basics: Reading Further",
         "Research Basics: Searches & Sources",
         "Voices of the Cross & Crescent | Crusades Project",
         "WEHS Summer Reading 2026"
