@@ -25,6 +25,11 @@
       "href": "databases.html"
     },
     {
+      "id": "catalog",
+      "label": "Print Catalog",
+      "href": "https://na.accessit.online/WST43/#!dashboard"
+    },
+    {
       "id": "guides",
       "label": "Research Guides",
       "href": "guides.html"

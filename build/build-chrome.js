@@ -93,6 +93,9 @@ function buildNav(base, activePage) {
     const isActive = item.id === activePage;
     const cls  = isActive ? ' class="active"' : "";
     const curr = isActive ? ' aria-current="page"' : "";
+    if (/^https?:\/\//.test(item.href)) {
+      return `      <a href="${escAttr(item.href)}" target="_blank" rel="noopener noreferrer">${item.label}</a>`;
+    }
     return `      <a href="${escAttr(base + item.href)}"${cls}${curr}>${item.label}</a>`;
   }).join("\n");
 }
