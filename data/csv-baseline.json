@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-18",
+  "generated": "2026-09-22",
   "files": {
     "databases.csv": {
       "rows": 82,
-      "sha256": "deea0cd6ca694b4dd46b8c60d9cf87d7fe3dfaa93c266173608a1710410b2ab9",
+      "sha256": "e7c9b69d1ccefdbb4eb627e5bb10db8c63a3243836dc8b043d6cc1ba70586f52",
       "names": [
         "Academic Search Complete",
         "African-American History",

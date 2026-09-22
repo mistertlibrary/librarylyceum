@@ -204,10 +204,69 @@
     "</li>";
   }
 
+  var QUERY_STOP = ["and", "the", "for", "with", "of", "in", "on", "to", "a",
+                    "an", "or", "at", "by", "is", "it", "my", "i", "about",
+                    "what", "should", "how"];
+
+  function queryWords(q) {
+    return q.toLowerCase().split(/\s+/).filter(function (w) {
+      return w.length > 1 && QUERY_STOP.indexOf(w) === -1;
+    });
+  }
+
+  /* Fuse compares the whole typed string against each field, so a multi-word
+     query only matches a span where those words sit together. "ancient rome"
+     therefore missed "Ancient and Medieval History", which contains both. The
+     phrase pass runs first and keeps its ranking; a second pass then adds any
+     record matching every word somewhere, ranked behind. */
+  function everyWordHits(words, phraseSeen) {
+    var counts = [], scores = [], out = [];
+    var i, j, hits, at;
+
+    for (i = 0; i < allRecords.length; i++) { counts[i] = 0; scores[i] = 0; }
+
+    for (j = 0; j < words.length; j++) {
+      hits = fuse.search(words[j]);
+      for (i = 0; i < hits.length; i++) {
+        at = hits[i].refIndex;
+        if (at === undefined) at = allRecords.indexOf(hits[i].item);
+        if (at < 0) continue;
+        counts[at]++;
+        scores[at] += (typeof hits[i].score === "number" ? hits[i].score : 0);
+      }
+    }
+
+    for (i = 0; i < allRecords.length; i++) {
+      if (counts[i] === words.length && !phraseSeen[i]) {
+        out.push({ at: i, score: scores[i] });
+      }
+    }
+    out.sort(function (a, b) { return a.score - b.score; });
+
+    return out.map(function (x) { return allRecords[x.at]; });
+  }
+
+  function searchRecords(q) {
+    var phrase = fuse.search(q);
+    var seen = {}, results = [], i, at;
+
+    for (i = 0; i < phrase.length; i++) {
+      at = phrase[i].refIndex;
+      if (at === undefined) at = allRecords.indexOf(phrase[i].item);
+      if (at >= 0) seen[at] = true;
+      results.push(phrase[i].item);
+    }
+
+    var words = queryWords(q);
+    if (words.length < 2) return results;
+
+    return results.concat(everyWordHits(words, seen));
+  }
+
   function matching() {
     var results;
     if (searchQuery.length >= MIN_QUERY && fuse) {
-      results = fuse.search(searchQuery).map(function (x) { return x.item; });
+      results = searchRecords(searchQuery);
     } else if (searchQuery.length >= MIN_QUERY) {
       results = [];
     } else {
@@ -315,7 +374,8 @@
             { name: "tags",        weight: 1 }
           ],
           threshold: 0.20,
-          ignoreLocation: true
+          ignoreLocation: true,
+          includeScore: true
         });
 
         buildTypeBar();
