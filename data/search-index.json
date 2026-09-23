@@ -21,7 +21,21 @@
         "Science",
         "Social Studies"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "scholarly journals",
+        "peer reviewed articles",
+        "academic journals",
+        "full text articles",
+        "open access journals",
+        "preprints",
+        "multidisciplinary research",
+        "general research",
+        "where do i start",
+        "journal article",
+        "academic research"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -32,7 +46,27 @@
       "subjects": [
         "Social Studies"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "african american history",
+        "black history",
+        "slavery",
+        "african american culture",
+        "famous speeches",
+        "primary sources",
+        "historical timelines",
+        "key figures",
+        "emancipation",
+        "reconstruction",
+        "segregation",
+        "jim crow",
+        "abolition",
+        "civil rights movement",
+        "harlem renaissance",
+        "great migration",
+        "underground railroad"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -43,7 +77,32 @@
       "subjects": [
         "Social Studies"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "american government",
+        "civics",
+        "us government",
+        "political process",
+        "supreme court cases",
+        "landmark supreme court cases",
+        "rights and liberties",
+        "domestic policy",
+        "foreign policy",
+        "political documents",
+        "speeches",
+        "primary sources",
+        "guided inquiry",
+        "constitution",
+        "bill of rights",
+        "congress",
+        "presidency",
+        "elections",
+        "voting rights",
+        "federalism",
+        "separation of powers",
+        "judicial review"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -54,7 +113,29 @@
       "subjects": [
         "Social Studies"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "american history",
+        "us history",
+        "united states history",
+        "biographies",
+        "primary sources",
+        "timelines",
+        "maps and graphs",
+        "topic centers",
+        "american revolution",
+        "civil war",
+        "great depression",
+        "colonial america",
+        "westward expansion",
+        "progressive era",
+        "new deal",
+        "cold war",
+        "vietnam war",
+        "industrial revolution",
+        "immigration history"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -65,7 +146,26 @@
       "subjects": [
         "Social Studies"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "american indian history",
+        "native american history",
+        "indigenous peoples",
+        "native american groups",
+        "tribes",
+        "biographies",
+        "primary sources",
+        "maps",
+        "timelines",
+        "indigenous culture",
+        "first nations",
+        "removal and relocation",
+        "trail of tears",
+        "treaties",
+        "reservations",
+        "sovereignty"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -76,7 +176,36 @@
       "subjects": [
         "Social Studies"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "ancient history",
+        "medieval history",
+        "world history to 1500",
+        "prehistory",
+        "ancient near east",
+        "ancient egypt",
+        "ancient greece",
+        "ancient rome",
+        "ancient africa",
+        "ancient asia",
+        "ancient americas",
+        "medieval europe",
+        "islamic world",
+        "civilizations",
+        "primary sources",
+        "timelines",
+        "suggested search terms",
+        "mesopotamia",
+        "byzantine empire",
+        "middle ages",
+        "feudalism",
+        "crusades",
+        "black death",
+        "mayan",
+        "aztec",
+        "inca"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -87,7 +216,28 @@
       "subjects": [
         "English Language Arts"
       ],
-      "primary": "English Language Arts"
+      "primary": "English Language Arts",
+      "keywords": [
+        "literary criticism",
+        "literature analysis",
+        "author biographies",
+        "character analysis",
+        "literary themes",
+        "scholarly essays",
+        "multiple interpretations",
+        "essay prompts",
+        "writing guides",
+        "academic writing",
+        "close reading",
+        "shakespeare",
+        "novel analysis",
+        "poetry analysis",
+        "book analysis",
+        "symbolism",
+        "literary devices",
+        "sparknotes alternative"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -98,7 +248,24 @@
       "subjects": [
         "Basic Information and General Reference"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "images",
+        "pictures",
+        "photographs",
+        "educational videos",
+        "rights cleared images",
+        "copyright safe images",
+        "images for a project",
+        "visual sources",
+        "citation tool",
+        "image metadata",
+        "illustrations",
+        "diagrams",
+        "historical photographs",
+        "clip art"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -109,7 +276,21 @@
       "subjects": [
         "Basic Information and General Reference"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "encyclopedia",
+        "britannica",
+        "articles",
+        "images",
+        "videos",
+        "primary sources",
+        "reading levels",
+        "starting point for research",
+        "background information",
+        "general reference",
+        "overview of a topic"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -120,7 +301,33 @@
       "subjects": [
         "Business"
       ],
-      "primary": "Business"
+      "primary": "Business",
+      "keywords": [
+        "business journals",
+        "harvard business review",
+        "forbes",
+        "fortune",
+        "bloomberg businessweek",
+        "market trends",
+        "entrepreneurship",
+        "marketing",
+        "management",
+        "company reports",
+        "swot analysis",
+        "market research",
+        "case studies",
+        "deca",
+        "fbla",
+        "finance",
+        "economics",
+        "accounting",
+        "stock market",
+        "investing",
+        "supply chain",
+        "advertising",
+        "business ethics"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -131,7 +338,33 @@
       "subjects": [
         "Science"
       ],
-      "primary": "Science"
+      "primary": "Science",
+      "keywords": [
+        "biology",
+        "cell biology",
+        "genetics",
+        "ecology",
+        "animal systems",
+        "plant structures",
+        "microbes",
+        "adaptation",
+        "physiology",
+        "ecological systems",
+        "science experiments",
+        "next generation science standards",
+        "ngss",
+        "interactive timelines",
+        "photosynthesis",
+        "dna",
+        "evolution",
+        "mitosis",
+        "cell structure",
+        "human body systems",
+        "food webs",
+        "natural selection",
+        "heredity"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -142,7 +375,28 @@
       "subjects": [
         "Science"
       ],
-      "primary": "Science"
+      "primary": "Science",
+      "keywords": [
+        "chemistry",
+        "atoms",
+        "elements",
+        "chemical reactions",
+        "organic chemistry",
+        "biochemistry",
+        "properties of matter",
+        "chemical bonding",
+        "molecules",
+        "experiments",
+        "next generation science standards",
+        "ngss",
+        "stoichiometry",
+        "acids and bases",
+        "states of matter",
+        "chemical equations",
+        "molecular structure",
+        "lab safety"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -153,7 +407,25 @@
       "subjects": [
         "Science"
       ],
-      "primary": "Science"
+      "primary": "Science",
+      "keywords": [
+        "periodic table",
+        "elements",
+        "atomic structure",
+        "atomic theory",
+        "the 118 elements",
+        "element builder",
+        "chemistry reference",
+        "glossaries",
+        "flashcards",
+        "atomic number",
+        "electron configuration",
+        "noble gases",
+        "metals and nonmetals",
+        "isotopes",
+        "valence electrons"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -164,7 +436,22 @@
       "subjects": [
         "Basic Information and General Reference"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "reference materials",
+        "research starting point",
+        "topic discovery",
+        "mind map",
+        "information literacy",
+        "research skills",
+        "skill builder",
+        "exploratory searching",
+        "building vocabulary",
+        "background reading",
+        "where do i start",
+        "general reference"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -176,7 +463,34 @@
         "Culture and Geography",
         "Social Studies"
       ],
-      "primary": "Culture and Geography"
+      "primary": "Culture and Geography",
+      "keywords": [
+        "country reports",
+        "culture",
+        "customs",
+        "daily life",
+        "world cultures",
+        "countries",
+        "land and climate",
+        "greetings",
+        "dating and marriage",
+        "family",
+        "diet",
+        "housing",
+        "holidays",
+        "economy",
+        "education",
+        "health",
+        "us states",
+        "canadian provinces",
+        "world factbook alternative",
+        "traditions",
+        "etiquette",
+        "national holidays",
+        "population",
+        "languages spoken"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -187,7 +501,22 @@
       "subjects": [
         "For Teachers"
       ],
-      "primary": "For Teachers"
+      "primary": "For Teachers",
+      "keywords": [
+        "handouts",
+        "lesson plans",
+        "reproducibles",
+        "fact sheets",
+        "printable maps",
+        "science diagrams",
+        "math activities",
+        "image gallery",
+        "classroom supplements",
+        "for teachers",
+        "worksheets",
+        "teaching materials"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -198,7 +527,17 @@
       "subjects": [
         "Basic Information and General Reference"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "ebooks",
+        "electronic books",
+        "online books",
+        "book length treatment",
+        "full text books",
+        "digital books",
+        "read a book online"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -209,7 +548,27 @@
       "subjects": [
         "For Teachers"
       ],
-      "primary": "For Teachers"
+      "primary": "For Teachers",
+      "keywords": [
+        "education research",
+        "pedagogy",
+        "teaching",
+        "curriculum guides",
+        "education journals",
+        "conference papers",
+        "dissertations",
+        "policy papers",
+        "education level",
+        "institute of education sciences",
+        "department of education",
+        "classroom management",
+        "assessment",
+        "literacy instruction",
+        "special education",
+        "teacher preparation",
+        "education policy"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -220,7 +579,26 @@
       "subjects": [
         "Social Studies"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "european exploration",
+        "colonial americas",
+        "primary sources",
+        "rare books",
+        "european views of native americans",
+        "john carter brown library",
+        "1493 to 1750",
+        "natural disasters",
+        "religious orders",
+        "slavery",
+        "new world",
+        "age of exploration",
+        "columbus",
+        "conquistadors",
+        "colonization",
+        "first contact"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -240,7 +618,20 @@
         "Science",
         "Social Studies"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "high school research",
+        "topic overviews",
+        "associated press videos",
+        "topic explorer",
+        "starting point for research",
+        "age appropriate sources",
+        "general reference",
+        "magazine articles",
+        "subtopics",
+        "where do i start"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -251,7 +642,20 @@
       "subjects": [
         "Basic Information and General Reference"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "elementary research",
+        "middle school research",
+        "age appropriate content",
+        "topic indexes",
+        "text to speech",
+        "citations",
+        "translation",
+        "noodletools integration",
+        "google classroom",
+        "beginning research"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -267,7 +671,23 @@
         "Mathematics",
         "Business"
       ],
-      "primary": "English Language Arts"
+      "primary": "English Language Arts",
+      "keywords": [
+        "feature films",
+        "full length films",
+        "movies",
+        "literary adaptations",
+        "dramas",
+        "classics",
+        "science fiction",
+        "foreign films",
+        "social issues",
+        "animation",
+        "academy award winners",
+        "environmental films",
+        "film studies"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -278,7 +698,32 @@
       "subjects": [
         "College and Career"
       ],
-      "primary": "College and Career"
+      "primary": "College and Career",
+      "keywords": [
+        "career exploration",
+        "career planning",
+        "careers",
+        "professions",
+        "industries",
+        "job duties",
+        "job hunting",
+        "resume",
+        "resume templates",
+        "cover letter",
+        "cover letter templates",
+        "skills and education paths",
+        "earnings",
+        "employment trends",
+        "school planning",
+        "occupational outlook handbook",
+        "vocational guidance",
+        "college majors",
+        "internships",
+        "job interview",
+        "career assessment",
+        "salary"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -289,7 +734,20 @@
       "subjects": [
         "Basic Information and General Reference"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "encyclopedia",
+        "encyclopedia entries",
+        "general reference",
+        "science",
+        "history",
+        "geography",
+        "biography",
+        "the arts",
+        "quick summaries",
+        "background information"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -303,7 +761,19 @@
         "Psychology",
         "Science"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "ebooks",
+        "electronic books",
+        "book length treatment",
+        "history",
+        "science",
+        "psychology",
+        "genetics",
+        "online books",
+        "reference books"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -317,7 +787,27 @@
         "Mathematics",
         "Science"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "biography",
+        "biographies",
+        "famous people",
+        "historical figures",
+        "life of",
+        "international figures",
+        "multiple perspectives",
+        "primary sources",
+        "periodicals",
+        "who was",
+        "who is",
+        "notable people",
+        "inventors",
+        "scientists",
+        "authors",
+        "world leaders",
+        "activists"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -328,7 +818,37 @@
       "subjects": [
         "English Language Arts"
       ],
-      "primary": "English Language Arts"
+      "primary": "English Language Arts",
+      "keywords": [
+        "literature",
+        "literary criticism",
+        "plot summaries",
+        "character analysis",
+        "themes",
+        "essential questions",
+        "author biographies",
+        "novels",
+        "poems",
+        "short stories",
+        "plays",
+        "graphic novels",
+        "literary periods",
+        "genre",
+        "full text works",
+        "public domain",
+        "mla apa chicago citations",
+        "bookshelf browse",
+        "shakespeare",
+        "the great gatsby",
+        "to kill a mockingbird",
+        "macbeth",
+        "poetry analysis",
+        "book report",
+        "symbolism",
+        "literary devices",
+        "canonical classics"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -339,7 +859,38 @@
       "subjects": [
         "Complicated Issues"
       ],
-      "primary": "Complicated Issues"
+      "primary": "Complicated Issues",
+      "keywords": [
+        "opposing viewpoints",
+        "pro and con",
+        "debate topics",
+        "social issues",
+        "controversial issues",
+        "current issues",
+        "argue both sides",
+        "persuasive writing",
+        "debate preparation",
+        "immigration",
+        "fast fashion",
+        "artificial intelligence",
+        "reference articles",
+        "interactive maps",
+        "infographics",
+        "gun control",
+        "death penalty",
+        "climate change",
+        "censorship",
+        "vaping",
+        "social media and teens",
+        "abortion",
+        "capital punishment",
+        "drug legalization",
+        "free speech",
+        "animal testing",
+        "school uniforms",
+        "minimum wage"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -350,7 +901,32 @@
       "subjects": [
         "Social Studies"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "us history",
+        "american history",
+        "colonization to present",
+        "event overviews",
+        "topic overviews",
+        "biographies",
+        "primary sources",
+        "newspapers",
+        "periodicals",
+        "american revolution",
+        "civil war",
+        "reconstruction",
+        "great depression",
+        "world war 2",
+        "cold war",
+        "civil rights movement",
+        "jim crow",
+        "harlem renaissance",
+        "womens suffrage",
+        "vietnam war",
+        "new deal",
+        "9 11"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -361,7 +937,30 @@
       "subjects": [
         "Social Studies"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "world history",
+        "ancient world",
+        "world cultures",
+        "world civilizations",
+        "significant people events and topics",
+        "primary sources",
+        "curriculum aligned",
+        "french revolution",
+        "world war 1",
+        "world war 2",
+        "holocaust",
+        "cold war",
+        "imperialism",
+        "industrial revolution",
+        "renaissance",
+        "reformation",
+        "decolonization",
+        "genocide",
+        "ancient rome",
+        "ancient egypt"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -372,7 +971,21 @@
       "subjects": [
         "English Language Arts"
       ],
-      "primary": "English Language Arts"
+      "primary": "English Language Arts",
+      "keywords": [
+        "literary index",
+        "author listings",
+        "title listings",
+        "index of literature",
+        "works by an author",
+        "oeuvre",
+        "gale literature products",
+        "charles scribners sons",
+        "st james press",
+        "twayne publishers",
+        "what is an index"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -383,7 +996,21 @@
       "subjects": [
         "English Language Arts"
       ],
-      "primary": "English Language Arts"
+      "primary": "English Language Arts",
+      "keywords": [
+        "author study",
+        "critical introductions",
+        "lives and works of writers",
+        "literary movements",
+        "influences",
+        "thematic topics",
+        "chronological topics",
+        "major writers",
+        "literary schools",
+        "literary periods",
+        "criticism"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -401,7 +1028,14 @@
         "Science",
         "Social Studies"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "search all gale databases",
+        "unified search",
+        "cross search",
+        "search everything"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -412,7 +1046,34 @@
       "subjects": [
         "College and Career"
       ],
-      "primary": "College and Career"
+      "primary": "College and Career",
+      "keywords": [
+        "test prep",
+        "standardized test prep",
+        "sat",
+        "act",
+        "college entry exams",
+        "practice tests",
+        "college planning",
+        "school search",
+        "scholarship search",
+        "scholarships",
+        "career assessment",
+        "job search",
+        "resume",
+        "cover letter",
+        "us citizenship test",
+        "vocational exams",
+        "law enforcement exam",
+        "cosmetology exam",
+        "foundational skills math and science",
+        "reading and writing review",
+        "asvab",
+        "ap exams",
+        "college applications",
+        "financial aid"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -424,7 +1085,31 @@
         "Science",
         "Basic Information and General Reference"
       ],
-      "primary": "Science"
+      "primary": "Science",
+      "keywords": [
+        "environment",
+        "environmental science",
+        "human impact on the environment",
+        "global warming",
+        "green building",
+        "pollution",
+        "sustainable agriculture",
+        "renewable energy",
+        "recycling",
+        "sustainability",
+        "environmental law",
+        "environmental health",
+        "climate change",
+        "carbon emissions",
+        "conservation",
+        "endangered species",
+        "deforestation",
+        "water quality",
+        "solar power",
+        "wind power",
+        "fossil fuels"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -436,7 +1121,36 @@
         "Health and Wellness",
         "Psychology"
       ],
-      "primary": "Health and Wellness"
+      "primary": "Health and Wellness",
+      "keywords": [
+        "health",
+        "body systems",
+        "diseases and conditions",
+        "treatments",
+        "medical procedures",
+        "nutrition",
+        "mens health",
+        "womens health",
+        "childrens health",
+        "teen health",
+        "seniors",
+        "mental health",
+        "substance abuse",
+        "pubmed central",
+        "medlineplus",
+        "anxiety",
+        "depression",
+        "vaping",
+        "eating disorders",
+        "vaccines",
+        "diabetes",
+        "sleep",
+        "stress",
+        "addiction",
+        "puberty",
+        "sexual health"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -447,7 +1161,28 @@
       "subjects": [
         "Health and Wellness"
       ],
-      "primary": "Health and Wellness"
+      "primary": "Health and Wellness",
+      "keywords": [
+        "consumer health",
+        "health magazines",
+        "nutrition",
+        "exercise",
+        "fitness",
+        "medical self care",
+        "drugs and alcohol",
+        "disease",
+        "diabetes",
+        "aging",
+        "womens health",
+        "childrens health",
+        "ailments and conditions",
+        "diet",
+        "weight",
+        "vitamins",
+        "first aid",
+        "allergies"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -458,7 +1193,22 @@
       "subjects": [
         "Health and Wellness"
       ],
-      "primary": "Health and Wellness"
+      "primary": "Health and Wellness",
+      "keywords": [
+        "nursing",
+        "allied health",
+        "pediatric nursing",
+        "critical care",
+        "mental health",
+        "nursing management",
+        "medical law",
+        "medical terminology",
+        "peer reviewed medical studies",
+        "health sciences",
+        "sports medicine",
+        "scholarly medical journals"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -474,7 +1224,37 @@
         "Science",
         "Social Studies"
       ],
-      "primary": "Complicated Issues"
+      "primary": "Complicated Issues",
+      "keywords": [
+        "hot topics",
+        "controversial issues",
+        "pro con format",
+        "debate topics",
+        "politics",
+        "government",
+        "business",
+        "society",
+        "education",
+        "popular culture",
+        "key facts and arguments",
+        "research papers",
+        "debate preparation",
+        "persuasive writing",
+        "subject clusters",
+        "source list",
+        "reliable outlets",
+        "gun control",
+        "death penalty",
+        "immigration",
+        "censorship",
+        "climate policy",
+        "vaping",
+        "social media",
+        "privacy",
+        "policing",
+        "healthcare policy"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -488,7 +1268,28 @@
         "Psychology",
         "Science"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "jstor",
+        "peer reviewed scholarly journals",
+        "academic monographs",
+        "literary journals",
+        "research reports",
+        "primary sources",
+        "humanities",
+        "social sciences",
+        "archives",
+        "scholarly articles",
+        "academic research",
+        "back issues",
+        "art history",
+        "philosophy",
+        "anthropology",
+        "sociology",
+        "political science",
+        "history scholarship"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -500,7 +1301,21 @@
         "Basic Information and General Reference",
         "For Teachers"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "streaming video",
+        "educational videos",
+        "video clips",
+        "interactives",
+        "images",
+        "audio files",
+        "worksheets",
+        "activities",
+        "multimedia",
+        "k-12 video",
+        "classroom video"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -512,7 +1327,26 @@
         "Business",
         "Basic Information and General Reference"
       ],
-      "primary": "Business"
+      "primary": "Business",
+      "keywords": [
+        "legal reference",
+        "law",
+        "legal forms",
+        "nolo",
+        "business law",
+        "financial planning",
+        "family law",
+        "property and real estate",
+        "rights and disputes",
+        "how to legal guides",
+        "consumer law",
+        "tenant rights",
+        "wills",
+        "contracts",
+        "small claims",
+        "employment law"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -523,7 +1357,21 @@
       "subjects": [
         "Basic Information and General Reference"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "library science",
+        "information science",
+        "librarianship",
+        "informatics",
+        "history of libraries",
+        "resource sharing",
+        "communication studies",
+        "library journals",
+        "cataloging",
+        "information literacy",
+        "archives and archiving"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -534,7 +1382,26 @@
       "subjects": [
         "English Language Arts"
       ],
-      "primary": "English Language Arts"
+      "primary": "English Language Arts",
+      "keywords": [
+        "literature reference",
+        "poems",
+        "short stories",
+        "classic novels",
+        "plot summaries",
+        "critical analysis essays",
+        "literary journals",
+        "author biographies",
+        "study guides",
+        "lesson plans",
+        "all genres and time periods",
+        "curriculum standards",
+        "poetry",
+        "drama",
+        "fiction analysis",
+        "literary terms"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -545,7 +1412,20 @@
       "subjects": [
         "English Language Arts"
       ],
-      "primary": "English Language Arts"
+      "primary": "English Language Arts",
+      "keywords": [
+        "literary ebooks",
+        "literary criticism books",
+        "study guides",
+        "classic fiction",
+        "emma",
+        "dracula",
+        "frankenstein",
+        "book length literary criticism",
+        "gothic novels",
+        "classic literature"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -559,7 +1439,24 @@
         "Science",
         "Social Studies"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "reference ebooks",
+        "encyclopedias",
+        "biography",
+        "history",
+        "careers",
+        "language arts",
+        "literature",
+        "government",
+        "health",
+        "math",
+        "science",
+        "current events",
+        "social emotional health",
+        "longer treatments"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -573,7 +1470,30 @@
         "Science",
         "Social Studies"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "magazines",
+        "popular magazines",
+        "high school magazines",
+        "full text biographies",
+        "primary source documents",
+        "reference books",
+        "photos",
+        "maps",
+        "flags",
+        "history",
+        "science",
+        "health",
+        "journalism",
+        "periodicals",
+        "political science",
+        "civics",
+        "government",
+        "politics",
+        "popular science",
+        "news articles"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -584,7 +1504,20 @@
       "subjects": [
         "Basic Information and General Reference"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "magazines",
+        "full text magazines",
+        "reference books",
+        "business",
+        "health",
+        "education",
+        "general science",
+        "multicultural issues",
+        "image collection",
+        "general adult audience"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -595,7 +1528,23 @@
       "subjects": [
         "Basic Information and General Reference"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "reference ebooks",
+        "biography",
+        "history",
+        "architecture",
+        "literature",
+        "cooking",
+        "health and wellness",
+        "science",
+        "self help",
+        "religion",
+        "current events",
+        "sports",
+        "travel"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -606,7 +1555,22 @@
       "subjects": [
         "Health and Wellness"
       ],
-      "primary": "Health and Wellness"
+      "primary": "Health and Wellness",
+      "keywords": [
+        "medline",
+        "biomedical literature",
+        "medical citations and abstracts",
+        "health journals",
+        "national library of medicine",
+        "mesh subject headings",
+        "clinical research",
+        "peer reviewed medical articles",
+        "pubmed",
+        "medical studies",
+        "clinical trials",
+        "disease research"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -626,7 +1590,19 @@
         "Science",
         "Social Studies"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "middle school magazines",
+        "middle school research",
+        "reference ebooks",
+        "primary source documents",
+        "videos",
+        "history",
+        "current events",
+        "science",
+        "sports"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -646,7 +1622,19 @@
         "Science",
         "Social Studies"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "middle school reference ebooks",
+        "social studies",
+        "math",
+        "history",
+        "language arts",
+        "technology",
+        "geography",
+        "culture",
+        "science"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -657,7 +1645,25 @@
       "subjects": [
         "Social Studies"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "military",
+        "armed forces",
+        "government",
+        "defense policy",
+        "military journals",
+        "policy makers",
+        "military branches",
+        "national security",
+        "veterans",
+        "army",
+        "navy",
+        "air force",
+        "marines",
+        "war and conflict",
+        "military history"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -668,7 +1674,28 @@
       "subjects": [
         "Social Studies"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "modern world history",
+        "world history since 1450",
+        "subject entries",
+        "biographies",
+        "maps and graphs",
+        "primary sources",
+        "timelines",
+        "people places events and ideas",
+        "world war 1",
+        "world war 2",
+        "holocaust",
+        "cold war",
+        "french revolution",
+        "industrial revolution",
+        "imperialism",
+        "russian revolution",
+        "decolonization",
+        "globalization"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -679,7 +1706,28 @@
       "subjects": [
         "Current Events and News"
       ],
-      "primary": "Current Events and News"
+      "primary": "Current Events and News",
+      "keywords": [
+        "newspapers",
+        "newspaper articles",
+        "news",
+        "newswires",
+        "television transcripts",
+        "radio transcripts",
+        "washington post",
+        "philadelphia inquirer",
+        "international newspapers",
+        "cnn",
+        "cbs news",
+        "pbs",
+        "npr style transcripts",
+        "daily news updates",
+        "current events",
+        "breaking news",
+        "editorials",
+        "op ed"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -690,7 +1738,30 @@
       "subjects": [
         "Citation Tools"
       ],
-      "primary": "Citation Tools"
+      "primary": "Citation Tools",
+      "keywords": [
+        "citation",
+        "citations",
+        "cite a source",
+        "works cited",
+        "bibliography",
+        "references page",
+        "mla",
+        "apa",
+        "chicago style",
+        "in text citations",
+        "citation generator",
+        "notecards",
+        "outline",
+        "research management",
+        "note taking",
+        "source evaluation",
+        "group projects",
+        "how do i cite",
+        "citation machine alternative",
+        "annotated bibliography"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -701,7 +1772,25 @@
       "subjects": [
         "English Language Arts"
       ],
-      "primary": "English Language Arts"
+      "primary": "English Language Arts",
+      "keywords": [
+        "readers advisory",
+        "what should i read next",
+        "find your next read",
+        "book recommendations",
+        "similar books",
+        "read alikes",
+        "genre",
+        "story element",
+        "author alerts",
+        "book lists",
+        "popular books",
+        "book summaries",
+        "if you liked",
+        "reading for fun",
+        "series order"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -717,7 +1806,19 @@
         "Psychology",
         "Science"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "dissertations",
+        "theses",
+        "etd",
+        "graduate research",
+        "doctoral dissertations",
+        "institutional repository",
+        "niche topics",
+        "scholarly bibliography",
+        "original research"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -728,7 +1829,31 @@
       "subjects": [
         "Complicated Issues"
       ],
-      "primary": "Complicated Issues"
+      "primary": "Complicated Issues",
+      "keywords": [
+        "points of view",
+        "debate topics",
+        "point and counterpoint",
+        "controversial topics",
+        "global issues",
+        "political magazines",
+        "news transcripts",
+        "blog posts",
+        "primary sources",
+        "guide to critical analysis",
+        "develop an argument",
+        "digital literacy",
+        "over 750 debate topics",
+        "pro con",
+        "persuasive essay",
+        "argument essay",
+        "gun control",
+        "death penalty",
+        "censorship",
+        "immigration",
+        "climate policy"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -739,7 +1864,34 @@
       "subjects": [
         "Culture and Geography"
       ],
-      "primary": "Culture and Geography"
+      "primary": "Culture and Geography",
+      "keywords": [
+        "pop culture",
+        "popular culture",
+        "american culture",
+        "art",
+        "literature",
+        "clothing",
+        "fashion",
+        "food",
+        "film",
+        "music",
+        "sports",
+        "technology",
+        "travel",
+        "decades",
+        "movements and trends",
+        "turning points",
+        "1900s through 2010s",
+        "primary and secondary sources",
+        "icons idols ideas",
+        "the sixties",
+        "the jazz age",
+        "rock and roll",
+        "television history",
+        "advertising history"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -755,7 +1907,18 @@
         "Science",
         "Social Studies"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "elementary school magazines",
+        "childrens magazines",
+        "easy to read encyclopedia",
+        "kids content",
+        "elementary research",
+        "child development",
+        "babysitting",
+        "education"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -771,7 +1934,21 @@
         "Science",
         "Social Studies"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "elementary reference ebooks",
+        "social studies",
+        "history",
+        "language arts",
+        "geography",
+        "culture",
+        "math",
+        "science",
+        "kids reference",
+        "child development",
+        "education"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -782,7 +1959,15 @@
       "subjects": [
         "For Teachers"
       ],
-      "primary": "For Teachers"
+      "primary": "For Teachers",
+      "keywords": [
+        "professional development",
+        "educators",
+        "education researchers",
+        "professional librarians",
+        "education journals"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -793,7 +1978,25 @@
       "subjects": [
         "Basic Information and General Reference"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "spanish language",
+        "en espanol",
+        "recursos en espanol",
+        "enciclopedia en espanol",
+        "spanish reference",
+        "spanish dictionary",
+        "diccionario espanol ingles",
+        "latin american newspapers",
+        "informes medicos",
+        "revistas en espanol",
+        "spanish speakers",
+        "libros de referencia",
+        "investigacion en espanol",
+        "fuentes en espanol",
+        "bilingual research"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -804,7 +2007,23 @@
       "subjects": [
         "Business"
       ],
-      "primary": "Business"
+      "primary": "Business",
+      "keywords": [
+        "regional business",
+        "local business news",
+        "business newspapers",
+        "trade publications",
+        "newswires",
+        "business radio and television transcripts",
+        "localized economic data",
+        "united states and canada",
+        "deca",
+        "fbla",
+        "local economy",
+        "regional markets",
+        "industry news"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -817,7 +2036,19 @@
         "Science",
         "Social Studies"
       ],
-      "primary": "English Language Arts"
+      "primary": "English Language Arts",
+      "keywords": [
+        "salem press",
+        "critical insights",
+        "reference volumes",
+        "literature",
+        "history",
+        "science",
+        "critical thinking",
+        "study skills",
+        "literary criticism books"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -828,7 +2059,35 @@
       "subjects": [
         "Science"
       ],
-      "primary": "Science"
+      "primary": "Science",
+      "keywords": [
+        "science reference",
+        "biology",
+        "chemistry",
+        "physics",
+        "earth science",
+        "space science",
+        "environmental science",
+        "marine science",
+        "forensics",
+        "weather",
+        "computers",
+        "math support",
+        "essays",
+        "diagrams",
+        "definitions",
+        "interactives",
+        "experiments",
+        "topic centers",
+        "elearning modules",
+        "science concepts",
+        "astronomy",
+        "geology",
+        "climate",
+        "scientific method",
+        "lab reports"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -840,7 +2099,35 @@
         "Mathematics",
         "Science"
       ],
-      "primary": "Science"
+      "primary": "Science",
+      "keywords": [
+        "science magazines",
+        "science journals",
+        "applied sciences",
+        "biology",
+        "chemistry",
+        "computer science",
+        "earth sciences",
+        "engineering",
+        "environmental science",
+        "forensics",
+        "health and wellness",
+        "mathematics",
+        "paleontology",
+        "physics",
+        "scientists and innovators",
+        "space sciences",
+        "astronomy",
+        "science experiments",
+        "lesson plans",
+        "science images",
+        "dinosaurs",
+        "robotics",
+        "renewable energy",
+        "genetics",
+        "space exploration"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -851,7 +2138,16 @@
       "subjects": [
         "Business"
       ],
-      "primary": "Business"
+      "primary": "Business",
+      "keywords": [
+        "small business ebooks",
+        "sustainable business",
+        "ethical business practices",
+        "business reference books",
+        "business planning",
+        "social entrepreneurship"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -862,7 +2158,30 @@
       "subjects": [
         "Business"
       ],
-      "primary": "Business"
+      "primary": "Business",
+      "keywords": [
+        "small business",
+        "entrepreneurship",
+        "starting a business",
+        "business plan",
+        "writing a business plan",
+        "marketing a business",
+        "managing employees",
+        "going green",
+        "business on the internet",
+        "selling a business",
+        "business videos",
+        "case studies",
+        "start up kit",
+        "nolo legal information",
+        "state specific business data",
+        "deca",
+        "fbla",
+        "franchising",
+        "funding a business",
+        "small business taxes"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -873,7 +2192,24 @@
       "subjects": [
         "For Teachers"
       ],
-      "primary": "For Teachers"
+      "primary": "For Teachers",
+      "keywords": [
+        "teacher resources",
+        "education magazines",
+        "peer reviewed education journals",
+        "assessment",
+        "best practices",
+        "continuing education",
+        "curriculum development",
+        "elementary education",
+        "higher education",
+        "instructional media",
+        "literacy standards",
+        "pedagogical research",
+        "school administration",
+        "teacher education"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -886,7 +2222,34 @@
         "Culture and Geography",
         "English Language Arts"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "african american experience",
+        "african american history",
+        "black history",
+        "primary and secondary sources",
+        "overview essays",
+        "biographies",
+        "slave narratives",
+        "speeches",
+        "court cases",
+        "civil rights movement",
+        "w e b du bois",
+        "barack obama",
+        "africa and the atlantic",
+        "chronological topic centers",
+        "scholarly commentary",
+        "slavery",
+        "emancipation",
+        "jim crow",
+        "segregation",
+        "harlem renaissance",
+        "great migration",
+        "black power",
+        "march on washington",
+        "brown v board"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -899,7 +2262,37 @@
         "Culture and Geography",
         "English Language Arts"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "asian american experience",
+        "asian american history",
+        "japanese american incarceration",
+        "war relocation authority",
+        "manzanar",
+        "tule lake",
+        "heart mountain",
+        "minidoka",
+        "poston",
+        "gila river",
+        "jerome",
+        "rohwer",
+        "topaz",
+        "east asian american history",
+        "south asian american",
+        "southeast asian american",
+        "native hawaiian",
+        "pacific islander",
+        "primary sources",
+        "letters",
+        "government documents",
+        "maps",
+        "cartoons",
+        "internment camps",
+        "chinese exclusion act",
+        "immigration history",
+        "model minority"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -910,7 +2303,24 @@
       "subjects": [
         "Current Events and News"
       ],
-      "primary": "Current Events and News"
+      "primary": "Current Events and News",
+      "keywords": [
+        "the atlantic",
+        "magazine",
+        "long form journalism",
+        "essays",
+        "politics",
+        "foreign affairs",
+        "business",
+        "technology",
+        "culture",
+        "analysis",
+        "american magazine",
+        "opinion writing",
+        "cultural criticism",
+        "current affairs"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -923,7 +2333,41 @@
         "Culture and Geography",
         "English Language Arts"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "latino american experience",
+        "latino history",
+        "hispanic history",
+        "mexican american",
+        "puerto rican",
+        "guatemalan",
+        "cuban",
+        "dominican",
+        "colombian",
+        "ecuadorian",
+        "spanish empire",
+        "voting access",
+        "political representation",
+        "immigration reform",
+        "bracero oral histories",
+        "speeches",
+        "songs",
+        "interviews",
+        "court cases",
+        "chicano movement",
+        "murals",
+        "poster art",
+        "teatro campesino",
+        "zoot suit",
+        "simon bolivar",
+        "rita hayworth",
+        "sonia sotomayor",
+        "cesar chavez",
+        "farm workers",
+        "immigration",
+        "bilingual education"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -934,7 +2378,23 @@
       "subjects": [
         "Current Events and News"
       ],
-      "primary": "Current Events and News"
+      "primary": "Current Events and News",
+      "keywords": [
+        "new york times",
+        "nyt",
+        "newspaper",
+        "journalism",
+        "news",
+        "reporting",
+        "current events",
+        "investigative journalism",
+        "american press",
+        "breaking news",
+        "opinion",
+        "daily news",
+        "news analysis"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -946,7 +2406,30 @@
         "Science",
         "Current Events and News"
       ],
-      "primary": "Science"
+      "primary": "Science",
+      "keywords": [
+        "science news",
+        "recent discoveries",
+        "scientific advances",
+        "biology",
+        "chemistry",
+        "environmental science",
+        "space",
+        "physics",
+        "technology",
+        "stem",
+        "conversations with scientists",
+        "science careers",
+        "topic centers",
+        "science videos",
+        "current science",
+        "new research",
+        "climate research",
+        "space missions",
+        "medical breakthroughs",
+        "artificial intelligence"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -957,7 +2440,21 @@
       "subjects": [
         "Current Events and News"
       ],
-      "primary": "Current Events and News"
+      "primary": "Current Events and News",
+      "keywords": [
+        "current events",
+        "social issues",
+        "political issues",
+        "economic issues",
+        "scientific discoveries",
+        "classroom topics",
+        "biographies",
+        "book reviews",
+        "government information",
+        "public opinion polls",
+        "international newspapers"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -970,7 +2467,36 @@
         "Culture and Geography",
         "English Language Arts"
       ],
-      "primary": "Social Studies"
+      "primary": "Social Studies",
+      "keywords": [
+        "womens history",
+        "women in america",
+        "suffragists",
+        "womens suffrage",
+        "trailblazers",
+        "civil rights activists",
+        "political leaders",
+        "cultural icons",
+        "primary sources",
+        "letters",
+        "photographs",
+        "newspaper clippings",
+        "archival video",
+        "speeches",
+        "biographies",
+        "clioview",
+        "demographic data",
+        "population income health marital status",
+        "student inquiry activities",
+        "feminism",
+        "equal rights amendment",
+        "seneca falls",
+        "right to vote",
+        "women in the workforce",
+        "title ix",
+        "reproductive rights"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -981,7 +2507,22 @@
       "subjects": [
         "Basic Information and General Reference"
       ],
-      "primary": "Basic Information and General Reference"
+      "primary": "Basic Information and General Reference",
+      "keywords": [
+        "world book",
+        "encyclopedia",
+        "encyclopedia articles",
+        "reading level",
+        "illustrations",
+        "videos",
+        "interactive maps",
+        "research help",
+        "activities",
+        "general reference",
+        "background information",
+        "starting point"
+      ],
+      "tier": "general"
     },
     {
       "type": "database",
@@ -993,7 +2534,27 @@
         "Culture and Geography",
         "Social Studies"
       ],
-      "primary": "Culture and Geography"
+      "primary": "Culture and Geography",
+      "keywords": [
+        "geography",
+        "world geography",
+        "countries",
+        "country profiles",
+        "cultures",
+        "geography concepts and skills",
+        "maps and flags",
+        "gazetteer",
+        "biographies",
+        "timelines",
+        "us states",
+        "world factbook alternative",
+        "landforms",
+        "climate zones",
+        "population",
+        "capital cities",
+        "borders"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "database",
@@ -1005,7 +2566,35 @@
         "Culture and Geography",
         "Social Studies"
       ],
-      "primary": "Culture and Geography"
+      "primary": "Culture and Geography",
+      "keywords": [
+        "world religions",
+        "religion",
+        "belief systems",
+        "buddhism",
+        "christianity",
+        "chinese religions",
+        "hinduism",
+        "islam",
+        "judaism",
+        "new religions",
+        "shinto",
+        "traditional religions",
+        "western esotericism",
+        "unbelief",
+        "faiths and beliefs",
+        "core beliefs",
+        "customs and practices",
+        "celebrations and holidays",
+        "sacred places",
+        "religious figures",
+        "comparative religion",
+        "sikhism",
+        "religious history",
+        "holidays and festivals",
+        "places of worship"
+      ],
+      "tier": "specialist"
     },
     {
       "type": "guide",
@@ -1075,17 +2664,29 @@
         {
           "title": "Formatting",
           "anchor": "#formatting",
-          "keywords": []
+          "keywords": [
+            "title page"
+          ]
         },
         {
           "title": "In-Text Citations",
           "anchor": "#intext",
-          "keywords": []
+          "keywords": [
+            "parenthetical",
+            "narrative citation",
+            "quoting",
+            "paraphrasing"
+          ]
         },
         {
           "title": "References",
           "anchor": "#references",
-          "keywords": []
+          "keywords": [
+            "reference list",
+            "bibliography",
+            "works cited",
+            "hanging indent"
+          ]
         },
         {
           "title": "Style and Grammar",
@@ -1100,10 +2701,13 @@
         {
           "title": "Citation Generator",
           "anchor": "#generator",
-          "keywords": []
+          "keywords": [
+            "citation machine",
+            "make a citation"
+          ]
         }
       ],
-      "sectionText": "Formatting In-Text Citations References Style and Grammar Tables and Figures Citation Generator"
+      "sectionText": "Formatting title page In-Text Citations parenthetical narrative citation quoting paraphrasing References reference list bibliography works cited hanging indent Style and Grammar Tables and Figures Citation Generator citation machine make a citation"
     },
     {
       "type": "guide",
@@ -1121,22 +2725,39 @@
         {
           "title": "Formatting",
           "anchor": "#formatting",
-          "keywords": []
+          "keywords": [
+            "margins",
+            "page numbers",
+            "paper setup"
+          ]
         },
         {
           "title": "In-Text Citations",
           "anchor": "#intext",
-          "keywords": []
+          "keywords": [
+            "signal phrase",
+            "quoting",
+            "paraphrasing",
+            "block quote"
+          ]
         },
         {
           "title": "Works Cited",
           "anchor": "#workscited",
-          "keywords": []
+          "keywords": [
+            "bibliography",
+            "references",
+            "hanging indent",
+            "list of sources"
+          ]
         },
         {
           "title": "Citation Generator",
           "anchor": "#generator",
-          "keywords": []
+          "keywords": [
+            "citation machine",
+            "make a citation"
+          ]
         },
         {
           "title": "Citing Generative AI",
@@ -1144,7 +2765,7 @@
           "keywords": []
         }
       ],
-      "sectionText": "Formatting In-Text Citations Works Cited Citation Generator Citing Generative AI"
+      "sectionText": "Formatting margins page numbers paper setup In-Text Citations signal phrase quoting paraphrasing block quote Works Cited bibliography references hanging indent list of sources Citation Generator citation machine make a citation Citing Generative AI"
     },
     {
       "type": "guide",
@@ -1229,22 +2850,41 @@
         {
           "title": "Common Licenses at a Glance",
           "anchor": "#h-keys",
-          "keywords": []
+          "keywords": [
+            "creative commons",
+            "cc0",
+            "public domain",
+            "attribution",
+            "license types"
+          ]
         },
         {
           "title": "Copyright-Flexible Image Sources",
           "anchor": "#h-dir",
-          "keywords": []
+          "keywords": [
+            "where to find pictures"
+          ]
         },
         {
           "title": "How to Cite Images",
           "anchor": "#h-cite",
-          "keywords": []
+          "keywords": [
+            "citing a picture",
+            "figure caption",
+            "image citation",
+            "credit a photo"
+          ]
         },
         {
           "title": "Copyright & Fair Use",
           "anchor": "#h-learn",
-          "keywords": []
+          "keywords": [
+            "fair use",
+            "intellectual property",
+            "open licensing",
+            "permissions",
+            "author rights"
+          ]
         },
         {
           "title": "Ethics and AI Images",
@@ -1252,7 +2892,7 @@
           "keywords": []
         }
       ],
-      "sectionText": "Start Here Common Licenses at a Glance Copyright-Flexible Image Sources How to Cite Images Copyright & Fair Use Ethics and AI Images"
+      "sectionText": "Start Here Common Licenses at a Glance creative commons cc0 public domain attribution license types Copyright-Flexible Image Sources where to find pictures How to Cite Images citing a picture figure caption image citation credit a photo Copyright & Fair Use fair use intellectual property open licensing permissions author rights Ethics and AI Images"
     },
     {
       "type": "guide",
@@ -1354,27 +2994,45 @@
         {
           "title": "Why Read?",
           "anchor": "#argument",
-          "keywords": []
+          "keywords": [
+            "close reading",
+            "active reading"
+          ]
         },
         {
           "title": "Why Write?",
           "anchor": "#why-bother",
-          "keywords": []
+          "keywords": [
+            "marginalia",
+            "commentary",
+            "thinking on paper"
+          ]
         },
         {
           "title": "Before You Begin…",
           "anchor": "#before-you-begin",
-          "keywords": []
+          "keywords": [
+            "annotation strategies"
+          ]
         },
         {
           "title": "Make Your Mark!",
           "anchor": "#mark-it-up",
-          "keywords": []
+          "keywords": [
+            "highlighting",
+            "underlining",
+            "symbols",
+            "marking up a text"
+          ]
         },
         {
           "title": "Make Yourself Heard!",
           "anchor": "#write-your-notes",
-          "keywords": []
+          "keywords": [
+            "note taking",
+            "sticky notes",
+            "writing in books"
+          ]
         },
         {
           "title": "Iterate and Explore!",
@@ -1382,7 +3040,7 @@
           "keywords": []
         }
       ],
-      "sectionText": "Why Read? Why Write? Before You Begin… Make Your Mark! Make Yourself Heard! Iterate and Explore!"
+      "sectionText": "Why Read? close reading active reading Why Write? marginalia commentary thinking on paper Before You Begin… annotation strategies Make Your Mark! highlighting underlining symbols marking up a text Make Yourself Heard! note taking sticky notes writing in books Iterate and Explore!"
     },
     {
       "type": "guide",
@@ -1399,25 +3057,42 @@
         {
           "title": "Selecting a Topic",
           "anchor": "#topic",
-          "keywords": []
+          "keywords": [
+            "choosing a topic",
+            "narrowing a topic",
+            "what should i write about"
+          ]
         },
         {
           "title": "Choosing a Database",
           "anchor": "#database",
-          "keywords": []
+          "keywords": [
+            "which database",
+            "where to search",
+            "picking a source",
+            "subject databases"
+          ]
         },
         {
           "title": "Preliminary Research",
           "anchor": "#preliminary",
-          "keywords": []
+          "keywords": [
+            "background reading",
+            "exploratory",
+            "presearch"
+          ]
         },
         {
           "title": "Formulating a Question",
           "anchor": "#question",
-          "keywords": []
+          "keywords": [
+            "research question",
+            "inquiry question",
+            "focusing"
+          ]
         }
       ],
-      "sectionText": "Selecting a Topic Choosing a Database Preliminary Research Formulating a Question"
+      "sectionText": "Selecting a Topic choosing a topic narrowing a topic what should i write about Choosing a Database which database where to search picking a source subject databases Preliminary Research background reading exploratory presearch Formulating a Question research question inquiry question focusing"
     },
     {
       "type": "guide",
@@ -1531,17 +3206,34 @@
         {
           "title": "Building Effective Searches",
           "anchor": "#searches",
-          "keywords": []
+          "keywords": [
+            "boolean",
+            "and or not",
+            "search strings",
+            "operators",
+            "advanced search",
+            "quotation marks",
+            "truncation"
+          ]
         },
         {
           "title": "Evaluating Results",
           "anchor": "#evaluating",
-          "keywords": []
+          "keywords": [
+            "source evaluation",
+            "credibility",
+            "accuracy",
+            "bias",
+            "is this reliable"
+          ]
         },
         {
           "title": "The Three Cs",
           "anchor": "#three-cs",
-          "keywords": []
+          "keywords": [
+            "creator content context",
+            "source evaluator"
+          ]
         },
         {
           "title": "Managing Materials",
@@ -1551,15 +3243,24 @@
         {
           "title": "Reading Academic Articles",
           "anchor": "#reading",
-          "keywords": []
+          "keywords": [
+            "scholarly article",
+            "journal article"
+          ]
         },
         {
           "title": "Reading News Articles",
           "anchor": "#news",
-          "keywords": []
+          "keywords": [
+            "fact or opinion",
+            "journalism",
+            "news literacy",
+            "reporting",
+            "opinion piece"
+          ]
         }
       ],
-      "sectionText": "Our Goals Building Effective Searches Evaluating Results The Three Cs Managing Materials Reading Academic Articles Reading News Articles"
+      "sectionText": "Our Goals Building Effective Searches boolean and or not search strings operators advanced search quotation marks truncation Evaluating Results source evaluation credibility accuracy bias is this reliable The Three Cs creator content context source evaluator Managing Materials Reading Academic Articles scholarly article journal article Reading News Articles fact or opinion journalism news literacy reporting opinion piece"
     },
     {
       "type": "guide",
@@ -1571,7 +3272,8 @@
         "Social Studies"
       ],
       "series": "",
-      "course": ""
+      "course": "",
+      "sectionText": "role play simulation historical figures perspective taking medieval middle ages"
     },
     {
       "type": "guide",
@@ -1583,7 +3285,8 @@
         "English Language Arts"
       ],
       "series": "",
-      "course": ""
+      "course": "",
+      "sectionText": "summer reading list"
     },
     {
       "type": "tool",
@@ -1593,7 +3296,13 @@
       "text": "Nearpod transforms slide decks into interactives by embedding polls, open-ended questions, draw-it prompts, and quizzes between the slides, with real-time results arriving on your screen as students respond. You can proceed at your pace or allow students to move at their own. Flocabulary offers a collection of short videos that set vocabulary concepts and topics to hip-hop alongside supplementary learning activities. Although Renaissance owns both Nearpod and Flocabulary, they aren't complementary tools. Flocabulary is a vocabulary-specific platform; Nearpod attaches to any lesson you already teach.",
       "band": "Middle School",
       "vendor": "",
-      "keywords": [],
+      "keywords": [
+        "interactive slides",
+        "polls",
+        "formative assessment",
+        "student paced",
+        "vocabulary videos"
+      ],
       "sectionText": "Nearpod provides opportunities for formative assessment with the benefit of a data trail. You can also get creative with student-paced lessons by offering them as homework or keeping them on the back burner for absentees. Flocabulary's a great way to frontload material ahead of a challenging new read. \"Create active learning experiences students can’t wait to be a part of.\" — Nearpod \"A library of songs, videos and activities for K–12 online learning.\" — Flocabulary"
     },
     {
@@ -1604,7 +3313,15 @@
       "text": "Albert is a practice engine loaded with question banks across math, ELA, science, social studies, electives and world languages, plus dedicated preparation for standardized tests including AP, the SAT, and the ACT. The content adapts as students work and the teacher interface makes it clear which standards a class finds most challenging. Albert sells practice questions, not curriculum or instruction. Its value stems from its style, especially for standardized exams.",
       "band": "High School",
       "vendor": "",
-      "keywords": [],
+      "keywords": [
+        "practice questions",
+        "question bank",
+        "test prep",
+        "ap exam",
+        "sat prep",
+        "retrieval practice",
+        "do now"
+      ],
       "sectionText": "Great for retrieval! Make Monday's Do Now an Albert bank with material from two weeks last Tuesday. Have data from past exams? See where this year's students stand and/or where last year's students were most challenged and target those areas early. \"Adaptive skills practice + premium question banks for all subjects and exams in grades 3–12.\" — Albert"
     },
     {
@@ -1615,7 +3332,14 @@
       "text": "Edpuzzle lets you turducken questions into a video (could be yours, could be something from YouTube). The video stops and poses a question; the students answer and you receive a log of who watched for how long and how they responded. It integrates with Classroom, which should make scoring a breeze! Edpuzzle makes video assignments accountable without being overtly punitive.",
       "band": "Middle & High School",
       "vendor": "",
-      "keywords": [],
+      "keywords": [
+        "video questions",
+        "flipped classroom",
+        "video lesson",
+        "comprehension check",
+        "youtube",
+        "screencast"
+      ],
       "sectionText": "Fine, I'll use the buzzwords: use Edpuzzle for flipped instruction. Let the video lecture and provide comprehension checks so you can focus class time on practice. If you aren't camera-shy, record yourself reading a text and jam your reading check right into the video. Also, take a look at the analytics! The part where every student rewound three times is probably worth reviewing as a class. \"Make any video your lesson.\" — Edpuzzle"
     },
     {
@@ -1626,7 +3350,15 @@
       "text": "Gimkit takes the concept of an \"information economy\" quite literally. Students answer questions to earn in-game currency, then spend it on upgrades and power-ups that change how fast they earn. If you've tried Kahoot and found wrong-answer click-spamming taxing, Gimkit, in theory, solves that specific problem. Speed matters less; accumulated correct answers matter more. Question sets can be built from scratch, imported from Quizlet or pasted in from a spreadsheet. The set can play live with the whole class or be assigned for students to work through on their own time.",
       "band": "Middle & High School",
       "vendor": "",
-      "keywords": [],
+      "keywords": [
+        "review game",
+        "quiz game",
+        "game show",
+        "kahoot alternative",
+        "vocabulary practice",
+        "retrieval",
+        "drill"
+      ],
       "sectionText": "Great for vocabulary and formula recall, or anything that demands a ton of reps. The game structure helps make repetition tolerable. Consider using it as an asynchronous assignment prior to an assessment to identify and target tricky content. \"A game show for the classroom that requires knowledge, collaboration, and strategy to win.\" — Gimkit"
     },
     {
@@ -1637,7 +3369,15 @@
       "text": "Gizmos are interactive math and science simulations. The user changes a variable, the model responds, and the relationship becomes manifest in a way still diagrams cannot muster. I'll repeat: this is not a science-only resource! The math library is substantial. It's also worth noting that a simulation makes a poor substitute for a lab, though it is very good at running the experiment twenty times in four minutes to find a pattern.",
       "band": "Middle & High School",
       "vendor": "",
-      "keywords": [],
+      "keywords": [
+        "simulation",
+        "virtual lab",
+        "interactive science",
+        "math models",
+        "virtual experiment",
+        "ngss",
+        "pre-lab"
+      ],
       "sectionText": "Run a simulation before a lab! The hypothesis should carry a bit more water going into the physical activity given the modeled outcome. Heading into a topic students reliably misunderstand? Break the model deliberately! Set the variable to an absurd value and ask why the model does what it does. \"Interactive online simulations and case studies for math and science that power inquiry and understanding through hands-on learning and experimentation.\" — ExploreLearning"
     },
     {
@@ -1692,6 +3432,4555 @@
         }
       ],
       "sectionText": "Library Hours Formal Library Policies Visiting the Library: A Few Gentle Reminders Library Etiquette Class, Lunch, and Study Hall Visitors Library Lyceum Our Digital Library Hub What Are You Doing Here?: A Provocation A beautiful sunset! Stylized sunset over dark rolling hills and green shoreline, with small buildings, a boat, and textured blue water creating a serene mood. by Arthur Dove (American, 1880-1946)\") Welcome back! I'm Mr. Thompson, your steadfast librarian, writing on behalf of the West Essex High School Library, and this is Knightly Muse, a newsletter I intend to post at regular intervals moving forward. I hope you're settling in following the hubbub of the first week and look forward to corresponding with you. Students are always welcome to reply to this newsletter with questions, considerations, and reactions of any kind. My inbox is always open! Onward. In our flagship missive, we'll review a few library basics, introduce a new library website, and share a provocation. Let's get it! Library Hours A library hours flyer! The library is open daily from 7:40am to 3:30pm. Have you stopped in this school year? Our library is open before and after school every day with a handful of exceptions. The library will close before school if... ...I'm not here. The library will close after school if... ...we're following a half-day/single session schedule. ...teachers are attending a Monday faculty meeting. That's the long and the short of it. I look forward to seeing you! Formal Library Policies Library policies are also available on the district's library website , but are reposted here for ease of reference. To offer my gloss of these rules: always use a Securly pass during the school day, make sure you have your ID at all times, and treat our shared space and one another with the care and affection befitting such precious resources. As to particulars: Visiting the Library: A Few Gentle Reminders The Library is a shared, safe, and inclusive space accessible to everybody in our learning community. Outside of instructional time, students are encouraged to use the Library for study, research, and recreational reading. Library Etiquette If you need help with anything—anything!—just ask. During instructional time, work quietly. Do not disturb in-session classes or other library users. Beverages in secure containers are permissible; food is prohibited. Strive to return borrowed materials promptly. Clean up after yourself before leaving. Class, Lunch, and Study Hall Visitors Regardless of the time or reason, students must present a physical ID to enter the library. During instructional time, students cannot enter without a Securly pass. The librarian encourages lunchtime visitors to plan on eating in the cafeteria before or after stopping in. The librarian reserves the right to restrict the number of students entering during lunch. Students coming from Study Hall must remain in the Library for the rest of the period. The librarian reserves the right to restrict the number of students entering from study hall. Library Lyceum A screenshot of the Library Lyceum homepage. I'm thrilled to debut the West Essex High School Library Lyceum , a new library website intended to serve as a repository for our ever-expanding digital offerings. The site's name invokes two ancestors. Students of the first, Aristotle’s school in ancient Athens, pursued philosophy peripatetically, moving literally and figuratively between questions. Our library also ambles about, tirelessly walking down satisfying answers to complicated questions; our library also realizes a host of further inquiries lurks between the syllables of any given answer. Educators of the second, America's 19th century Lyceum movement, brought serious ideas to public audiences outside academia. Our library also believes the pursuit of knowledge belongs to everyone, regardless of credential, station, social status, or present course of study. This hub anchors our network of research guides, instructional resources, and databases. Each component of the Lyceum is built around a specific course, assignment, or question. Each serves as a map through unfamiliar territory, and, like any map worth its vellum, proves most useful after you realize the territory itself takes priority over any abstraction. More on the Lyceum in future newsletters and classes as the year progresses! What Are You Doing Here?: A Provocation Vintage geological chart showing colorful folded rock strata, labeled layers, mountains, an ocean horizon, and smoking volcanoes; educational presentation. by Levi Walter Yaggy (American, 1848 - 1912)\") As we begin a new year, I thought I might share a few notes from a recent essay in Asterisk magazine titled \"Saving Academics from Themselves.\" The author, Kevin Munger, is an computational social scientist; in this piece, he treats the contrasting value systems of Silicon Valley and academia as a departure point for his thoughts on acquiring, integrating, producing, and sharing information. Epistemology—the study of what we think we know and why we think we know it—is a common denominator in much of what I do as a librarian. While Munger's thoughts specifically concern advanced studies, the epistemological issues he explores are just as pressing at the high school level (and below!). For instance: Speaking for my field: Unless academics can design and implement major reforms to our research practice in the next few years, there is a real risk that many social science professors will want to ban AI entirely. Soon we’ll be forcing each other to sign statements swearing that we didn’t use AI and AInvestigating not just every em-dash, but every semicolon and three-part list, too. To do so would make academics a sort of dockworkers union of knowledge, preventing the adoption of more efficient technology for doing research in order to preserve their current way of life. This needless cycle of dissemblance, accusation, and counter-accusation is just as pressing (and annoying) in secondary schools as it is among credentialed professionals. We, too, must decide how we wish to navigate a world where dissemblance is effortless and information overwhelms. Do I agree with everything the essay argues? Absolutely not. Do I think it broaches interesting questions and contributes to an important conversation? I do. (Never forget that an essay is literally a try, an attempt, a reckoning with a topic that isn't intended to be the final word.) Consider a few of the deep epistemological questions the essay implies: What types of knowledge and learning should schools value as digital technologies advance? Rather than completely abstaining from AI use, how can academics maintain their autonomy while applying its strengths to their work? How can institutions incentivize researchers to read and integrate the vast body of extant research rather than focusing on producing new material? Where and how should academics convey their findings and expertise to a general public? What are educators supposed to convey to their students: specific skills, subject area knowledge, general ways of thinking, ethical ways of being? Which of these categories do their assignments and class structures seem to prioritize? Aside from college and career, what are students preparing themselves for? Are they in high school to produce work (create content?) or to learn how to judge it? How committed are they to putting in the time necessary to develop and refine their own taste and abilities? When you draft an essay, break down an equation, write a lab report, or analyze a historical figure, is it more important to produce impressive work or to experience the generative friction of struggling to it? Do you approach wood shop, culinary class, art, music, or gym with the same mindset and standards that you apply to the core academic subjects? Why or why not? Is there much value in providing a correct answer or strong argument, but crumbling beneath an iota of scrutiny? In an age of easy answers, perhaps we should rededicate ourselves to asking better questions not only of the information at hand, but our own rationale for obtaining it. Excelsior, Mr. T"
+    }
+  ],
+  "topics": [
+    {
+      "t": "colonial america",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "jamestown",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "salem witch trials",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "american revolution",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "declaration of independence",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "constitutional convention",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "bill of rights",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "federalism",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "war of 1812",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "manifest destiny",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "westward expansion",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "trail of tears",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "abolition",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "underground railroad",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "civil war",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "emancipation proclamation",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "reconstruction",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "jim crow",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "segregation",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "industrial revolution",
+      "s": [
+        "Social Studies",
+        "Science"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "gilded age",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "immigration history",
+      "s": [
+        "Social Studies",
+        "Culture and Geography"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "ellis island",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "progressive era",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "womens suffrage",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "prohibition",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "the jazz age",
+      "s": [
+        "Social Studies",
+        "Culture and Geography"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "harlem renaissance",
+      "s": [
+        "Social Studies",
+        "English Language Arts"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "great depression",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "the new deal",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "dust bowl",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "pearl harbor",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "japanese american internment",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "the great migration",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "red scare",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "mccarthyism",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "brown v board of education",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "civil rights movement",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "march on washington",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "black power",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "chicano movement",
+      "s": [
+        "Social Studies",
+        "Culture and Geography"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "american indian movement",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "vietnam war",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "watergate",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "september 11",
+      "s": [
+        "Social Studies",
+        "Current Events and News"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "electoral college",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "supreme court",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "congress",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "the presidency",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "political parties",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "voting rights",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "American History",
+        "Gale in Context: US History",
+        "African-American History",
+        "The African American Experience",
+        "American Government",
+        "American Indian History"
+      ]
+    },
+    {
+      "t": "mesopotamia",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "ancient egypt",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "ancient greece",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "ancient rome",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "the silk road",
+      "s": [
+        "Social Studies",
+        "Culture and Geography"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "byzantine empire",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "the middle ages",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "feudalism",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "the crusades",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "the black death",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "the renaissance",
+      "s": [
+        "Social Studies",
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "the reformation",
+      "s": [
+        "Social Studies",
+        "Culture and Geography"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "age of exploration",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "columbian exchange",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "the enlightenment",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "french revolution",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "napoleon",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "imperialism",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "world war 1",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "russian revolution",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "world war 2",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "the holocaust",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "the cold war",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "berlin wall",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "korean war",
+      "s": [
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "decolonization",
+      "s": [
+        "Social Studies",
+        "Culture and Geography"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "apartheid",
+      "s": [
+        "Social Studies",
+        "Culture and Geography"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "genocide",
+      "s": [
+        "Social Studies",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "globalization",
+      "s": [
+        "Social Studies",
+        "Business"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "arab spring",
+      "s": [
+        "Social Studies",
+        "Current Events and News"
+      ],
+      "d": [
+        "Gale in Context: World History",
+        "Modern World History",
+        "Ancient and Medieval History",
+        "European Views of the Americas: 1493 to 1750",
+        "Gale in Context: US History",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "shakespeare",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "macbeth",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "hamlet",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "romeo and juliet",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "the great gatsby",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "to kill a mockingbird",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "of mice and men",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "the crucible",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "lord of the flies",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "1984",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "brave new world",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "fahrenheit 451",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "the odyssey",
+      "s": [
+        "English Language Arts",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "beowulf",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "frankenstein",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "the scarlet letter",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "their eyes were watching god",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "the catcher in the rye",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "night by elie wiesel",
+      "s": [
+        "English Language Arts",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "a raisin in the sun",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "poetry analysis",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "literary devices",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "symbolism",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "theme",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "character analysis",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "close reading",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "rhetorical analysis",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "argumentative essay",
+      "s": [
+        "English Language Arts",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale in Context: Opposing Viewpoints",
+        "Gale Literature: Twayne's Author Series",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "persuasive writing",
+      "s": [
+        "English Language Arts",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale in Context: Opposing Viewpoints",
+        "Gale Literature: Twayne's Author Series",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "narrative writing",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "literary movements",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "transcendentalism",
+      "s": [
+        "English Language Arts",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "modernism",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "gothic literature",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "dystopian fiction",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "graphic novels",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "banned books",
+      "s": [
+        "English Language Arts",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale in Context: Opposing Viewpoints",
+        "Gale Literature: Twayne's Author Series",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "book recommendations",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "what should i read next",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Literature",
+        "Bloom's Literature",
+        "NoveList",
+        "Gale Literature: Twayne's Author Series",
+        "Literary Reference Source eBooks",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "scientific method",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "photosynthesis",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "cellular respiration",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "cell structure",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "mitosis",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "dna",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "genetics",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "heredity",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "evolution",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "natural selection",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "ecology",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "ecosystems",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "food webs",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "biomes",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "human body systems",
+      "s": [
+        "Science",
+        "Health and Wellness"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "anatomy",
+      "s": [
+        "Science",
+        "Health and Wellness"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "microbiology",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "viruses",
+      "s": [
+        "Science",
+        "Health and Wellness"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "atomic structure",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "the periodic table",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "chemical reactions",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "chemical bonding",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "acids and bases",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "states of matter",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "stoichiometry",
+      "s": [
+        "Science",
+        "Mathematics"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "newtons laws",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "forces and motion",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "energy",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "thermodynamics",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "electricity and magnetism",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "waves",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "optics",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "plate tectonics",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "rock cycle",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "the water cycle",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "weather and climate",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "meteorology",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "astronomy",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "the solar system",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "space exploration",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "black holes",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "climate change",
+      "s": [
+        "Science",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Gale in Context: Opposing Viewpoints"
+      ]
+    },
+    {
+      "t": "global warming",
+      "s": [
+        "Science",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Gale in Context: Opposing Viewpoints"
+      ]
+    },
+    {
+      "t": "renewable energy",
+      "s": [
+        "Science",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Gale in Context: Opposing Viewpoints"
+      ]
+    },
+    {
+      "t": "fossil fuels",
+      "s": [
+        "Science",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Gale in Context: Opposing Viewpoints"
+      ]
+    },
+    {
+      "t": "pollution",
+      "s": [
+        "Science",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Gale in Context: Opposing Viewpoints"
+      ]
+    },
+    {
+      "t": "biodiversity",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "endangered species",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "conservation",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "forensic science",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "paleontology",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "dinosaurs",
+      "s": [
+        "Science"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "robotics",
+      "s": [
+        "Science",
+        "Mathematics"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Science Online"
+      ]
+    },
+    {
+      "t": "artificial intelligence",
+      "s": [
+        "Science",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Core Concepts: Biology",
+        "GreenFile",
+        "Science Reference Ultimate",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table",
+        "Gale in Context: Opposing Viewpoints"
+      ]
+    },
+    {
+      "t": "nutrition",
+      "s": [
+        "Health and Wellness"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Medline",
+        "Explora High Schools",
+        "Gale Power Search"
+      ]
+    },
+    {
+      "t": "exercise and fitness",
+      "s": [
+        "Health and Wellness"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Medline",
+        "Explora High Schools",
+        "Gale Power Search"
+      ]
+    },
+    {
+      "t": "mental health",
+      "s": [
+        "Health and Wellness",
+        "Psychology"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Issues & Controversies",
+        "Medline",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "anxiety",
+      "s": [
+        "Health and Wellness",
+        "Psychology"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Issues & Controversies",
+        "Medline",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "depression",
+      "s": [
+        "Health and Wellness",
+        "Psychology"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Issues & Controversies",
+        "Medline",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "stress",
+      "s": [
+        "Health and Wellness",
+        "Psychology"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Issues & Controversies",
+        "Medline",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "sleep",
+      "s": [
+        "Health and Wellness"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Medline",
+        "Explora High Schools",
+        "Gale Power Search"
+      ]
+    },
+    {
+      "t": "eating disorders",
+      "s": [
+        "Health and Wellness",
+        "Psychology"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Issues & Controversies",
+        "Medline",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "substance abuse",
+      "s": [
+        "Health and Wellness",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Medline"
+      ]
+    },
+    {
+      "t": "vaping",
+      "s": [
+        "Health and Wellness",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Medline"
+      ]
+    },
+    {
+      "t": "alcohol",
+      "s": [
+        "Health and Wellness",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Medline"
+      ]
+    },
+    {
+      "t": "opioids",
+      "s": [
+        "Health and Wellness",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Medline"
+      ]
+    },
+    {
+      "t": "addiction",
+      "s": [
+        "Health and Wellness",
+        "Psychology"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Issues & Controversies",
+        "Medline",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "vaccines",
+      "s": [
+        "Health and Wellness",
+        "Science"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Issues & Controversies",
+        "Core Concepts: Biology",
+        "Core Concepts: Chemistry"
+      ]
+    },
+    {
+      "t": "infectious disease",
+      "s": [
+        "Health and Wellness",
+        "Science"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Issues & Controversies",
+        "Core Concepts: Biology",
+        "Core Concepts: Chemistry"
+      ]
+    },
+    {
+      "t": "diabetes",
+      "s": [
+        "Health and Wellness"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Medline",
+        "Explora High Schools",
+        "Gale Power Search"
+      ]
+    },
+    {
+      "t": "cancer",
+      "s": [
+        "Health and Wellness"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Medline",
+        "Explora High Schools",
+        "Gale Power Search"
+      ]
+    },
+    {
+      "t": "heart disease",
+      "s": [
+        "Health and Wellness"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Medline",
+        "Explora High Schools",
+        "Gale Power Search"
+      ]
+    },
+    {
+      "t": "first aid",
+      "s": [
+        "Health and Wellness"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Medline",
+        "Explora High Schools",
+        "Gale Power Search"
+      ]
+    },
+    {
+      "t": "sexual health",
+      "s": [
+        "Health and Wellness"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Medline",
+        "Explora High Schools",
+        "Gale Power Search"
+      ]
+    },
+    {
+      "t": "puberty",
+      "s": [
+        "Health and Wellness"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Medline",
+        "Explora High Schools",
+        "Gale Power Search"
+      ]
+    },
+    {
+      "t": "sports medicine",
+      "s": [
+        "Health and Wellness"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Medline",
+        "Explora High Schools",
+        "Gale Power Search"
+      ]
+    },
+    {
+      "t": "public health",
+      "s": [
+        "Health and Wellness",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Medline"
+      ]
+    },
+    {
+      "t": "epidemics",
+      "s": [
+        "Health and Wellness",
+        "Social Studies"
+      ],
+      "d": [
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition",
+        "Issues & Controversies",
+        "African-American History",
+        "American Government"
+      ]
+    },
+    {
+      "t": "gun control",
+      "s": [
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Explora High Schools",
+        "Middle Search Plus",
+        "Middle Search Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "the death penalty",
+      "s": [
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Explora High Schools",
+        "Middle Search Plus",
+        "Middle Search Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "capital punishment",
+      "s": [
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Explora High Schools",
+        "Middle Search Plus",
+        "Middle Search Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "abortion",
+      "s": [
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Explora High Schools",
+        "Middle Search Plus",
+        "Middle Search Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "immigration policy",
+      "s": [
+        "Complicated Issues",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "African-American History",
+        "American Government",
+        "American History"
+      ]
+    },
+    {
+      "t": "censorship",
+      "s": [
+        "Complicated Issues",
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Bloom's Literature",
+        "Feature Films for Education",
+        "Gale in Context: Literature"
+      ]
+    },
+    {
+      "t": "free speech",
+      "s": [
+        "Complicated Issues",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "African-American History",
+        "American Government",
+        "American History"
+      ]
+    },
+    {
+      "t": "privacy",
+      "s": [
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Explora High Schools",
+        "Middle Search Plus",
+        "Middle Search Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "surveillance",
+      "s": [
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Explora High Schools",
+        "Middle Search Plus",
+        "Middle Search Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "social media and teens",
+      "s": [
+        "Complicated Issues",
+        "Health and Wellness"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition"
+      ]
+    },
+    {
+      "t": "screen time",
+      "s": [
+        "Complicated Issues",
+        "Health and Wellness"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition"
+      ]
+    },
+    {
+      "t": "cyberbullying",
+      "s": [
+        "Complicated Issues",
+        "Health and Wellness"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition"
+      ]
+    },
+    {
+      "t": "misinformation",
+      "s": [
+        "Complicated Issues",
+        "Current Events and News"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Newspaper Source Plus",
+        "The Atlantic",
+        "The New York Times"
+      ]
+    },
+    {
+      "t": "fake news",
+      "s": [
+        "Complicated Issues",
+        "Current Events and News"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Newspaper Source Plus",
+        "The Atlantic",
+        "The New York Times"
+      ]
+    },
+    {
+      "t": "media bias",
+      "s": [
+        "Complicated Issues",
+        "Current Events and News"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Newspaper Source Plus",
+        "The Atlantic",
+        "The New York Times"
+      ]
+    },
+    {
+      "t": "policing",
+      "s": [
+        "Complicated Issues",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "African-American History",
+        "American Government",
+        "American History"
+      ]
+    },
+    {
+      "t": "criminal justice",
+      "s": [
+        "Complicated Issues",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "African-American History",
+        "American Government",
+        "American History"
+      ]
+    },
+    {
+      "t": "mass incarceration",
+      "s": [
+        "Complicated Issues",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "African-American History",
+        "American Government",
+        "American History"
+      ]
+    },
+    {
+      "t": "income inequality",
+      "s": [
+        "Complicated Issues",
+        "Business"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Business Source Premier",
+        "Legal Information Reference Source",
+        "Regional Business News"
+      ]
+    },
+    {
+      "t": "minimum wage",
+      "s": [
+        "Complicated Issues",
+        "Business"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Business Source Premier",
+        "Legal Information Reference Source",
+        "Regional Business News"
+      ]
+    },
+    {
+      "t": "healthcare policy",
+      "s": [
+        "Complicated Issues",
+        "Health and Wellness"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Health Reference Center",
+        "Health Source: Consumer Edition",
+        "Health Source: Nursing/Academic Edition"
+      ]
+    },
+    {
+      "t": "student loans",
+      "s": [
+        "Complicated Issues",
+        "College and Career"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Ferguson's Career Guidance Center",
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Explora High Schools"
+      ]
+    },
+    {
+      "t": "school uniforms",
+      "s": [
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Explora High Schools",
+        "Middle Search Plus",
+        "Middle Search Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "standardized testing",
+      "s": [
+        "Complicated Issues",
+        "For Teachers"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Curriculum Resource Center",
+        "ERIC (Education Resources Information Center)",
+        "Professional Development Collection"
+      ]
+    },
+    {
+      "t": "animal testing",
+      "s": [
+        "Complicated Issues",
+        "Science"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Core Concepts: Biology",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table"
+      ]
+    },
+    {
+      "t": "factory farming",
+      "s": [
+        "Complicated Issues",
+        "Science"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Core Concepts: Biology",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table"
+      ]
+    },
+    {
+      "t": "fast fashion",
+      "s": [
+        "Complicated Issues",
+        "Business"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Business Source Premier",
+        "Legal Information Reference Source",
+        "Regional Business News"
+      ]
+    },
+    {
+      "t": "gene editing",
+      "s": [
+        "Complicated Issues",
+        "Science"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Core Concepts: Biology",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table"
+      ]
+    },
+    {
+      "t": "drug legalization",
+      "s": [
+        "Complicated Issues"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Explora High Schools",
+        "Middle Search Plus",
+        "Middle Search Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "voting age",
+      "s": [
+        "Complicated Issues",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "African-American History",
+        "American Government",
+        "American History"
+      ]
+    },
+    {
+      "t": "electoral reform",
+      "s": [
+        "Complicated Issues",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "African-American History",
+        "American Government",
+        "American History"
+      ]
+    },
+    {
+      "t": "climate policy",
+      "s": [
+        "Complicated Issues",
+        "Science"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Core Concepts: Biology",
+        "Core Concepts: Chemistry",
+        "Core Concepts: Periodic Table"
+      ]
+    },
+    {
+      "t": "gender identity",
+      "s": [
+        "Complicated Issues",
+        "Psychology"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Feature Films for Education",
+        "Health Reference Center",
+        "JSTOR"
+      ]
+    },
+    {
+      "t": "affirmative action",
+      "s": [
+        "Complicated Issues",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "African-American History",
+        "American Government",
+        "American History"
+      ]
+    },
+    {
+      "t": "world religions",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "christianity",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "islam",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "judaism",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "hinduism",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "buddhism",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "sikhism",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "shinto",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "comparative religion",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "country profiles",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "world geography",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "landforms",
+      "s": [
+        "Culture and Geography",
+        "Science"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "JSTOR",
+        "The Latino American Experience",
+        "Women’s History in the United States"
+      ]
+    },
+    {
+      "t": "climate zones",
+      "s": [
+        "Culture and Geography",
+        "Science"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "JSTOR",
+        "The Latino American Experience",
+        "Women’s History in the United States"
+      ]
+    },
+    {
+      "t": "population",
+      "s": [
+        "Culture and Geography",
+        "Social Studies"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "Ancient and Medieval History",
+        "CultureGrams",
+        "JSTOR",
+        "The Latino American Experience"
+      ]
+    },
+    {
+      "t": "urbanization",
+      "s": [
+        "Culture and Geography",
+        "Social Studies"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "Ancient and Medieval History",
+        "CultureGrams",
+        "JSTOR",
+        "The Latino American Experience"
+      ]
+    },
+    {
+      "t": "migration",
+      "s": [
+        "Culture and Geography",
+        "Social Studies"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "Ancient and Medieval History",
+        "CultureGrams",
+        "JSTOR",
+        "The Latino American Experience"
+      ]
+    },
+    {
+      "t": "cultural traditions",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "holidays and festivals",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "food and cuisine",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "music history",
+      "s": [
+        "Culture and Geography",
+        "English Language Arts"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "JSTOR",
+        "The Latino American Experience",
+        "Women’s History in the United States"
+      ]
+    },
+    {
+      "t": "film history",
+      "s": [
+        "Culture and Geography",
+        "English Language Arts"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "JSTOR",
+        "The Latino American Experience",
+        "Women’s History in the United States"
+      ]
+    },
+    {
+      "t": "art history",
+      "s": [
+        "Culture and Geography",
+        "English Language Arts"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "JSTOR",
+        "The Latino American Experience",
+        "Women’s History in the United States"
+      ]
+    },
+    {
+      "t": "fashion history",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "sports history",
+      "s": [
+        "Culture and Geography"
+      ],
+      "d": [
+        "World Religions",
+        "World Geography and Culture",
+        "CultureGrams",
+        "The Latino American Experience",
+        "Women’s History in the United States",
+        "Pop Culture Universe"
+      ]
+    },
+    {
+      "t": "economics",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "supply and demand",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "inflation",
+      "s": [
+        "Business",
+        "Current Events and News"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Newspaper Source Plus",
+        "Small Business Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "the stock market",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "investing",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "personal finance",
+      "s": [
+        "Business",
+        "College and Career"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Ferguson's Career Guidance Center",
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Legal Information Reference Source"
+      ]
+    },
+    {
+      "t": "budgeting",
+      "s": [
+        "Business",
+        "College and Career"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Ferguson's Career Guidance Center",
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Legal Information Reference Source"
+      ]
+    },
+    {
+      "t": "credit and debt",
+      "s": [
+        "Business",
+        "College and Career"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Ferguson's Career Guidance Center",
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Legal Information Reference Source"
+      ]
+    },
+    {
+      "t": "entrepreneurship",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "starting a business",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "business plan",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "marketing",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "advertising",
+      "s": [
+        "Business",
+        "Culture and Geography"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Pop Culture Universe",
+        "Women’s History in the United States",
+        "CultureGrams"
+      ]
+    },
+    {
+      "t": "branding",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "supply chain",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "international trade",
+      "s": [
+        "Business",
+        "Social Studies"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "JSTOR",
+        "Women’s History in the United States",
+        "African-American History"
+      ]
+    },
+    {
+      "t": "business ethics",
+      "s": [
+        "Business",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Legal Information Reference Source"
+      ]
+    },
+    {
+      "t": "deca",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "fbla",
+      "s": [
+        "Business"
+      ],
+      "d": [
+        "Business Source Premier",
+        "Small Business Source",
+        "Regional Business News",
+        "Legal Information Reference Source",
+        "Small Business Reference eBook Collection",
+        "Feature Films for Education"
+      ]
+    },
+    {
+      "t": "career exploration",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "choosing a major",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "college majors",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "college applications",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "college essay",
+      "s": [
+        "College and Career",
+        "English Language Arts"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center",
+        "Bloom's Literature",
+        "Gale in Context: Literature",
+        "Issues & Controversies",
+        "The Asian American Experience"
+      ]
+    },
+    {
+      "t": "scholarships",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "financial aid",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "fafsa",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "sat",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "act",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "ap exams",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "asvab",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "resume",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "cover letter",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "job interview",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "internships",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "trade school",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "apprenticeship",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "gap year",
+      "s": [
+        "College and Career"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center"
+      ]
+    },
+    {
+      "t": "military service",
+      "s": [
+        "College and Career",
+        "Social Studies"
+      ],
+      "d": [
+        "Gale Presents: Peterson's Test and Career Prep",
+        "Ferguson's Career Guidance Center",
+        "American Indian History",
+        "Military and Government Collection",
+        "The Asian American Experience",
+        "Women’s History in the United States"
+      ]
+    },
+    {
+      "t": "how to cite a source",
+      "s": [
+        "Citation Tools"
+      ],
+      "d": [
+        "NoodleTools"
+      ]
+    },
+    {
+      "t": "works cited page",
+      "s": [
+        "Citation Tools"
+      ],
+      "d": [
+        "NoodleTools"
+      ]
+    },
+    {
+      "t": "bibliography",
+      "s": [
+        "Citation Tools"
+      ],
+      "d": [
+        "NoodleTools"
+      ]
+    },
+    {
+      "t": "in text citations",
+      "s": [
+        "Citation Tools"
+      ],
+      "d": [
+        "NoodleTools"
+      ]
+    },
+    {
+      "t": "mla style",
+      "s": [
+        "Citation Tools"
+      ],
+      "d": [
+        "NoodleTools"
+      ]
+    },
+    {
+      "t": "apa style",
+      "s": [
+        "Citation Tools"
+      ],
+      "d": [
+        "NoodleTools"
+      ]
+    },
+    {
+      "t": "chicago style",
+      "s": [
+        "Citation Tools"
+      ],
+      "d": [
+        "NoodleTools"
+      ]
+    },
+    {
+      "t": "annotated bibliography",
+      "s": [
+        "Citation Tools"
+      ],
+      "d": [
+        "NoodleTools"
+      ]
+    },
+    {
+      "t": "plagiarism",
+      "s": [
+        "Citation Tools",
+        "Complicated Issues"
+      ],
+      "d": [
+        "NoodleTools",
+        "Explora High Schools",
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies",
+        "Points of View Ultimate",
+        "Middle Search Plus"
+      ]
+    },
+    {
+      "t": "paraphrasing",
+      "s": [
+        "Citation Tools",
+        "English Language Arts"
+      ],
+      "d": [
+        "NoodleTools",
+        "JSTOR",
+        "Open Dissertations",
+        "The African American Experience",
+        "The Latino American Experience",
+        "Academic Search Complete"
+      ]
+    },
+    {
+      "t": "evaluating sources",
+      "s": [
+        "Basic Information and General Reference",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Academic Search Complete",
+        "Credo Source",
+        "Explora High Schools",
+        "Britannica ImageQuest",
+        "Gale in Context: Opposing Viewpoints",
+        "Issues & Controversies"
+      ]
+    },
+    {
+      "t": "lateral reading",
+      "s": [
+        "Basic Information and General Reference"
+      ],
+      "d": [
+        "Academic Search Complete",
+        "Credo Source",
+        "Explora High Schools",
+        "Britannica ImageQuest",
+        "Library, Information Science & Technology Abstracts",
+        "Referencia Latina"
+      ]
+    },
+    {
+      "t": "primary and secondary sources",
+      "s": [
+        "Basic Information and General Reference",
+        "Social Studies"
+      ],
+      "d": [
+        "JSTOR",
+        "Open Dissertations",
+        "The African American Experience",
+        "The Latino American Experience",
+        "Academic Search Complete",
+        "Credo Source"
+      ]
+    },
+    {
+      "t": "peer review",
+      "s": [
+        "Basic Information and General Reference"
+      ],
+      "d": [
+        "Academic Search Complete",
+        "Credo Source",
+        "Explora High Schools",
+        "Britannica ImageQuest",
+        "Library, Information Science & Technology Abstracts",
+        "Referencia Latina"
+      ]
+    },
+    {
+      "t": "scholarly articles",
+      "s": [
+        "Basic Information and General Reference"
+      ],
+      "d": [
+        "Academic Search Complete",
+        "Credo Source",
+        "Explora High Schools",
+        "Britannica ImageQuest",
+        "Library, Information Science & Technology Abstracts",
+        "Referencia Latina"
+      ]
+    },
+    {
+      "t": "research question",
+      "s": [
+        "Basic Information and General Reference"
+      ],
+      "d": [
+        "Academic Search Complete",
+        "Credo Source",
+        "Explora High Schools",
+        "Britannica ImageQuest",
+        "Library, Information Science & Technology Abstracts",
+        "Referencia Latina"
+      ]
+    },
+    {
+      "t": "thesis statement",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "JSTOR",
+        "Open Dissertations",
+        "The African American Experience",
+        "The Latino American Experience",
+        "Academic Search Complete",
+        "Explora High Schools"
+      ]
+    },
+    {
+      "t": "note taking",
+      "s": [
+        "Citation Tools",
+        "Basic Information and General Reference"
+      ],
+      "d": [
+        "NoodleTools",
+        "Academic Search Complete",
+        "Credo Source",
+        "Explora High Schools",
+        "Britannica ImageQuest",
+        "Library, Information Science & Technology Abstracts"
+      ]
+    },
+    {
+      "t": "where do i start",
+      "s": [
+        "Basic Information and General Reference"
+      ],
+      "d": [
+        "Academic Search Complete",
+        "Credo Source",
+        "Explora High Schools",
+        "Britannica ImageQuest",
+        "Library, Information Science & Technology Abstracts",
+        "Referencia Latina"
+      ]
+    },
+    {
+      "t": "images for a project",
+      "s": [
+        "Basic Information and General Reference"
+      ],
+      "d": [
+        "Referencia Latina",
+        "Middle Search Plus",
+        "Britannica ImageQuest",
+        "EBSCO eBook Collection",
+        "Learn360",
+        "MAS Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "copyright free images",
+      "s": [
+        "Basic Information and General Reference"
+      ],
+      "d": [
+        "Referencia Latina",
+        "Middle Search Plus",
+        "Britannica ImageQuest",
+        "EBSCO eBook Collection",
+        "Learn360",
+        "MAS Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "streaming video",
+      "s": [
+        "Basic Information and General Reference"
+      ],
+      "d": [
+        "Referencia Latina",
+        "Middle Search Plus",
+        "Britannica ImageQuest",
+        "EBSCO eBook Collection",
+        "Learn360",
+        "MAS Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "documentaries",
+      "s": [
+        "Basic Information and General Reference"
+      ],
+      "d": [
+        "Referencia Latina",
+        "Middle Search Plus",
+        "Britannica ImageQuest",
+        "EBSCO eBook Collection",
+        "Learn360",
+        "MAS Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "ebooks",
+      "s": [
+        "Basic Information and General Reference"
+      ],
+      "d": [
+        "Referencia Latina",
+        "Middle Search Plus",
+        "Britannica ImageQuest",
+        "EBSCO eBook Collection",
+        "Learn360",
+        "MAS Reference eBook Collection"
+      ]
+    },
+    {
+      "t": "audiobooks",
+      "s": [
+        "English Language Arts"
+      ],
+      "d": [
+        "Middle Search Plus",
+        "Gale in Context: Literature",
+        "Gale in Context: Biography",
+        "Gale eBooks",
+        "Primary Search",
+        "Bloom's Literature"
+      ]
+    },
+    {
+      "t": "newspapers",
+      "s": [
+        "Current Events and News"
+      ],
+      "d": [
+        "Newspaper Source Plus",
+        "The New York Times",
+        "TOPICsearch",
+        "The Atlantic",
+        "Issues & Controversies",
+        "Today's Science"
+      ]
+    },
+    {
+      "t": "magazines",
+      "s": [
+        "Current Events and News"
+      ],
+      "d": [
+        "Newspaper Source Plus",
+        "The New York Times",
+        "TOPICsearch",
+        "The Atlantic",
+        "Issues & Controversies",
+        "Today's Science"
+      ]
+    },
+    {
+      "t": "current events",
+      "s": [
+        "Current Events and News"
+      ],
+      "d": [
+        "Newspaper Source Plus",
+        "The New York Times",
+        "TOPICsearch",
+        "The Atlantic",
+        "Issues & Controversies",
+        "Today's Science"
+      ]
+    },
+    {
+      "t": "breaking news",
+      "s": [
+        "Current Events and News"
+      ],
+      "d": [
+        "Newspaper Source Plus",
+        "The New York Times",
+        "TOPICsearch",
+        "The Atlantic",
+        "Issues & Controversies",
+        "Today's Science"
+      ]
+    },
+    {
+      "t": "editorials",
+      "s": [
+        "Current Events and News",
+        "Complicated Issues"
+      ],
+      "d": [
+        "Newspaper Source Plus",
+        "Points of View Ultimate",
+        "The New York Times",
+        "TOPICsearch",
+        "Middle Search Plus",
+        "Gale in Context: Opposing Viewpoints"
+      ]
+    },
+    {
+      "t": "spanish language sources",
+      "s": [
+        "Basic Information and General Reference",
+        "Culture and Geography"
+      ],
+      "d": [
+        "Referencia Latina",
+        "Middle Search Plus",
+        "Britannica ImageQuest",
+        "EBSCO eBook Collection",
+        "Learn360",
+        "MAS Reference eBook Collection"
+      ]
     }
   ]
 }

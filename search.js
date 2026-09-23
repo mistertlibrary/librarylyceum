@@ -19,6 +19,8 @@
 
   var allRecords = [];
   var fuse       = null;
+  var topicFuse  = null;
+  var SUGGEST_MAX = 6;
   var searchQuery = "";
   var activeType  = "all";
 
@@ -214,11 +216,6 @@
     });
   }
 
-  /* Fuse compares the whole typed string against each field, so a multi-word
-     query only matches a span where those words sit together. "ancient rome"
-     therefore missed "Ancient and Medieval History", which contains both. The
-     phrase pass runs first and keeps its ranking; a second pass then adds any
-     record matching every word somewhere, ranked behind. */
   function everyWordHits(words, phraseSeen) {
     var counts = [], scores = [], out = [];
     var i, j, hits, at;
@@ -278,6 +275,28 @@
     return results;
   }
 
+  function suggestionsFor(q) {
+    if (!topicFuse || (activeType !== "all" && activeType !== "database")) return null;
+    var hit = topicFuse.search(q)[0];
+    if (!hit) return null;
+    var want = hit.item.s || [];
+    var dbs = (hit.item.d || []).map(function (title) {
+      return allRecords.find(function (r) { return r.type === "database" && r.title === title; });
+    }).filter(Boolean).slice(0, SUGGEST_MAX);
+    return dbs.length ? { subjects: want, dbs: dbs } : null;
+  }
+
+  function suggestionsHtml(q) {
+    var sug = suggestionsFor(q);
+    if (!sug) return "";
+    return '<section class="result-group" aria-labelledby="group-suggest">' +
+      '<h2 class="result-group-heading" id="group-suggest">' + esc(sug.subjects.join(" & ")) +
+        '<span class="result-group-count">' + sug.dbs.length + "</span>" +
+      "</h2>" +
+      '<ul class="result-list">' + sug.dbs.map(resultHtml).join("") + "</ul>" +
+    "</section>";
+  }
+
   function render() {
     var box  = document.getElementById("results");
     var meta = document.getElementById("results-meta");
@@ -302,10 +321,10 @@
       meta.innerHTML = "No matches for <strong>" + esc(searchQuery) + "</strong>";
       box.innerHTML =
         '<div class="empty-state">' +
-          "<p>No retrievals, but no worries! Try a broader search, browse by subject, or " +
-          '<a href="mailto:sthompson@westex.org">ask Mr. Thompson</a> ' +
-          "for help getting started.</p>" +
-        "</div>";
+          "<p>Uh oh! We couldn't find anything related to your search. Try another strategy or consult " +
+          '<a href="mailto:sthompson@westex.org">Mr. Thompson</a> ' +
+          "for help!</p>" +
+        "</div>" + suggestionsHtml(searchQuery);
       return;
     }
 
@@ -360,6 +379,9 @@
       })
       .then(function (data) {
         allRecords = data.records || [];
+        if ((data.topics || []).length) {
+          topicFuse = new Fuse(data.topics, { keys: ["t"], threshold: 0.12, ignoreLocation: true });
+        }
 
         fuse = new Fuse(allRecords, {
           keys: [

@@ -11,27 +11,64 @@
     {
       "title": "Nearpod & Flocabulary",
       "anchor": "#tool-nearpod-and-flocabulary",
-      "keywords": []
+      "keywords": [
+        "interactive slides",
+        "polls",
+        "formative assessment",
+        "student paced",
+        "vocabulary videos"
+      ]
     },
     {
       "title": "Albert",
       "anchor": "#tool-albert",
-      "keywords": []
+      "keywords": [
+        "practice questions",
+        "question bank",
+        "test prep",
+        "ap exam",
+        "sat prep",
+        "retrieval practice",
+        "do now"
+      ]
     },
     {
       "title": "Edpuzzle",
       "anchor": "#tool-edpuzzle",
-      "keywords": []
+      "keywords": [
+        "video questions",
+        "flipped classroom",
+        "video lesson",
+        "comprehension check",
+        "youtube",
+        "screencast"
+      ]
     },
     {
       "title": "Gimkit",
       "anchor": "#tool-gimkit",
-      "keywords": []
+      "keywords": [
+        "review game",
+        "quiz game",
+        "game show",
+        "kahoot alternative",
+        "vocabulary practice",
+        "retrieval",
+        "drill"
+      ]
     },
     {
       "title": "Gizmos",
       "anchor": "#tool-gizmos",
-      "keywords": []
+      "keywords": [
+        "simulation",
+        "virtual lab",
+        "interactive science",
+        "math models",
+        "virtual experiment",
+        "ngss",
+        "pre-lab"
+      ]
     }
   ]
 }
