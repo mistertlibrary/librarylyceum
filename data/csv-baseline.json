@@ -3,7 +3,7 @@
   "files": {
     "databases.csv": {
       "rows": 82,
-      "sha256": "e7c9b69d1ccefdbb4eb627e5bb10db8c63a3243836dc8b043d6cc1ba70586f52",
+      "sha256": "a214213daaf31eb6c9026b331e8e8cd8d52c5846ef8c0ff0f012ce37f204721e",
       "names": [
         "Academic Search Complete",
         "African-American History",
@@ -12,14 +12,14 @@
         "American Indian History",
         "Ancient and Medieval History",
         "Bloom's Literature",
-        "Britannica Imagequest",
+        "Britannica ImageQuest",
         "Britannica School",
         "Business Source Premier",
         "Core Concepts: Biology",
         "Core Concepts: Chemistry",
         "Core Concepts: Periodic Table",
         "Credo Source",
-        "Culturegrams",
+        "CultureGrams",
         "Curriculum Resource Center",
         "EBSCO eBook Collection",
         "ERIC (Education Resources Information Center)",
@@ -28,7 +28,7 @@
         "FactCite",
         "Feature Films for Education",
         "Ferguson's Career Guidance Center",
-        "Funk & Wagnall's New World Encyclopedia",
+        "Funk & Wagnalls New World Encyclopedia",
         "Gale eBooks",
         "Gale in Context: Biography",
         "Gale in Context: Literature",
@@ -90,8 +90,8 @@
       ]
     },
     "guides.csv": {
-      "rows": 12,
-      "sha256": "c5d7154226735039f802da822f51f92b772710e15d7f6d0e616daadfab856b5a",
+      "rows": 13,
+      "sha256": "b4c7ed7284e4b1083a431833525178c2a9661138d090d90bebf21979bf8b9f4a",
       "names": [
         "Babel: The Thompson Catalogue of Engines",
         "Citation Station: APA Format",
@@ -99,6 +99,7 @@
         "Colony Research Project",
         "Image Clearinghouse",
         "Museum Studies Crash Course: The Lower East Side Tenement Museum",
+        "News vs. Information vs. Research",
         "On Annotation: A Handbook for Active Readers",
         "Research Basics: Getting Started",
         "Research Basics: Reading Further",

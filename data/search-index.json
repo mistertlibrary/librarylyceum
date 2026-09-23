@@ -3,7 +3,7 @@
   "generated": "2026-09-23",
   "counts": {
     "database": 82,
-    "guide": 12,
+    "guide": 13,
     "tool": 5,
     "issue": 1
   },
@@ -91,7 +91,7 @@
     },
     {
       "type": "database",
-      "title": "Britannica Imagequest",
+      "title": "Britannica ImageQuest",
       "url": "https://quest.eb.com",
       "external": true,
       "text": "Britannica ImageQuest provides access to more than 3 million rights-cleared images and 11,000 educational videos drawn from 60+ media partners. All these materials are all cleared for educational, non-commercial use, making them ideal for project-based learning, research, and visual inquiry. This database also includes a built-in citation tool and complete metadata for every image.\n\nIf you need a visual and want to be sure it's copyright compliant, make ImageQuest your first destination!",
@@ -168,7 +168,7 @@
     },
     {
       "type": "database",
-      "title": "Culturegrams",
+      "title": "CultureGrams",
       "url": "https://online.culturegrams.com/index.php",
       "external": true,
       "text": "CultureGrams provides country reports that go beyond mere facts and figures to deliver a one-of-a-kind perspective on daily life and culture, including the background, customs, and lifestyles of the world's people. The reports are written and reviewed by in-country experts and are updated as new information becomes available, so you can be sure you are reading nothing but the very best, most current information. CultureGrams contains four core products:\n\nWorld Edition: Cultural reports for more than 200 countries. Each include 25 categories such as Land and Climate, History, Personal Appearance, Greetings, Dating and Marriage, Family, Diet, Housing, Holidays, Economy, Education, Health, and more.\n\nKids Edition: This collection of more than 185+ country reports teaches upper elementary-aged and middle school users about the world around them. Each report includes up-to-date, engaging cultural information, complete with images, an historical timeline, fun facts, and sections on history, population, \"life as a kid,\" and more.\n\nStates Edition: These colorful and easy-to-read state reports help upper elementary-aged students understand the diversity and history of each U.S. state and the District of Columbia. Reports include maps, flags, symbols, and timelines, plus sections on history, economy, geography, population, and more.\n\nProvinces Edition: This edition contains kid-friendly reports on all 13 Canadian provinces and territories. Reports include images, maps, charts, data tables, and fun facts, plus sections on the environment, culture, government, first inhabitants, and more.\n\nAlthough the scope of CultureGrams' content is sharply limited, the quality of its content is second to none, especially given the untimely demise of the CIA's World Factbook.",
@@ -282,10 +282,10 @@
     },
     {
       "type": "database",
-      "title": "Funk & Wagnall's New World Encyclopedia",
+      "title": "Funk & Wagnalls New World Encyclopedia",
       "url": "https://research.ebsco.com/c/t3bsam?db=funk",
       "external": true,
-      "text": "Funk & Wagnalls New World Encyclopedia is a general-purpose reference encyclopedia for students and adults alike. This database indexes over 25,000 records, covering an array of topics across science, history, geography, biography, and the arts.\n\nIf you're searching via Explora, Funk & Wagnall's will make up a portion of your search results. These entries tend toward the simplistic, which is a boon if you're after unpretentious summaries, but I'd encourage anyone after a more thorough understanding of a subject to start with the full Explora interface, Britannica School, or Credo to diversify their sources.",
+      "text": "Funk & Wagnalls New World Encyclopedia is a general-purpose reference encyclopedia for students and adults alike. This database indexes over 25,000 records, covering an array of topics across science, history, geography, biography, and the arts.\n\nIf you're searching via Explora, Funk & Wagnalls will make up a portion of your search results. These entries tend toward the simplistic, which is a boon if you're after unpretentious summaries, but I'd encourage anyone after a more thorough understanding of a subject to start with the full Explora interface, Britannica School, or Credo to diversify their sources.",
       "subjects": [
         "Basic Information and General Reference"
       ],
@@ -1293,6 +1293,51 @@
         }
       ],
       "sectionText": "Hook Case study: the Tenement Museum Whole group: tour the building Roles Bridge"
+    },
+    {
+      "type": "guide",
+      "title": "News vs. Information vs. Research",
+      "url": "https://mistertlibrary.github.io/sciencenews/",
+      "external": true,
+      "text": "Distinguish news articles, informational websites, and scholarly articles from one another; background information on churnalism in science reporting.",
+      "subjects": [
+        "Science"
+      ],
+      "series": "",
+      "course": "",
+      "sections": [
+        {
+          "title": "Same Scientific Content, Three Unique Formats!",
+          "anchor": "#kinds-title",
+          "keywords": []
+        },
+        {
+          "title": "Test Your Knowledge!",
+          "anchor": "#activity-title",
+          "keywords": []
+        },
+        {
+          "title": "Science News Sources",
+          "anchor": "#outlets-title",
+          "keywords": []
+        },
+        {
+          "title": "Thompson's Three Cs for Source Evaluation",
+          "anchor": "#threecs-title",
+          "keywords": []
+        },
+        {
+          "title": "A Note on Churnalism",
+          "anchor": "#churnalism-title",
+          "keywords": []
+        },
+        {
+          "title": "Writing About Science",
+          "anchor": "#writing-title",
+          "keywords": []
+        }
+      ],
+      "sectionText": "Same Scientific Content, Three Unique Formats! Test Your Knowledge! Science News Sources Thompson's Three Cs for Source Evaluation A Note on Churnalism Writing About Science"
     },
     {
       "type": "guide",
