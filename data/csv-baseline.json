@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22",
+  "generated": "2026-09-23",
   "files": {
     "databases.csv": {
       "rows": 82,
@@ -90,12 +90,13 @@
       ]
     },
     "guides.csv": {
-      "rows": 11,
-      "sha256": "e682a4f6f9f8ecf65d888fff76c0e9764839030b8950f9829fc85293fc9db803",
+      "rows": 12,
+      "sha256": "c5d7154226735039f802da822f51f92b772710e15d7f6d0e616daadfab856b5a",
       "names": [
         "Babel: The Thompson Catalogue of Engines",
         "Citation Station: APA Format",
         "Citation Station: MLA Format",
+        "Colony Research Project",
         "Image Clearinghouse",
         "Museum Studies Crash Course: The Lower East Side Tenement Museum",
         "On Annotation: A Handbook for Active Readers",
