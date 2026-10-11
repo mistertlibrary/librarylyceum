@@ -2,6 +2,8 @@
 (function () {
   "use strict";
 
+  var SELF_SRC = document.currentScript ? document.currentScript.src : "";
+
   var STORE = { size: "lyceum-size", font: "lyceum-font", theme: "lyceum-theme" };
   var DEFAULTS = { size: "small", font: "serif", theme: "light" };
 
@@ -103,7 +105,9 @@
   function onKeydown(e) {
     if (e.key === "Escape") { e.preventDefault(); closePanel(true); return; }
     if (e.key !== "Tab") return;
-    var focusables = panel.querySelectorAll("button");
+    var focusables = Array.prototype.filter.call(panel.querySelectorAll("button"), function (b) {
+      return !b.closest("[hidden]");
+    });
     if (!focusables.length) return;
     var first = focusables[0];
     var last  = focusables[focusables.length - 1];
@@ -117,6 +121,40 @@
   }
 
 
+
+  function loadShelve(done) {
+    if (window.LyceumShelve) { done(); return; }
+    var src = SELF_SRC ? SELF_SRC.replace(/lyceum\.js(\?.*)?$/, "shelve.js") : "shelve.js";
+    var tag = document.createElement("script");
+    tag.src = src;
+    tag.onload = function () { if (window.LyceumShelve) done(); };
+    document.head.appendChild(tag);
+  }
+
+  function initSecret() {
+    var title  = document.getElementById("a11y-panel-title");
+    var secret = document.getElementById("a11y-secret");
+    var play   = document.getElementById("a11y-play");
+    if (!title || !secret || !play) return;
+
+    var clicks = 0, last = 0;
+    title.addEventListener("click", function () {
+      var now = Date.now();
+      clicks = now - last < 600 ? clicks + 1 : 1;
+      last = now;
+      if (clicks < 3 || !secret.hasAttribute("hidden")) return;
+      secret.removeAttribute("hidden");
+      play.focus();
+    });
+
+    play.addEventListener("click", function () {
+      loadShelve(function () {
+        var on = window.LyceumShelve.toggle();
+        play.classList.toggle("active", on);
+        play.setAttribute("aria-pressed", String(on));
+      });
+    });
+  }
 
   function init() {
     var year = document.getElementById("yr");
@@ -134,6 +172,7 @@
         else if (btn.dataset.font) setFont(btn.dataset.font);
         else if (btn.dataset.themeChoice) setTheme(btn.dataset.themeChoice);
       });
+      initSecret();
     }
 
     var LEGACY_SIZE = { "default": "small", "large": "medium", "larger": "large" };

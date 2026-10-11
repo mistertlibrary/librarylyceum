@@ -269,6 +269,8 @@ a:hover { color: var(--text); }
 }
 
 .a11y-group { margin-bottom: 1.1rem; }
+.a11y-panel-title { user-select: none; -webkit-user-select: none; }
+.a11y-secret[hidden] { display: none; }
 .a11y-group:last-child { margin-bottom: 0; }
 
 .a11y-label {
