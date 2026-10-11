@@ -28,7 +28,10 @@
     ".lyc-cursor.lyc-pressed svg { transform: scale(.86); }",
     "@keyframes lycFlip { 0% { transform: scaleX(1); } 50% { transform: scaleX(-1); } 100% { transform: scaleX(1); } }",
     "@media (prefers-reduced-motion: reduce) { .lyc-cursor .lyc-page, .lyc-spine.lyc-hop, .lyc-spine.lyc-lean { animation: none; } }",
-    "@media print { .lyc-shelves, .lyc-cursor { display: none !important; } }"
+    ".lyc-pointer { position: fixed; left: 1rem; z-index: 170; font: 600 0.62rem/1.2 var(--sans, system-ui, sans-serif); letter-spacing: 0.1em; text-transform: uppercase; color: #F3E7D2; background: #2F1414; border: 1px solid #C9A84C; padding: 0.45rem 0.7rem; cursor: pointer; }",
+    ".lyc-pointer:focus-visible { outline: 3px solid #C9A84C; outline-offset: 2px; }",
+    "html.lyceum-shelving.lyceum-shelving-fine .lyc-pointer { cursor: none !important; }",
+    "@media print { .lyc-shelves, .lyc-cursor, .lyc-pointer { display: none !important; } }"
   ].join("\n");
 
   var BOOK_SVG =
@@ -42,7 +45,22 @@
     '</svg>';
 
   var active = false;
-  var styleEl = null, cursorEl = null, shelvesEl = null;
+  var styleEl = null, cursorEl = null, shelvesEl = null, pointerBtn = null;
+  var POINTER_KEY = "lyceum-book-cursor";
+
+  function bookCursorWanted() {
+    try { return localStorage.getItem(POINTER_KEY) !== "off"; } catch (e) { return true; }
+  }
+
+  function setBookCursor(on) {
+    root.classList.toggle("lyceum-shelving-fine", on);
+    if (cursorEl) cursorEl.style.display = on ? "" : "none";
+    if (pointerBtn) {
+      pointerBtn.setAttribute("aria-pressed", String(on));
+      pointerBtn.textContent = on ? "Book cursor: On" : "Book cursor: Off";
+    }
+    try { localStorage.setItem(POINTER_KEY, on ? "on" : "off"); } catch (e) {}
+  }
   var shelves = [], books = [];
   var idleTimer = null, savedPadding = "";
 
@@ -51,6 +69,7 @@
   function syncPadding() {
     if (!shelvesEl) return;
     document.body.style.paddingBottom = shelvesEl.offsetHeight + "px";
+    if (pointerBtn) pointerBtn.style.bottom = (shelvesEl.offsetHeight + 8) + "px";
   }
 
   function newShelf() {
@@ -151,12 +170,18 @@
     document.head.appendChild(styleEl);
     root.classList.add("lyceum-shelving");
     if (fine) {
-      root.classList.add("lyceum-shelving-fine");
       cursorEl = document.createElement("div");
       cursorEl.className = "lyc-cursor";
       cursorEl.innerHTML = BOOK_SVG;
       cursorEl.style.transform = "translate(-100px,-100px)";
       document.body.appendChild(cursorEl);
+      pointerBtn = document.createElement("button");
+      pointerBtn.type = "button";
+      pointerBtn.className = "lyc-pointer";
+      pointerBtn.addEventListener("click", function () {
+        setBookCursor(pointerBtn.getAttribute("aria-pressed") !== "true");
+      });
+      document.body.appendChild(pointerBtn);
     }
     shelvesEl = document.createElement("div");
     shelvesEl.className = "lyc-shelves";
@@ -164,6 +189,7 @@
     document.body.appendChild(shelvesEl);
     savedPadding = document.body.style.paddingBottom;
     newShelf();
+    if (fine) setBookCursor(bookCursorWanted());
     document.addEventListener("pointermove", onMove);
     document.addEventListener("pointerdown", onDown);
     document.addEventListener("pointerup", onUp);
@@ -181,9 +207,10 @@
     clearInterval(idleTimer);
     Array.prototype.forEach.call(document.querySelectorAll(".lyc-flyer"), function (f) { f.remove(); });
     if (cursorEl) cursorEl.remove();
+    if (pointerBtn) pointerBtn.remove();
     if (shelvesEl) shelvesEl.remove();
     if (styleEl) styleEl.remove();
-    cursorEl = shelvesEl = styleEl = null;
+    cursorEl = shelvesEl = styleEl = pointerBtn = null;
     shelves = []; books = [];
     root.classList.remove("lyceum-shelving", "lyceum-shelving-fine");
     document.body.style.paddingBottom = savedPadding;

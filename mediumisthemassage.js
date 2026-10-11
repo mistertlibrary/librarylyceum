@@ -171,7 +171,7 @@
     var dek = d.dek || "";
     return templateHtml
       .replace(/<title>[^<]*<\/title>/,
-        "<title>" + esc(title) + " &mdash; WEHS Library Lyceum</title>")
+        "<title>" + esc(title) + " | WEHS Library Lyceum</title>")
       .replace(/(<meta name="description" content=")[^"]*(">)/,
         "$1" + esc(dek) + "$2")
       .replace(/(<meta property="og:title" content=")[^"]*(">)/,
@@ -181,7 +181,7 @@
       .replace(/(<meta property="og:url" content=")[^"]*(">)/,
         "$1" + SITE + "/newsletter/issues/" + encodeURIComponent(d.slug) + "/$2")
       .replace(/(<meta name="twitter:title" content=")[^"]*(">)/,
-        "$1" + esc(title) + " &mdash; WEHS Library Lyceum$2")
+        "$1" + esc(title) + " | WEHS Library Lyceum$2")
       .replace(/(<meta name="twitter:description" content=")[^"]*(">)/,
         "$1" + esc(dek) + "$2");
   }

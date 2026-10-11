@@ -271,6 +271,7 @@ a:hover { color: var(--text); }
 .a11y-group { margin-bottom: 1.1rem; }
 .a11y-panel-title { user-select: none; -webkit-user-select: none; }
 .a11y-secret[hidden] { display: none; }
+.a11y-play { width: 100%; }
 .a11y-group:last-child { margin-bottom: 0; }
 
 .a11y-label {
@@ -299,7 +300,8 @@ a:hover { color: var(--text); }
   padding: 0.4rem 0.35rem;
   cursor: pointer;
   line-height: 1.4;
-  min-width: 0;
+  min-width: min-content;
+  white-space: normal;
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
