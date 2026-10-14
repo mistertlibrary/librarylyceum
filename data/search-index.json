@@ -3,7 +3,7 @@
   "generated": "2026-10-14",
   "counts": {
     "database": 82,
-    "guide": 18,
+    "guide": 19,
     "tool": 5,
     "issue": 1
   },
@@ -2961,6 +2961,26 @@
         }
       ],
       "sectionText": "study abroad college search universities Latin America Spain extracurricular Spanish MLA Plan de dos días two-day plan Descubrir discover portals university list enrollment Investigar research report informe citation Comparar compare comparisons Extensiones extensions extra credit Entregar turn in submit"
+    },
+    {
+      "type": "guide",
+      "title": "Fossil Poetry",
+      "url": "https://mistertlibrary.github.io/fossilpoetry/",
+      "external": true,
+      "text": "Search and browse Webster's 1828 and 1913 dictionaries, Roget's Thesaurus, Soule's Synonymes, and Fernald's Synonyms and Antonyms.",
+      "subjects": [
+        "English Language Arts"
+      ],
+      "series": "",
+      "course": "",
+      "sections": [
+        {
+          "title": "Sources",
+          "anchor": "#sources",
+          "keywords": []
+        }
+      ],
+      "sectionText": "Sources"
     },
     {
       "type": "guide",
