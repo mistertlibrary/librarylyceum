@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13",
+  "generated": "2026-10-14",
   "files": {
     "databases.csv": {
       "rows": 82,
@@ -90,13 +90,14 @@
       ]
     },
     "guides.csv": {
-      "rows": 17,
-      "sha256": "aab401f35693e02770d95296fd25309b580e4d9d5d71c6acccd4c12dea23268c",
+      "rows": 18,
+      "sha256": "b121ecbfac153e6e552d5bcf9888f530bdea2804a8a138265f22fc2ccd5c0837",
       "names": [
         "Babel: The Thompson Catalogue of Engines",
         "Citation Station: APA Format",
         "Citation Station: MLA Format",
         "Colony Research Project",
+        "Design Your Own Assessment",
         "Explorando Universidades Hispanohablantes",
         "Image Clearinghouse",
         "Museum Studies Crash Course: The Lower East Side Tenement Museum",
