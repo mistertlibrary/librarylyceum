@@ -3,7 +3,7 @@
   "generated": "2026-10-16",
   "counts": {
     "database": 82,
-    "guide": 20,
+    "guide": 21,
     "tool": 5,
     "issue": 1
   },
@@ -3094,6 +3094,80 @@
         }
       ],
       "sectionText": "The Brain Bunker reading log Brain Bunker Choosing Your Product playlist menu exhibit independent reading Building Your Product liner notes historic menus museum labels Benchmarks and Scope benchmarks pitch scope statement"
+    },
+    {
+      "type": "guide",
+      "title": "Jersey Rain",
+      "url": "https://mistertlibrary.github.io/jerseyrain/",
+      "external": true,
+      "text": "A three-day Environmental Science unit on extreme rain in Fairfield, North Caldwell, Essex Fells, and Roseland. Students read the Passaic River gauge, pull real rainfall data, map the swing from drought to flood, and ask who keeps count and who pays.",
+      "subjects": [
+        "Science"
+      ],
+      "series": "",
+      "course": "",
+      "sections": [
+        {
+          "title": "How It Works",
+          "anchor": "#start",
+          "keywords": [
+            "StoryMapJS",
+            "extreme rain"
+          ]
+        },
+        {
+          "title": "Roles",
+          "anchor": "#roles",
+          "keywords": [
+            "Hydrologist",
+            "Cartographer",
+            "Analyst",
+            "Archivist"
+          ]
+        },
+        {
+          "title": "Day 1: Read the River",
+          "anchor": "#day1",
+          "keywords": [
+            "Passaic River",
+            "Pine Brook gauge",
+            "NOWData",
+            "rainfall data"
+          ]
+        },
+        {
+          "title": "Day 2: Whiplash",
+          "anchor": "#day2",
+          "keywords": [
+            "drought",
+            "wildfire",
+            "flood maps",
+            "FEMA"
+          ]
+        },
+        {
+          "title": "Day 3: Who Keeps Count? Who Pays?",
+          "anchor": "#day3",
+          "keywords": [
+            "billion-dollar disasters",
+            "flood insurance",
+            "National Flood Insurance Program"
+          ]
+        },
+        {
+          "title": "Checklist",
+          "anchor": "#checklist",
+          "keywords": []
+        },
+        {
+          "title": "Where to Look",
+          "anchor": "#sources",
+          "keywords": [
+            "APA"
+          ]
+        }
+      ],
+      "sectionText": "How It Works StoryMapJS extreme rain Roles Hydrologist Cartographer Analyst Archivist Day 1: Read the River Passaic River Pine Brook gauge NOWData rainfall data Day 2: Whiplash drought wildfire flood maps FEMA Day 3: Who Keeps Count? Who Pays? billion-dollar disasters flood insurance National Flood Insurance Program Checklist Where to Look APA"
     },
     {
       "type": "guide",
