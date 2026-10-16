@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14",
+  "generated": "2026-10-16",
   "files": {
     "databases.csv": {
       "rows": 82,
@@ -90,8 +90,8 @@
       ]
     },
     "guides.csv": {
-      "rows": 19,
-      "sha256": "7e1b3023302e389bc14dce48e6037eeee4b57d80af571512f7b7827a4ff52b0c",
+      "rows": 20,
+      "sha256": "3bb584f9e948e63c947ef6041395a77d89f23a4e48cfe4744d4d9dfb2f301025",
       "names": [
         "Babel: The Thompson Catalogue of Engines",
         "Citation Station: APA Format",
@@ -101,6 +101,7 @@
         "Explorando Universidades Hispanohablantes",
         "Fossil Poetry",
         "Image Clearinghouse",
+        "Independent Reading Assessments: Playlist, Menu, Exhibit",
         "Museum Studies Crash Course: The Lower East Side Tenement Museum",
         "News vs. Information vs. Research",
         "On Annotation: A Handbook for Active Readers",
