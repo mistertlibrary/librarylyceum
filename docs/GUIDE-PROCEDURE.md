@@ -42,8 +42,14 @@ never publishes. It already carries the network frame:
 - **Chrome.** Skip link; top bar reading "WEHS Library Lyceum research
   guides presents..." with the link to `/librarylyceum/guides.html`;
   Lyceum footer; the "Aa" panel in the bottom-right corner.
-- **Page title.** `Guide Title — WEHS Library Lyceum`, matching the
+- **Page title.** `Guide Title | WEHS Library Lyceum`, matching the
   network convention.
+- **Lightbox.** Every content image opens full size in a lightbox: a
+  click, or Enter on the focused image, opens it; Escape or a click
+  closes it. The starter carries the script. Logos, banners, and images
+  that link elsewhere are exempt. Point `data-full` at a larger file when
+  the page shows a smaller one. Projected material (a bellringer, a
+  drawing built into the page) opens whole, at screen size.
 
 Palette, hero, and section design are per-guide. Keep the frame intact.
 
@@ -60,6 +66,15 @@ The hub's search build reads it from `../<slug>/lyceum.json`.
   authoritative sources. Claims with one source are flagged; claims with
   none are cut.
 - Citation style is chosen at intake.
+- No stage directions in student-facing text. Labels such as "On
+  screen" tell the teacher how a section is used; they stay out of
+  the page.
+- Teacher notes and answers never sit readable on a public page. They
+  are encrypted with the network teacher passphrase
+  (`private-tools/teacher-lock`) and open only when it is entered.
+  Bellringers are exempt: they are projected, not opened on student
+  machines. Teacher guides are internal, written for Mister T alone,
+  and planned around co-teaching.
 
 ## 5. Verify, then publish
 
@@ -69,6 +84,8 @@ The hub's search build reads it from `../<slug>/lyceum.json`.
 3. Run the link check on every outbound URL, from school and home
    networks.
 4. Test light, dark, and high-contrast themes and all three typefaces.
+5. Open every image in the lightbox and close it with Escape. Unlock
+   the teacher notes with the passphrase.
 
 ## 6. List it
 
