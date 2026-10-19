@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16",
+  "generated": "2026-10-19",
   "files": {
     "databases.csv": {
       "rows": 82,
@@ -91,7 +91,7 @@
     },
     "guides.csv": {
       "rows": 21,
-      "sha256": "24bfd344f586f3f46203522eb164061226e8af0e378317e0797fe19c64e5d4ca",
+      "sha256": "41b479cee4efe726ad1a75ee4302cfc8b88e9c5a08ef0b1b356b3bc6b50f9379",
       "names": [
         "Babel: The Thompson Catalogue of Engines",
         "Citation Station: APA Format",
