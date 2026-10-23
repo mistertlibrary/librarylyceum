@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19",
+  "generated": "2026-10-23",
   "files": {
     "databases.csv": {
       "rows": 82,
@@ -90,8 +90,8 @@
       ]
     },
     "guides.csv": {
-      "rows": 21,
-      "sha256": "41b479cee4efe726ad1a75ee4302cfc8b88e9c5a08ef0b1b356b3bc6b50f9379",
+      "rows": 24,
+      "sha256": "dbfb819c13ef852a3fc4668a12fd4317b353c6cc808327847dee6be332f5d656",
       "names": [
         "Babel: The Thompson Catalogue of Engines",
         "Citation Station: APA Format",
@@ -107,12 +107,15 @@
         "News vs. Information vs. Research",
         "On Annotation: A Handbook for Active Readers",
         "Primary Source Palooza!",
+        "Radium Girls",
         "Research Basics: Getting Started",
         "Research Basics: Reading Further",
         "Research Basics: Searches & Sources",
+        "Research Basics: Take Note!",
         "Salem Case Files",
         "The Twenties News Desk",
         "Voices of the Cross & Crescent | Crusades Project",
+        "WEHS Debate Club",
         "WEHS Summer Reading 2026"
       ]
     }
