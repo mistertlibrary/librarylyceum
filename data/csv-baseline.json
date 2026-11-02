@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-23",
+  "generated": "2026-11-02",
   "files": {
     "databases.csv": {
       "rows": 82,
@@ -90,8 +90,8 @@
       ]
     },
     "guides.csv": {
-      "rows": 24,
-      "sha256": "f865004551454cceefda74075232e44d8f702e3ea8ac8cf6ae02864e9b303c8e",
+      "rows": 25,
+      "sha256": "7b86d9e02b2fd3b8502c18851e2f1db06690f44fb7ea1a990bba85a4ac33ba24",
       "names": [
         "Babel: The Thompson Catalogue of Engines",
         "Citation Station: APA Format",
@@ -106,6 +106,7 @@
         "Museum Studies Crash Course: The Lower East Side Tenement Museum",
         "News vs. Information vs. Research",
         "On Annotation: A Handbook for Active Readers",
+        "Penna, spada e lingua",
         "Primary Source Palooza!",
         "Radium Girls",
         "Research Basics: Getting Started",
