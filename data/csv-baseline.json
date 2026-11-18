@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-02",
+  "generated": "2026-11-18",
   "files": {
     "databases.csv": {
       "rows": 82,
-      "sha256": "d41bd7b2f1d60d72f088a9fab91cd4566ef5b4d83b538dae82f7cefdd7e92b64",
+      "sha256": "a1d0d219b97070df4ca8ce22530752ba75e959dd61f92700a2104bb83403f0ff",
       "names": [
         "Academic Search Complete",
         "African-American History",
@@ -90,8 +90,8 @@
       ]
     },
     "guides.csv": {
-      "rows": 25,
-      "sha256": "7b86d9e02b2fd3b8502c18851e2f1db06690f44fb7ea1a990bba85a4ac33ba24",
+      "rows": 27,
+      "sha256": "e5902ec815cd36741e3102d88cbbfe8a3b432b8d3191f35b678b5ddb460c4eff",
       "names": [
         "Babel: The Thompson Catalogue of Engines",
         "Citation Station: APA Format",
@@ -113,11 +113,13 @@
         "Research Basics: Reading Further",
         "Research Basics: Searches & Sources",
         "Research Basics: Take Note!",
+        "Rights on the Docket: The Bill of Rights Today",
         "Salem Case Files",
         "The Twenties News Desk",
         "Voices of the Cross & Crescent | Crusades Project",
         "WEHS Debate Club",
-        "WEHS Summer Reading 2026"
+        "WEHS Summer Reading 2026",
+        "The Five Major World Religions"
       ]
     }
   }
