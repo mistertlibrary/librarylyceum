@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-18",
+  "generated": "2026-11-20",
   "files": {
     "databases.csv": {
-      "rows": 82,
-      "sha256": "a1d0d219b97070df4ca8ce22530752ba75e959dd61f92700a2104bb83403f0ff",
+      "rows": 83,
+      "sha256": "6c9237530a78c270977803bbae8f594c8a4500a2949c574b49f414ed0f990352",
       "names": [
         "Academic Search Complete",
         "African-American History",
@@ -31,6 +31,7 @@
         "Funk & Wagnalls New World Encyclopedia",
         "Gale eBooks",
         "Gale in Context: Biography",
+        "Gale in Context: Global Issues",
         "Gale in Context: Literature",
         "Gale in Context: Opposing Viewpoints",
         "Gale in Context: US History",
